@@ -1,0 +1,4 @@
+######################
+####  EXTENSIONS  ####
+######################
+@import 'EXT:sp_ueberland/Configuration/TypoScript/Extensions/sr_email_subscribe/constants.typoscript'

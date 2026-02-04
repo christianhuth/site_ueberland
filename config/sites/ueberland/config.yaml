@@ -1,0 +1,259 @@
+base: 'https://ueberland-tecklenburg.de'
+baseVariants:
+  -
+    base: 'https://sp-ueb.ddev.site'
+    condition: 'applicationContext == "Development"'
+errorHandling:
+  -
+    errorCode: 404
+    errorHandler: Page
+    errorContentSource: '1'
+languages:
+  -
+    title: Deutsch
+    enabled: true
+    base: /de/
+    typo3Language: de
+    locale: de_DE
+    iso-639-1: de
+    navigationTitle: Deutsch
+    hreflang: de-DE
+    direction: ltr
+    flag: de
+    languageId: 0
+  -
+    title: Englisch
+    enabled: true
+    base: /en/
+    typo3Language: default
+    locale: en_US.UTF-8
+    iso-639-1: en
+    navigationTitle: English
+    hreflang: en-US
+    direction: ltr
+    fallbackType: strict
+    fallbacks: '0'
+    flag: gb
+    languageId: 1
+    websiteTitle: ''
+rootPageId: 1
+routeEnhancers:
+  NewsPlugin:
+    type: Extbase
+    extension: News
+    plugin: Pi1
+    limitToPages:
+      - 109
+    routes:
+      -
+        routePath: '/seite/{page}'
+        _controller: 'News::list'
+        _arguments:
+          page: '@widget_0/currentPage'
+    defaultController: 'News::list'
+    defaults:
+      page: '0'
+    aspects:
+      page:
+        type: StaticRangeMapper
+        start: '1'
+        end: '100'
+  UeberlandPluginShow:
+    type: Extbase
+    extension: ueberland
+    plugin: ueberland
+    limitToPages:
+      - 61
+    routes:
+      -
+        routePath: '/{angebot_slug}'
+        _controller: 'Angebot::show'
+        _arguments:
+          angebot_slug: angebot
+    defaultController: 'Angebot::show'
+    aspects:
+      angebot_slug:
+        type: PersistedAliasMapper
+        tableName: tx_ueberland_domain_model_angebot
+        routeFieldName: slug
+  UeberlandPluginList:
+    type: Extbase
+    extension: ueberland
+    plugin: ueberland
+    limitToPages:
+      - 10000
+    routes:
+      -
+        routePath: '/bundesland/{bundesland_slug}'
+        _controller: 'Angebot::list'
+        _arguments:
+          bundesland_slug: section
+      -
+        routePath: '/bundesland/{bundesland_slug}/seite/{page}'
+        _controller: 'Angebot::list'
+        _arguments:
+          bundesland_slug: section
+          page: '@widget_0/currentPage'
+      -
+        routePath: '/kategorie/{category_slug}'
+        _controller: 'Angebot::list'
+        _arguments:
+          category_slug: category
+      -
+        routePath: '/kategorie/{category_slug}/seite/{page}'
+        _controller: 'Angebot::list'
+        _arguments:
+          category_slug: category
+          page: '@widget_0/currentPage'
+      -
+        routePath: '/land/{land_slug}'
+        _controller: 'Angebot::list'
+        _arguments:
+          land_slug: country
+      -
+        routePath: '/land/{land_slug}/seite/{page}'
+        _controller: 'Angebot::list'
+        _arguments:
+          land_slug: country
+          page: '@widget_0/currentPage'
+      -
+        routePath: '/stadt/{stadt_slug}'
+        _controller: 'Angebot::list'
+        _arguments:
+          stadt_slug: city
+      -
+        routePath: '/stadt/{stadt_slug}/seite/{page}'
+        _controller: 'Angebot::list'
+        _arguments:
+          stadt_slug: city
+          page: '@widget_0/currentPage'
+      -
+        routePath: '/land/{land_slug}/bundesland/{bundesland_slug}'
+        _controller: 'Angebot::list'
+        _arguments:
+          land_slug: country
+          bundesland_slug: section
+      -
+        routePath: '/land/{land_slug}/bundesland/{bundesland_slug}/seite/{page}'
+        _controller: 'Angebot::list'
+        _arguments:
+          land_slug: country
+          bundesland_slug: section
+          page: '@widget_0/currentPage'
+      -
+        routePath: '/land/{land_slug}/stadt/{stadt_slug}'
+        _controller: 'Angebot::list'
+        _arguments:
+          land_slug: country
+          stadt_slug: city
+      -
+        routePath: '/land/{land_slug}/stadt/{stadt_slug}/seite/{page}'
+        _controller: 'Angebot::list'
+        _arguments:
+          land_slug: country
+          stadt_slug: city
+          page: '@widget_0/currentPage'
+      -
+        routePath: '/land/{land_slug}/kategorie/{category_slug}'
+        _controller: 'Angebot::list'
+        _arguments:
+          land_slug: country
+          category_slug: category
+      -
+        routePath: '/land/{land_slug}/kategorie/{category_slug}/seite/{page}'
+        _controller: 'Angebot::list'
+        _arguments:
+          land_slug: country
+          category_slug: category
+          page: '@widget_0/currentPage'
+      -
+        routePath: '/land/{land_slug}/kategorie/{category_slug}/seite/{page}'
+        _controller: 'Angebot::list'
+        _arguments:
+          land_slug: country
+          category_slug: category
+          page: '@widget_0/currentPage'
+      -
+        routePath: 'bundesland/{bundesland_slug}/stadt/{stadt_slug}'
+        _controller: 'Angebot::list'
+        _arguments:
+          bundesland_slug: section
+          stadt_slug: city
+      -
+        routePath: '/bundesland/{bundesland_slug}/kategorie/{category_slug}'
+        _controller: 'Angebot::list'
+        _arguments:
+          bundesland_slug: section
+          category_slug: category
+      -
+        routePath: '/stadt/{stadt_slug}/kategorie/{category_slug}'
+        _controller: 'Angebot::list'
+        _arguments:
+          stadt_slug: city
+          category_slug: category
+      -
+        routePath: '/land/{land_slug}/bundesland/{bundesland_slug}/stadt/{stadt_slug}'
+        _controller: 'Angebot::list'
+        _arguments:
+          land_slug: country
+          bundesland_slug: section
+          stadt_slug: city
+      -
+        routePath: '/land/{land_slug}/bundesland/{bundesland_slug}/kategorie/{category_slug}'
+        _controller: 'Angebot::list'
+        _arguments:
+          bundesland_slug: section
+          category_slug: category
+          land_slug: country
+      -
+        routePath: '/land/{land_slug}/stadt/{stadt_slug}/kategorie/{category_slug}'
+        _controller: 'Angebot::list'
+        _arguments:
+          category_slug: category
+          land_slug: country
+          stadt_slug: city
+      -
+        routePath: '/bundesland/{bundesland_slug}/stadt/{stadt_slug}/kategorie/{category_slug}'
+        _controller: 'Angebot::list'
+        _arguments:
+          bundesland_slug: section
+          category_slug: category
+          stadt_slug: city
+      -
+        routePath: '/land/{land_slug}/bundesland/{bundesland_slug}/stadt/{stadt_slug}/kategorie/{category_slug}'
+        _controller: 'Angebot::list'
+        _arguments:
+          bundesland_slug: section
+          category_slug: category
+          land_slug: country
+          stadt_slug: city
+      -
+        routePath: '/seite/{page}'
+        _controller: 'Angebot::list'
+        _arguments:
+          page: '@widget_0/currentPage'
+    defaultController: 'Angebot::list'
+    defaults:
+      page: '0'
+    aspects:
+      category_slug:
+        type: PersistedAliasMapper
+        tableName: sys_category
+        routeFieldName: slug
+      land_slug:
+        type: PersistedAliasMapper
+        tableName: tx_ueberland_domain_model_land
+        routeFieldName: slug
+      bundesland_slug:
+        type: PersistedAliasMapper
+        tableName: tx_ueberland_domain_model_bundesland
+        routeFieldName: slug
+      stadt_slug:
+        type: PersistedAliasMapper
+        tableName: tx_ueberland_domain_model_stadt
+        routeFieldName: slug
+      page:
+        type: StaticRangeMapper
+        start: '1'
+        end: '100'
+websiteTitle: ''

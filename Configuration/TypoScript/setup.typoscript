@@ -1,0 +1,17 @@
+######################
+####  EXTENSIONS  ####
+######################
+@import 'EXT:sp_ueberland/Configuration/TypoScript/Extensions/sr_email_subscribe/setup.typoscript'
+
+// Can be used starting with 12.4
+// page.includeJS {
+//     umami = https://webstats.christianhuth.de/umami
+//     umami.external = 1
+//     umami.defer = 1
+//     umami.data.data-website-id = 74389a7c-cfa8-4c17-bb35-9798d692ccd8
+// }
+
+page.headerData {
+   3020 = TEXT
+   3020.value = <script defer src="https://webstats.christianhuth.de/umami" data-website-id="74389a7c-cfa8-4c17-bb35-9798d692ccd8"></script>
+}

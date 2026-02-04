@@ -1,0 +1,22 @@
+######################
+####  TYPOSCRIPT  ####
+######################
+@import 'EXT:sr_email_subscribe/Configuration/TypoScript/PluginSetup/setup.typoscript'
+
+######################
+####  SITECONFIG  ####
+######################
+page {
+    includeCSS {
+        sr_email_subscribe = EXT:sp_ueberland/Resources/Public/Css/sr_email_subscribe.css
+    }
+}
+
+plugin.tx_sremailsubscribe_pi1 {
+	create = 1
+	create {
+		overrideValues {
+			module_sys_dmail_html = 1
+		}
+	}
+}

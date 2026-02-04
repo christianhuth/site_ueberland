@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2018-06-03T04:27:54Z" product-name="sp_ueberland">
+		<header/>
+		<body>
+			<trans-unit id="header_image_name">
+				<source>ueberland-logo-subline_EN.svg</source>
+                                <target>ueberland-logo-subline.svg</target>
+			</trans-unit>
+			<trans-unit id="slider_link">
+				<target>mehr Details</target>
+			</trans-unit>
+			<trans-unit id="footer_contact">
+				<target>Kontakt</target>
+			</trans-unit>
+			<trans-unit id="footer_opening_hours">
+				<target>Öffnungszeiten</target>
+			</trans-unit>
+			<trans-unit id="footer_monday_abbreviation">
+				<target>Mo</target>
+			</trans-unit>
+			<trans-unit id="footer_monday_opening_hours">
+				<target>08:00 - 17:00 Uhr</target>
+			</trans-unit>
+			<trans-unit id="footer_tuesday_abbreviation">
+				<target>Di</target>
+			</trans-unit>
+			<trans-unit id="footer_tuesday_opening_hours">
+				<target>08:00 - 17:00 Uhr</target>
+			</trans-unit>
+			<trans-unit id="footer_wednesday_abbreviation">
+				<target>Mi</target>
+			</trans-unit>
+			<trans-unit id="footer_wednesday_opening_hours">
+				<target>08:00 - 17:00 Uhr</target>
+			</trans-unit>
+			<trans-unit id="footer_thursday_abbreviation">
+				<target>Do</target>
+			</trans-unit>
+			<trans-unit id="footer_thursday_opening_hours">
+				<target>08:00 - 17:00 Uhr</target>
+			</trans-unit>
+			<trans-unit id="footer_friday_abbreviation">
+				<target>Fr</target>
+			</trans-unit>
+			<trans-unit id="footer_friday_opening_hours">
+				<target>08:00 - 16:00 Uhr</target>
+			</trans-unit>
+			<trans-unit id="footer_saturday_abbreviation">
+				<target>Sa</target>
+			</trans-unit>
+			<trans-unit id="footer_sunday_abbreviation">
+				<target>So</target>
+			</trans-unit>
+			<trans-unit id="footer_closed">
+				<target>geschlossen</target>
+			</trans-unit>
+			<trans-unit id="footer_info_service">
+				<target>Info &amp; Service</target>
+			</trans-unit>
+			<trans-unit id="footer_newsletter_subscription">
+				<target>Newsletteranmeldung</target>
+			</trans-unit>
+			<trans-unit id="footer_newsletter_text">
+				<target>Jetzt unseren ueberland-Newsletter abonnieren und immer die aktuellsten Angebote erhalten. </target>
+			</trans-unit>
+			<trans-unit id="footer_newsletter_button">
+				<target>Zur Anmeldung</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

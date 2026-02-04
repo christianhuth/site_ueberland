@@ -1,0 +1,653 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Email Address Subscription Template</title>
+</head>
+<body>
+
+<p><em>ANMELDEFORMULAR</em></p>
+<!-- ###TEMPLATE_CREATE### begin -->
+<div class="row">
+	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div>
+	<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+		<header><h1>###LABEL_MIDDLE_NAME###</h1></header>
+		<form id="###FORM_NAME###" method="post" action="###FORM_URL###" enctype="multipart/form-data" ###FORM_ONSUBMIT###>
+			<div>
+				###HIDDENFIELDS###
+			</div>
+			<div class="form-group">
+				<input id="tx-sremailsubscribe-pi1-first_name" 	type="text" 	maxlength="###MAXLENGTH_first_name###" 	title="###TOOLTIP_FIRST_NAME###" 	name="###NAME_FIRST_NAME###" 	class="form-control tx-sremailsubscribe-pi1-text" placeholder="###LABEL_FIRST_NAME###"/>
+				<input id="tx-sremailsubscribe-pi1-last_name" 	type="text" 	maxlength="###MAXLENGTH_last_name###" 	title="###TOOLTIP_LAST_NAME###" 	name="###NAME_LAST_NAME###" 	class="form-control tx-sremailsubscribe-pi1-text" placeholder="###LABEL_LAST_NAME###"/>
+				<input id="tx-sremailsubscribe-pi1-company" 	type="text" 	maxlength="###MAXLENGTH_company###" 	title="###TOOLTIP_COMPANY###" 		name="###NAME_COMPANY###" 		class="form-control tx-sremailsubscribe-pi1-text" placeholder="###LABEL_COMPANY###"/>
+				<input id="tx-sremailsubscribe-pi1-email" 		type="email" 	maxlength="###MAXLENGTH_email###" 		title="###TOOLTIP_EMAIL###" 		name="###NAME_EMAIL###" 		class="form-control tx-sremailsubscribe-pi1-text" placeholder="###LABEL_EMAIL### *" required="required"/>
+			</div>
+			<div class="form-group">
+				<input type="submit" class="btn btn-lg btn-primary pull-right tx-sremailsubscribe-pi1-submit" data-identifier="submit" name="tx_sremailsubscribe_pi1[submit]" value="###LABEL_BUTTON_REGISTER###" />
+				<a href="###INFOMAIL_URL###" class="btn btn-lg btn-unsubscribe" title="###LABEL_TOOLTIP_CLICK_HERE_TO_EDIT###">###LABEL_V_WISH_TO_UPDATE_OR_DELETE###</a>
+				<div style="clear: both"></div>
+			</div>
+		</form>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div>
+</div>
+<!-- ###TEMPLATE_CREATE### end -->
+
+<p><em>ABMELDEFORMULAR</em></p>
+<!-- ###TEMPLATE_INFOMAIL### begin -->
+<div class="row">
+	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div>
+	<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+		<header><h1>###LABEL_MIDDLE_NAME###</h1></header>
+		<form name="###FORM_NAME###" id="###FORM_NAME###" method="post" action="###INFOMAIL_URL###">
+			<div>
+				###HIDDENFIELDS###
+			</div>
+			<div class="form-group">
+				<input type="email" value="###FIELD_email###" name="###PREFIXID###[fetch]" id="tx-sremailsubscribe-pi1-email" class="form-control" placeholder="###LABEL_EMAIL### *" required="required"/>
+			</div>
+			<div class="form-group">
+				<input type="submit" class="btn btn-lg btn-unsubscribe tx-sremailsubscribe-pi1-submit" name="###PREFIXID###[submit]" value="###LABEL_TITLE###" />
+			</div>
+		</form>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div>
+</div>
+<!-- ###TEMPLATE_INFOMAIL### end-->
+
+<p><em>BESTÄTIGUNGSSEITE ÜBER DEN EINGANG DER NEWSLETTER-ANMELDUNG</em></p>
+<!-- ###TEMPLATE_SETFIXED_CREATE### begin -->
+<div class="row">
+	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div>
+	<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+		<header><h1>###LABEL_MIDDLE_NAME###</h1></header>
+		<div class="alert js__ajax-response alert-success">###LABEL_V_FOLLOW_INSTRUCTIONS1###</div>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div>
+</div>
+<!-- ###TEMPLATE_SETFIXED_CREATE### end-->
+
+<p><em>BESTÄTIGUNGSSEITE ÜBER DIE ERFOLGREICHE EINTRAGUNG IN DEN NEWSLETTER</em></p>
+<!-- ###TEMPLATE_SETFIXED_OK### begin -->
+<div class="row">
+	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div>
+	<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+		<header><h1>###LABEL_MIDDLE_NAME###</h1></header>
+		<div class="alert alert-success">
+			<p>###LABEL_V_REGISTRATION_CONFIRMED_MESSAGE2###</p>
+		</div>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div>
+</div>
+<!-- ###TEMPLATE_SETFIXED_OK### end-->
+
+<p><em>BESTÄTINGUNGSMAIL ÜBER DEN EINGANG DER NEWSLETTER-ANMELDUNG</em></p>
+<!-- ###EMAIL_TEMPLATE_SETFIXED_CREATE_HTML### begin -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<head>
+		<style type="text/css">
+			###CSS_STYLES###
+		</style>
+		<title>###LABEL_V_REGISTRATION_INITIATED_SUBJECT###</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=###CHARSET###">
+		<meta name="generator" content="TYPO3 CMS">
+	</head>
+	<body>
+		<!-- ###SUB_RECORD### -->
+		<p>
+			###LABEL_V_REGISTRATION_INITIATED_MESSAGE1###
+		</p>
+		<p>
+			<a href="###SETFIXED_APPROVE_URL###">###SETFIXED_APPROVE_URL###</a>
+		</p>
+		<p>
+			###LABEL_V_REGISTRATION_INITIATED_MESSAGE2###
+		</p>
+		<p>
+			<a href="###SETFIXED_DELETE_URL###">###SETFIXED_DELETE_URL###</a>
+		</p>
+		<p>Ihr Team von überland Tecklenburg</p>
+		<p>
+			überland Tecklenburg GmbH<br/>
+			Steinbrinkheide 2<br/>
+			D-49479 Ibbenbüren <br/>
+			–<br/>
+			Tel.: +49 (0)5451 – 9 37 47 17 <br/>
+			Fax: +49 (0)5451 – 9 37 47 10<br/>
+			Mail: <a href="mailto: w.hibbeler@ueberland-tecklenburg.de">w.hibbeler@ueberland-tecklenburg.de</a><br/>
+			–<br/>
+			www.ueberland-tecklenburg.de
+		</p>
+		<p>
+			Geschäftsführer Wolfgang Hibbeler<br/>
+			Amtsgericht Steinfurt HRB 12068<br/>
+			USt.-IDNr. DE319494080
+		</p>
+		<!-- ###SUB_RECORD### -->
+	</body>
+</html>
+<!-- ###EMAIL_TEMPLATE_SETFIXED_CREATE_HTML### end-->
+
+<p><em>BESTÄTIGUNGSSEITE ÜBER DEN WUNSCH DER NEWSLETTER-ABMELDUNG</em></p>
+<!-- ###TEMPLATE_INFOMAIL_SENT### begin -->
+<div class="row">
+	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div>
+	<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+		<header><h1>###LABEL_MIDDLE_NAME###</h1></header>
+		<div class="alert js__ajax-response alert-success">###LABEL_V_FOLLOW_INSTRUCTIONS2###</div>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div>
+</div>
+<!-- ###TEMPLATE_INFOMAIL_SENT### end-->
+<!-- ###TEMPLATE_DELETE_SAVED### end-->
+
+<p><em>BESTÄTIGUNGSSEITE ÜBER EINE ERFOLGREICHE NEWSLETTER-ABMELDUNG</em></p>
+<!-- ###TEMPLATE_SETFIXED_OK_DELETE### begin -->
+<div class="row">
+	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div>
+	<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+		<header><h1>###LABEL_MIDDLE_NAME###</h1></header>
+		<div class="alert js__ajax-response alert-success">###LABEL_V_REGISTRATION_CANCELLED_MESSAGE2###</div>
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div>
+</div>
+<!-- ###TEMPLATE_SETFIXED_OK_DELETE### end-->
+
+<p><em>HINWEIS ÜBER EINEN DOPPELT ANGEKLICKTEN LINK</em></p>
+<!-- ###TEMPLATE_SETFIXED_FAILED### begin -->
+<div class="row">
+	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div>
+	<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+		<header><h1>###LABEL_MIDDLE_NAME###</h1></header>
+		<div class="alert js__ajax-response alert-warning">###LABEL_INVALIDTOKEN###</div>
+		<div class="form-group">
+			<a href="###FORM_URL###" class="btn btn-lg btn-primary pull-right">###LABEL_V_NOTIFICATION###</a>
+			<a href="###INFOMAIL_URL###" class="btn btn-lg btn-unsubscribe" title="###LABEL_TOOLTIP_CLICK_HERE_TO_EDIT###">###LABEL_V_WISH_TO_UPDATE_OR_DELETE###</a>
+		</div>
+
+	</div>
+	<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2"></div>
+</div>
+<!-- ###TEMPLATE_SETFIXED_FAILED### end-->
+
+<p><em>BESTÄTINGUNGSMAIL ÜBER DEN WUNSCH ZUR NEWSLETTER-ABMELDUNG</em></p>
+<!-- ###EMAIL_TEMPLATE_INFOMAIL_HTML### begin -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<head>
+		<style type="text/css">
+			###CSS_STYLES###
+		</style>
+		<title>###LABEL_V_INFOMAIL_SUBJECT###</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=###CHARSET###">
+		<meta name="generator" content="TYPO3 CMS">
+	</head>
+	<body>
+		<!--###SUB_RECORD###-->
+		<p>
+            ###LABEL_V_REGISTRATION_CANCELLED_MESSAGE1###
+		</p>
+		<p>
+			<a href="###SETFIXED_DELETE_URL###">###SETFIXED_DELETE_URL###</a>
+		</p>
+		<p>Ihr Team von überland Tecklenburg</p>
+		<p>
+			überland Tecklenburg GmbH<br/>
+			Steinbrinkheide 2<br/>
+			D-49479 Ibbenbüren <br/>
+			–<br/>
+			Tel.: +49 (0)5451 – 9 37 47 17 <br/>
+			Fax: +49 (0)5451 – 9 37 47 10<br/>
+			Mail: <a href="mailto: w.hibbeler@ueberland-tecklenburg.de">w.hibbeler@ueberland-tecklenburg.de</a><br/>
+			–<br/>
+			www.ueberland-tecklenburg.de
+		</p>
+		<p>
+			Geschäftsführer Wolfgang Hibbeler<br/>
+			Amtsgericht Steinfurt HRB 12068<br/>
+			USt.-IDNr. DE319494080
+		</p>
+		<!--###SUB_RECORD###-->
+	</body>
+</html>
+<!-- ###EMAIL_TEMPLATE_INFOMAIL_HTML### end-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<p><em>This is shown when the user profile has been updated.</em></p>
+<!-- ###TEMPLATE_EDIT_SAVED### begin-->
+<h4>###LABEL_V_DEAR###</h4>
+<p>###LABEL_V_REGISTRATION_UPDATED_SUBJECT###</p>
+<p>###LABEL_V_REGISTRATION_UPDATED_MESSAGE1###</p>
+<p>###LABEL_KIND_REGARDS###</p>
+<h4>###SITE_NAME###</h4>
+<!-- ###TEMPLATE_EDIT_SAVED### end-->
+
+
+
+<p><em>This template is the response page when a user has deleted his email address subscription.</em></p>
+<!-- ###TEMPLATE_DELETE_SAVED### begin-->
+<h4>###LABEL_V_DEAR###</h4>
+<p>###LABEL_V_REGISTRATION_DELETED_SUBJECT###</p>
+<p>###LABEL_V_REGISTRATION_DELETED_MESSAGE1###</p>
+<p>###LABEL_V_REGISTRATION_DELETED_MESSAGE2###</p>
+<p>###LABEL_KIND_REGARDS###</p>
+<h4>###SITE_NAME###</h4>
+
+
+
+<p><em>Invalid token template</em></p>
+<!-- ###TEMPLATE_INVALID_TOKEN### begin-->
+<h4>###LABEL_INVALIDTOKEN###</h4>
+<p>###LABEL_REGISTRATION_SORRY###</p>
+<p>###LABEL_REGISTRATION_HELP### <a href="mailto:###SITE_EMAIL###">###SITE_EMAIL###</a></p>
+<p>###LABEL_KIND_REGARDS###</p>
+<h4>###SITE_NAME###</h4>
+<!-- ###TEMPLATE_INVALID_TOKEN### end-->
+
+
+
+
+<h1>EMAIL TEMPLATES:</h1>
+
+
+
+<p style="margin-top: 20px">In these plain text email templates the first line with content is used as subject in the mails.</p>
+<p><em>This template is used to confirm to a person by email that he has created his account and no confirmation is requested.</em></p>
+<!-- ###EMAIL_TEMPLATE_CREATE_SAVED_HTML### begin -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<style type="text/css">
+###CSS_STYLES###
+</style>
+<title>###LABEL_V_REGISTRATION_CREATED_SUBJECT###</title>
+<meta http-equiv="Content-Type" content="text/html; charset=###CHARSET###">
+<meta name="generator" content="TYPO3 CMS">
+</head>
+<body>
+<!-- ###SUB_RECORD### -->
+<h4>###LABEL_V_DEAR###</h4>
+<p>###LABEL_V_REGISTRATION_CREATED_SUBJECT###</p>
+<p>###LABEL_V_REGISTRATION_CREATED_MESSAGE1###</p>
+<p>###LABEL_V_REGISTRATION_CREATED_MESSAGE2###</p>
+<p>###LABEL_KIND_REGARDS###</p>
+<h4>###SITE_NAME###</h4>
+<p><a href="###SITE_URL###">###SITE_WWW###</a><br />
+<a href="mailto:###SITE_EMAIL###">###SITE_EMAIL###</a></p>
+<!-- ###SUB_RECORD### -->
+</body>
+</html>
+<!-- ###EMAIL_TEMPLATE_CREATE_SAVED_HTML### end-->
+
+
+
+<p><em>This template is used to confirm to a person by email that he has created his email address subscription and no confirmation is requested.</em></p>
+<!-- ###EMAIL_TEMPLATE_CREATE_SAVED### begin -->
+<!-- ###SUB_RECORD### -->###LABEL_V_REGISTRATION_CREATED_SUBJECT###
+
+###LABEL_V_DEAR###
+
+###LABEL_V_REGISTRATION_CREATED_SUBJECT###
+###LABEL_V_REGISTRATION_CREATED_MESSAGE1###
+###LABEL_V_REGISTRATION_CREATED_MESSAGE2###
+
+###LABEL_KIND_REGARDS###
+###SITE_NAME###
+###SITE_URL###
+###SITE_EMAIL###
+<!-- ###SUB_RECORD### -->
+<!-- ###EMAIL_TEMPLATE_CREATE_SAVED### end-->
+
+
+
+<p><em>This template is used to confirm to a person by email that he has updated his email subscription.</em></p>
+<!-- ###EMAIL_TEMPLATE_EDIT_SAVED_HTML### begin -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<style type="text/css">
+###CSS_STYLES###
+</style>
+<title>###LABEL_V_REGISTRATION_UPDATED_SUBJECT###</title>
+<meta http-equiv="Content-Type" content="text/html; charset=###CHARSET###">
+<meta name="generator" content="TYPO3 CMS">
+</head>
+<body>
+<!-- ###SUB_RECORD### -->
+<h4>###LABEL_V_DEAR###</h4>
+<p>###LABEL_V_REGISTRATION_UPDATED_SUBJECT###</p>
+<p>###LABEL_V_REGISTRATION_UPDATED_MESSAGE1###</p>
+<p>###LABEL_KIND_REGARDS###</p>
+<h4>###SITE_NAME###</h4>
+<p><a href="###SITE_URL###">###SITE_WWW###</a><br />
+<a href="mailto:###SITE_EMAIL###">###SITE_EMAIL###</a></p>
+<!-- ###SUB_RECORD### -->
+</body>
+</html>
+<!-- ###EMAIL_TEMPLATE_EDIT_SAVED_HTML### end-->
+
+
+
+<p><em>This template is used to confirm to a person by email that he has updated his email subscription.</em></p>
+<!-- ###EMAIL_TEMPLATE_EDIT_SAVED### begin -->
+<!-- ###SUB_RECORD### -->###LABEL_V_REGISTRATION_UPDATED_SUBJECT###
+
+###LABEL_V_DEAR###
+
+###LABEL_V_REGISTRATION_UPDATED_SUBJECT###
+###LABEL_V_REGISTRATION_UPDATED_MESSAGE1###
+
+###LABEL_KIND_REGARDS###
+###SITE_NAME###
+###SITE_URL###
+###SITE_EMAIL###
+<!-- ###SUB_RECORD### -->
+<!-- ###EMAIL_TEMPLATE_EDIT_SAVED### end-->
+
+
+
+
+
+
+
+
+
+
+<p><em>This template is used to notify a person by email that he has created his email address subscription, but confirmation is required.</em></p>
+<!-- ###EMAIL_TEMPLATE_SETFIXED_CREATE### begin -->
+<!-- ###SUB_RECORD### -->###LABEL_V_REGISTRATION_INITIATED_SUBJECT###
+
+###LABEL_V_DEAR###
+
+###LABEL_V_REGISTRATION_INITIATED_MESSAGE1###
+<###SETFIXED_APPROVE_URL###>
+###LABEL_COPY_PASTE_LINK###
+
+###LABEL_V_REGISTRATION_INITIATED_MESSAGE2###
+<###SETFIXED_DELETE_URL###>
+###LABEL_COPY_PASTE_LINK###
+###LABEL_EXCUSE_US###
+
+###LABEL_KIND_REGARDS###
+###SITE_NAME###
+<###SITE_URL###>
+###SITE_EMAIL###
+
+<!-- ###SUB_RECORD### -->
+<!-- ###EMAIL_TEMPLATE_SETFIXED_CREATE### end-->
+
+
+
+<p><em>This is the template used for the administrator notification email upon a new user registration, but confirmation is required.</em></p>
+<!-- ###EMAIL_TEMPLATE_SETFIXED_CREATE_ADMIN### begin -->
+<!-- ###SUB_RECORD### -->###LABEL_V_REGISTRATION_INITIATED###
+###LABEL_V_NOTIFICATION###: ###LABEL_V_REGISTRATION_INITIATED###
+
+###LABEL_FIRST_NAME###: ###FIELD_first_name###
+###LABEL_LAST_NAME###: ###FIELD_last_name###
+###LABEL_EMAIL###: ###FIELD_email###
+<!--###SUB_INCLUDED_FIELD_comments###-->###LABEL_COMMENTS### ###TCA_INPUT_comments###<!--###SUB_INCLUDED_FIELD_comments###-->
+
+###LABEL_KIND_REGARDS###
+###SITE_NAME###
+<!-- ###SUB_RECORD### -->
+<!-- ###EMAIL_TEMPLATE_SETFIXED_CREATE_ADMIN### end-->
+
+
+<p><em>This template is used to notify a person by email that he has created his account, he needs to confirm and administrative review is required.</em></p>
+<!-- ###EMAIL_TEMPLATE_SETFIXED_CREATE_REVIEW### begin -->
+<!-- ###SUB_RECORD### -->###LABEL_V_REGISTRATION_INITIATED_SUBJECT###
+
+###LABEL_V_DEAR###
+
+###LABEL_V_REGISTRATION_INITIATED_REVIEW1###
+<###SETFIXED_APPROVE_URL###>
+###LABEL_COPY_PASTE_LINK###
+
+###LABEL_V_REGISTRATION_INITIATED_REVIEW2###
+
+###LABEL_V_REGISTRATION_INITIATED_MESSAGE2###
+<###SETFIXED_DELETE_URL###>
+###LABEL_COPY_PASTE_LINK###
+###LABEL_V_REGISTRATION_INFOMAIL_MESSAGE1###
+###LABEL_EXCUSE_US###
+
+###LABEL_V_REGISTRATION_INITIATED_MESSAGE3### ###SITE_EMAIL###
+
+###LABEL_KIND_REGARDS_INI###
+###SITE_NAME###
+<###SITE_URL###>
+###SITE_EMAIL###
+
+<!-- ###SUB_RECORD### -->
+<!-- ###EMAIL_TEMPLATE_SETFIXED_CREATE_REVIEW### end-->
+
+
+
+<p><em>This template is used to notify an invited person by email that a subscription has been created for him/her.</em></p>
+<!-- ###EMAIL_TEMPLATE_SETFIXED_INVITE_HTML### begin -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<style type="text/css">
+###CSS_STYLES###
+</style>
+<title>###LABEL_V_REGISTRATION_INVITED_SUBJECT###</title>
+<meta http-equiv="Content-Type" content="text/html; charset=###CHARSET###">
+<meta name="generator" content="TYPO3 CMS">
+</head>
+<body>
+<!-- ###SUB_RECORD### -->
+<h4>###LABEL_V_DEAR###</h4>
+<p>###LABEL_V_REGISTRATION_INVITED_MESSAGE1###<br />
+<a href="###SETFIXED_APPROVE_URL###">###SETFIXED_APPROVE_URL###</a><br />
+###LABEL_COPY_PASTE_LINK###</p>
+<p>###LABEL_V_REGISTRATION_INVITED_MESSAGE2###<br />
+<a href="###SETFIXED_DELETE_URL###">###SETFIXED_DELETE_URL###</a><br />
+###LABEL_COPY_PASTE_LINK###<br />
+###LABEL_EXCUSE_US###</p>
+<p>###LABEL_KIND_REGARDS###</p>
+<h4>###SITE_NAME###</h4>
+<p><a href="###SITE_URL###">###SITE_WWW###</a><br />
+<a href="mailto:###SITE_EMAIL###">###SITE_EMAIL###</a></p>
+<!-- ###SUB_RECORD### -->
+</body>
+</html>
+<!-- ###EMAIL_TEMPLATE_SETFIXED_INVITE_HTML### end-->
+
+
+
+<p><em>This template is used to notify an invited person by email that a subscription has been created for him/her.</em></p>
+<!-- ###EMAIL_TEMPLATE_SETFIXED_INVITE### begin -->
+<!-- ###SUB_RECORD### -->###LABEL_V_REGISTRATION_INVITED_SUBJECT###
+
+###LABEL_V_DEAR###
+
+###LABEL_V_REGISTRATION_INVITED_MESSAGE1###
+<###SETFIXED_APPROVE_URL###>
+###LABEL_COPY_PASTE_LINK###
+
+###LABEL_V_REGISTRATION_INVITED_MESSAGE2###
+<###SETFIXED_DELETE_URL###>
+###LABEL_COPY_PASTE_LINK###
+###LABEL_EXCUSE_US###
+
+###LABEL_KIND_REGARDS###
+###SITE_NAME###
+<###SITE_URL###>
+###SITE_EMAIL###
+<!-- ###SUB_RECORD### -->
+<!-- ###EMAIL_TEMPLATE_SETFIXED_INVITE### end-->
+
+
+
+<p><em>This is the template used for the administrator notification email upon a new email address subscription.</em></p>
+<!-- ###EMAIL_TEMPLATE_SETFIXED_INVITE_ADMIN### begin -->
+<!-- ###SUB_RECORD### -->###LABEL_V_REGISTRATION_INVITED###
+###LABEL_V_NOTIFICATION###:
+
+###LABEL_V_REGISTRATION_INVITED###
+
+###LABEL_FIRST_NAME###: ###FIELD_first_name###
+###LABEL_LAST_NAME###: ###FIELD_last_name###
+###LABEL_EMAIL###: ###FIELD_email###
+
+###LABEL_KIND_REGARDS###
+###SITE_NAME###
+<!-- ###SUB_RECORD### -->
+<!-- ###EMAIL_TEMPLATE_SETFIXED_INVITE_ADMIN### end-->
+
+
+
+<p><em>This template is used to confirm to a person by email that he has approved email address subscription.</em></p>
+<!-- ###EMAIL_TEMPLATE_SETFIXED_APPROVE_HTML### begin -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<style type="text/css">
+###CSS_STYLES###
+</style>
+<title>###LABEL_V_REGISTRATION_CONFIRMED_SUBJECT###</title>
+<meta http-equiv="Content-Type" content="text/html; charset=###CHARSET###">
+<meta name="generator" content="TYPO3 CMS">
+</head>
+<body>
+<!-- ###SUB_RECORD### -->
+<h4>###LABEL_V_DEAR###</h4>
+<p>###LABEL_V_REGISTRATION_CONFIRMED_SUBJECT###</p>
+<p>###LABEL_V_REGISTRATION_CONFIRMED_MESSAGE1###</p>
+<p>###LABEL_V_REGISTRATION_CONFIRMED_MESSAGE2###</p>
+<p>###LABEL_KIND_REGARDS###</p>
+<h4>###SITE_NAME###</h4>
+<p><a href="###SITE_URL###">###SITE_WWW###</a><br />
+<a href="mailto:###SITE_EMAIL###">###SITE_EMAIL###</a></p>
+<!-- ###SUB_RECORD### -->
+</body>
+</html>
+<!-- ###EMAIL_TEMPLATE_SETFIXED_APPROVE_HTML### end-->
+
+
+
+<p><em>This template is used to send the 'infomail' email.</em></p>
+<!-- ###EMAIL_TEMPLATE_INFOMAIL### begin -->
+<!--###SUB_RECORD###-->###LABEL_V_INFOMAIL_SUBJECT###
+
+###LABEL_V_DEAR###
+
+###LABEL_V_INFOMAIL_REASON###
+
+###LABEL_V_INFOMAIL_MESSAGE1###
+<###SETFIXED_EDIT_URL###>
+###LABEL_COPY_PASTE_LINK###
+
+###LABEL_V_INFOMAIL_MESSAGE2###
+<###SETFIXED_DELETE_URL###>
+###LABEL_COPY_PASTE_LINK###
+
+###LABEL_KIND_REGARDS###
+###SITE_NAME###
+###SITE_URL###
+###SITE_EMAIL###
+<!--###SUB_RECORD###-->
+<!-- ###EMAIL_TEMPLATE_INFOMAIL### end-->
+
+
+
+<p><em>This template is used to send the 'infomail' email.</em></p>
+<!-- ###EMAIL_TEMPLATE_INFOMAIL_NORECORD_HTML### begin -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<style type="text/css">
+###CSS_STYLES###
+</style>
+<title>###LABEL_V_INFOMAIL_NORECORD_SUBJECT###</title>
+<meta http-equiv="Content-Type" content="text/html; charset=###CHARSET###">
+<meta name="generator" content="TYPO3 CMS">
+</head>
+<body>
+<!--###SUB_RECORD###-->
+<h4>###LABEL_HELLO###</h4>
+<p>###LABEL_V_INFOMAIL_NORECORD_MESSAGE1###</p>
+<p>###LABEL_V_INFOMAIL_NORECORD_MESSAGE2### <a href="mailto:###SITE_EMAIL###">###SITE_EMAIL###</a></p>
+<p>###LABEL_KIND_REGARDS###</p>
+<h4>###SITE_NAME###</h4>
+<p><a href="###SITE_URL###">###SITE_WWW###</a><br />
+<a href="mailto:###SITE_EMAIL###">###SITE_EMAIL###</a></p>
+<!--###SUB_RECORD###-->
+</body>
+</html>
+<!-- ###EMAIL_TEMPLATE_INFOMAIL_NORECORD_HTML### end-->
+
+
+
+<p><em>This template is used to confirm to a person by email that he has deleted his email address subscription.</em></p>
+<!-- ###EMAIL_TEMPLATE_DELETE_SAVED_HTML### begin -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<style type="text/css">
+###CSS_STYLES###
+</style>
+<title>###LABEL_V_REGISTRATION_DELETED_SUBJECT###</title>
+<meta http-equiv="Content-Type" content="text/html; charset=###CHARSET###">
+<meta name="generator" content="TYPO3 CMS">
+</head>
+<body>
+<!-- ###SUB_RECORD### -->
+<h4>###LABEL_V_DEAR###</h4>
+<p>###LABEL_V_REGISTRATION_DELETED_SUBJECT###</p>
+<p>###LABEL_V_REGISTRATION_DELETED_MESSAGE1###</p>
+<p>###LABEL_V_REGISTRATION_DELETED_MESSAGE2###</p>
+<p>###LABEL_KIND_REGARDS###</p>
+<h4>###SITE_NAME###</h4>
+<p><a href="###SITE_URL###">###SITE_WWW###</a><br />
+<a href="mailto:###SITE_EMAIL###">###SITE_EMAIL###</a></p>
+<!-- ###SUB_RECORD### -->
+</body>
+</html>
+<!-- ###EMAIL_TEMPLATE_DELETE_SAVED_HTML### end-->
+
+
+
+<p><em>This template is used to confirm to a person by email that he has deleted his email address subscription.</em></p>
+<!-- ###EMAIL_TEMPLATE_DELETE_SAVED### begin -->
+<!-- ###SUB_RECORD### -->###LABEL_V_REGISTRATION_DELETED_SUBJECT###
+
+###LABEL_V_DEAR###
+
+###LABEL_V_REGISTRATION_DELETED_SUBJECT###
+
+###LABEL_V_REGISTRATION_DELETED_MESSAGE1###
+
+###LABEL_V_REGISTRATION_DELETED_MESSAGE2###
+
+###LABEL_KIND_REGARDS###
+###SITE_NAME###
+###SITE_URL###
+###SITE_EMAIL###
+<!-- ###SUB_RECORD### -->
+<!-- ###EMAIL_TEMPLATE_DELETE_SAVED### end-->
+
+</body>
+</html>

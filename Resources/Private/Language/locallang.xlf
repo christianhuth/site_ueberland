@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='utf-8'?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-06-03T04:27:54Z" product-name="sp_ueberland">
+		<header/>
+		<body>
+			<trans-unit id="header_image_name">
+				<source>ueberland-logo-subline_EN.svg</source>
+			</trans-unit>
+			<trans-unit id="slider_link">
+				<source>more details</source>
+			</trans-unit>
+			<trans-unit id="footer_contact">
+				<source>Contact</source>
+			</trans-unit>
+			<trans-unit id="footer_opening_hours">
+				<source>Opening hours</source>
+			</trans-unit>
+			<trans-unit id="footer_monday_abbreviation">
+				<source>Mon</source>
+			</trans-unit>
+			<trans-unit id="footer_monday_opening_hours">
+				<source>08:00 - 17:00</source>
+			</trans-unit>
+			<trans-unit id="footer_tuesday_abbreviation">
+				<source>Tue</source>
+			</trans-unit>
+			<trans-unit id="footer_tuesday_opening_hours">
+				<source>08:00 - 17:00</source>
+			</trans-unit>
+			<trans-unit id="footer_wednesday_abbreviation">
+				<source>Wed</source>
+			</trans-unit>
+			<trans-unit id="footer_wednesday_opening_hours">
+				<source>08:00 - 17:00</source>
+			</trans-unit>
+			<trans-unit id="footer_thursday_abbreviation">
+				<source>Thu</source>
+			</trans-unit>
+			<trans-unit id="footer_thursday_opening_hours">
+				<source>08:00 - 17:00</source>
+			</trans-unit>
+			<trans-unit id="footer_friday_abbreviation">
+				<source>Fri</source>
+			</trans-unit>
+			<trans-unit id="footer_friday_opening_hours">
+				<source>08:00 - 16:00</source>
+			</trans-unit>
+			<trans-unit id="footer_saturday_abbreviation">
+				<source>Sat</source>
+			</trans-unit>
+			<trans-unit id="footer_sunday_abbreviation">
+				<source>Sun</source>
+			</trans-unit>
+			<trans-unit id="footer_closed">
+				<source>Closed</source>
+			</trans-unit>
+			<trans-unit id="footer_info_service">
+				<source>Info &amp; service</source>
+			</trans-unit>
+			<trans-unit id="footer_newsletter_subscription">
+				<source>Newsletter subscription</source>
+			</trans-unit>
+			<trans-unit id="footer_newsletter_text">
+				<source>Subscribe to our ueberland newsletter now and stay up to date with the latest offers.</source>
+			</trans-unit>
+			<trans-unit id="footer_newsletter_button">
+				<source>Subscribe now</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
