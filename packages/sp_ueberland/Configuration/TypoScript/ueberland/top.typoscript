@@ -1,0 +1,8 @@
+page {
+    includeCSS {
+        top = EXT:sp_ueberland/Resources/Public/Css/top.css
+    }
+    includeJSFooter {
+        top = EXT:sp_ueberland/Resources/Public/JavaScript/top.js
+    }
+}

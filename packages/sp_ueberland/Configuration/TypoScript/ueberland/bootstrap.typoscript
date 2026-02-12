@@ -1,0 +1,3 @@
+page.includeCSS.file1 = EXT:sp_ueberland/Resources/Public/Css/bootstrap_3.3.7.min.css
+
+page.includeJS.file100 = EXT:sp_ueberland/Resources/Public/JavaScript/bootstrap_3.3.7.min.js

@@ -1,0 +1,76 @@
+lib.navigation = COA
+lib.navigation {
+    
+    wrap = <nav class="navbar navbar-default"> <div class="container"> | </div> </nav>
+    wrap = |
+ 
+    10 = COA
+    10 {
+        wrap = <div class="navbar-header"> | </div>
+        10 = COA
+        10 {
+            // hamburger icon:
+            wrap = <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">|</button>
+            10 = TEXT
+            10.value = <span class="sr-only">Toggle navigation</span>
+            20 = TEXT
+            20.value = <span class="icon-bar"></span>
+            21 < .20
+            22 < .20
+        }
+    }
+ 
+    20 = HMENU
+    20 {
+        wrap = <div id="navbar" class="navbar-collapse collapse"> <ul class="nav navbar-nav"> | </ul> </div>
+ 
+        1 = TMENU
+        1 {
+            expAll = 1
+ 
+            NO = 1
+            NO {
+                ATagTitle.field = title
+                wrapItemAndSub = <li>|</li>
+            }
+ 
+            CUR < .NO
+            CUR {
+                wrapItemAndSub = <li class="active">|</li>
+            }
+ 
+            ACT < .CUR
+ 
+            IFSUB = 1
+            IFSUB {
+                ATagTitle.field = title
+                ATagParams = class="dropdown-toggle" role="button" aria-expanded="false"
+                linkWrap = |
+                ATagBeforeWrap = 1
+                wrapItemAndSub = <li class="dropdown">|</li>
+            }
+ 
+            ACTIFSUB < .IFSUB
+            ACTIFSUB {
+                wrapItemAndSub = <li class="dropdown active">|</li>
+            }
+ 
+            CURIFSUB < .ACTIFSUB
+        }
+ 
+        2 < .1
+        2 {
+            wrap = <ul class="dropdown-menu">|</ul>
+ 
+            SPC = 1
+            SPC {
+                ATagTitle.field = title
+                wrapItemAndSub = <li class="dropdown-header">|</li>
+            }
+            
+            IFSUB < .NO
+            SPCIFSUB < .IFSUB
+        }
+
+    }
+}

@@ -1,0 +1,34 @@
+<f:if condition="{pagination.allPageNumbers -> f:count()} > 1">
+	<nav aria-label="Page navigation" class="paginationContainer">
+		<div class="text-center">
+			<ul class="pagination pagination-lg">
+				<li class="previous{f:if(condition: pagination.previousPageNumber, else: ' disabled')}">
+					<f:link.action arguments="{currentPage: pagination.previousPageNumber}">
+                        <span aria-hidden="true">&laquo;</span>
+					</f:link.action>
+                </li>
+				<f:for each="{pagination.allPageNumbers}" as="page">
+					<f:if condition="{page} == {paginator.currentPageNumber}">
+						<f:then>
+							<li class="active">
+								<span>{page} <span class="sr-only">(current)</span></span>
+							</li>
+						</f:then>
+						<f:else>
+							<li>
+								<f:link.action arguments="{currentPage: page}">
+									{page}
+								</f:link.action>
+							</li>
+						</f:else>
+					</f:if>
+				</f:for>
+				<li class="next{f:if(condition: pagination.nextPageNumber, else: ' disabled')}">
+					<f:link.action arguments="{currentPage: pagination.nextPageNumber}">
+						<span aria-hidden="true">&raquo;</span>
+					</f:link.action>
+                </li>
+			</ul>
+		</div>
+	</nav>
+</f:if>

@@ -1,0 +1,24 @@
+.tx-srlanguagemenu {
+	height: 50px;
+	margin: 0;
+}
+
+.tx-srlanguagemenu a.flag {
+	display: block;
+	height: 50px;
+	width: 50px;
+}
+
+.tx-srlanguagemenu .CUR,
+.tx-srlanguagemenu .INACT,
+.tx-srlanguagemenu .NO {
+	height: 50px;
+	margin: 0;
+	width: 50px;
+}
+
+.tx-srlanguagemenu img.tx-srlanguagemenu-flag-linked,
+.tx-srlanguagemenu img.tx-srlanguagemenu-flag-unlinked {
+	margin: 15px 10px;
+	width: 30px;
+}

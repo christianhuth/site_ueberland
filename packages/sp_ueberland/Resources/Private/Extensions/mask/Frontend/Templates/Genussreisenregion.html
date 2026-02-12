@@ -1,0 +1,11 @@
+<div class="genussregion-teaser">
+	<h3 class="genussregion-headline">{data.tx_mask_ueberschrift}</h3>
+	<div class="genussregion-teasertext"><f:format.html>{data.tx_mask_teaser}</f:format.html></div>
+	<div class="genussregion-map">
+		<f:for each="{data.tx_mask_bild}" as="file">
+			<f:link.typolink parameter="{data.tx_mask_href}">
+				<f:image image="{file}" alt="{file.alternative}" title="{file.title}" width="200" />
+			</f:link.typolink>
+		</f:for>
+	</div>
+</div>

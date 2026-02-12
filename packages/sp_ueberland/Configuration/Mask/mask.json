@@ -1,0 +1,558 @@
+{
+    "version": "0.1.0",
+    "restructuringDone": false,
+    "tables": {
+        "sys_file_reference": {
+            "sql": {
+                "tx_mask_bild": {
+                    "sys_file_reference": {
+                        "tx_mask_bild": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_icon": {
+                    "sys_file_reference": {
+                        "tx_mask_icon": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_image": {
+                    "sys_file_reference": {
+                        "tx_mask_image": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_profilbild": {
+                    "sys_file_reference": {
+                        "tx_mask_profilbild": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                }
+            }
+        },
+        "tt_content": {
+            "elements": {
+                "button": {
+                    "color": "#000000",
+                    "colorOverlay": "",
+                    "columns": [
+                        "tx_mask_button_text",
+                        "tx_mask_button_link"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "",
+                        ""
+                    ],
+                    "icon": "fa-adjust",
+                    "iconOverlay": "",
+                    "key": "button",
+                    "label": "Button",
+                    "labels": [
+                        "Text",
+                        "Link"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 0
+                },
+                "genussreisenregion": {
+                    "color": "#000000",
+                    "colorOverlay": "",
+                    "columns": [
+                        "tx_mask_ueberschrift",
+                        "tx_mask_teaser",
+                        "tx_mask_bild",
+                        "tx_mask_href"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "icon": "fa-map",
+                    "iconOverlay": "",
+                    "key": "genussreisenregion",
+                    "label": "Region (Genussreisen)",
+                    "labels": [
+                        "\u00dcberschrift",
+                        "Teaser",
+                        "Bild",
+                        "Link"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 0
+                },
+                "iconwithtext": {
+                    "color": "#000000",
+                    "colorOverlay": "",
+                    "columns": [
+                        "tx_mask_text",
+                        "tx_mask_icon",
+                        "tx_mask_link"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "",
+                        "",
+                        ""
+                    ],
+                    "icon": "fa-adn",
+                    "iconOverlay": "",
+                    "key": "iconwithtext",
+                    "label": "Icon mit Text",
+                    "labels": [
+                        "Text",
+                        "Icon",
+                        "Link"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 0
+                },
+                "konturbox": {
+                    "color": "#000000",
+                    "colorOverlay": "",
+                    "columns": [
+                        "tx_mask_konturboxtyp",
+                        "tx_mask_highlightedtext",
+                        "tx_mask_buttontext",
+                        "tx_mask_buttonlink",
+                        "tx_mask_image",
+                        "tx_mask_experte"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "icon": "fa-picture-o",
+                    "iconOverlay": "",
+                    "key": "konturbox",
+                    "label": "Konturbox",
+                    "labels": [
+                        "Typ",
+                        "Hervorgehobener Text",
+                        "Button Beschriftung",
+                        "Button Link",
+                        "Bild",
+                        "Experte"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 0
+                },
+                "newsbox": {
+                    "color": "#000000",
+                    "colorOverlay": "",
+                    "columns": [
+                        "image",
+                        "header",
+                        "subheader",
+                        "header_link"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "icon": "fa-newspaper-o",
+                    "iconOverlay": "",
+                    "key": "newsbox",
+                    "label": "News Box",
+                    "labels": [
+                        "Bild",
+                        "\u00dcberschrift",
+                        "Text",
+                        "Link"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 0
+                },
+                "teammitglied2": {
+                    "color": "#000000",
+                    "colorOverlay": "",
+                    "columns": [
+                        "tx_mask_fullname",
+                        "tx_mask_profilbild",
+                        "tx_mask_function",
+                        "tx_mask_email",
+                        "tx_mask_telephone"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                    ],
+                    "icon": "fa-address-book-o",
+                    "iconOverlay": "",
+                    "key": "teammitglied2",
+                    "label": "Teammitglied",
+                    "labels": [
+                        "Name",
+                        "Profilbild",
+                        "Funktion",
+                        "E-Mail",
+                        "Telefon"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 0
+                }
+            },
+            "sql": {
+                "tx_mask_bild": {
+                    "tt_content": {
+                        "tx_mask_bild": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_button_link": {
+                    "tt_content": {
+                        "tx_mask_button_link": "tinytext"
+                    }
+                },
+                "tx_mask_button_text": {
+                    "tt_content": {
+                        "tx_mask_button_text": "tinytext"
+                    }
+                },
+                "tx_mask_buttonlink": {
+                    "tt_content": {
+                        "tx_mask_buttonlink": "tinytext"
+                    }
+                },
+                "tx_mask_buttontext": {
+                    "tt_content": {
+                        "tx_mask_buttontext": "tinytext"
+                    }
+                },
+                "tx_mask_email": {
+                    "tt_content": {
+                        "tx_mask_email": "tinytext"
+                    }
+                },
+                "tx_mask_experte": {
+                    "tt_content": {
+                        "tx_mask_experte": "tinytext"
+                    }
+                },
+                "tx_mask_fullname": {
+                    "tt_content": {
+                        "tx_mask_fullname": "tinytext"
+                    }
+                },
+                "tx_mask_function": {
+                    "tt_content": {
+                        "tx_mask_function": "tinytext"
+                    }
+                },
+                "tx_mask_highlightedtext": {
+                    "tt_content": {
+                        "tx_mask_highlightedtext": "mediumtext"
+                    }
+                },
+                "tx_mask_href": {
+                    "tt_content": {
+                        "tx_mask_href": "tinytext"
+                    }
+                },
+                "tx_mask_icon": {
+                    "tt_content": {
+                        "tx_mask_icon": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_image": {
+                    "tt_content": {
+                        "tx_mask_image": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_konturboxtyp": {
+                    "tt_content": {
+                        "tx_mask_konturboxtyp": "tinytext"
+                    }
+                },
+                "tx_mask_link": {
+                    "tt_content": {
+                        "tx_mask_link": "tinytext"
+                    }
+                },
+                "tx_mask_profilbild": {
+                    "tt_content": {
+                        "tx_mask_profilbild": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_teaser": {
+                    "tt_content": {
+                        "tx_mask_teaser": "mediumtext"
+                    }
+                },
+                "tx_mask_telephone": {
+                    "tt_content": {
+                        "tx_mask_telephone": "tinytext"
+                    }
+                },
+                "tx_mask_text": {
+                    "tt_content": {
+                        "tx_mask_text": "tinytext"
+                    }
+                },
+                "tx_mask_ueberschrift": {
+                    "tt_content": {
+                        "tx_mask_ueberschrift": "tinytext"
+                    }
+                }
+            },
+            "tca": {
+                "header": {
+                    "coreField": 1,
+                    "fullKey": "header",
+                    "key": "header"
+                },
+                "header_link": {
+                    "coreField": 1,
+                    "fullKey": "header_link",
+                    "key": "header_link"
+                },
+                "image": {
+                    "coreField": 1,
+                    "fullKey": "image",
+                    "key": "image"
+                },
+                "subheader": {
+                    "coreField": 1,
+                    "fullKey": "subheader",
+                    "key": "subheader"
+                },
+                "tx_mask_bild": {
+                    "config": {
+                        "maxitems": "1",
+                        "minitems": "1"
+                    },
+                    "fullKey": "tx_mask_bild",
+                    "imageoverlayPalette": 1,
+                    "key": "bild",
+                    "type": "file"
+                },
+                "tx_mask_button_link": {
+                    "config": {
+                        "eval": "required",
+                        "renderType": "inputLink",
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_button_link",
+                    "key": "button_link",
+                    "type": "link"
+                },
+                "tx_mask_button_text": {
+                    "config": {
+                        "eval": "required",
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_button_text",
+                    "key": "button_text",
+                    "type": "string"
+                },
+                "tx_mask_buttonlink": {
+                    "config": {
+                        "eval": "trim",
+                        "renderType": "inputLink",
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_buttonlink",
+                    "key": "buttonlink",
+                    "type": "link"
+                },
+                "tx_mask_buttontext": {
+                    "config": {
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_buttontext",
+                    "key": "buttontext",
+                    "type": "string"
+                },
+                "tx_mask_email": {
+                    "config": {
+                        "eval": "required",
+                        "renderType": "inputLink",
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_email",
+                    "key": "email",
+                    "type": "link"
+                },
+                "tx_mask_experte": {
+                    "config": {
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_experte",
+                    "key": "experte",
+                    "type": "string"
+                },
+                "tx_mask_fullname": {
+                    "config": {
+                        "eval": "required",
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_fullname",
+                    "key": "fullname",
+                    "type": "string"
+                },
+                "tx_mask_function": {
+                    "config": {
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_function",
+                    "key": "function",
+                    "type": "string"
+                },
+                "tx_mask_highlightedtext": {
+                    "config": {
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_highlightedtext",
+                    "key": "highlightedtext",
+                    "type": "text"
+                },
+                "tx_mask_href": {
+                    "config": {
+                        "renderType": "inputLink",
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_href",
+                    "key": "href",
+                    "type": "link"
+                },
+                "tx_mask_icon": {
+                    "config": {
+                        "appearance": {
+                            "useSortable": "1"
+                        },
+                        "maxitems": "1",
+                        "minitems": "1"
+                    },
+                    "fullKey": "tx_mask_icon",
+                    "imageoverlayPalette": 1,
+                    "key": "icon",
+                    "type": "file"
+                },
+                "tx_mask_image": {
+                    "config": {
+                        "minitems": ""
+                    },
+                    "fullKey": "tx_mask_image",
+                    "imageoverlayPalette": 1,
+                    "key": "image",
+                    "type": "file"
+                },
+                "tx_mask_konturboxtyp": {
+                    "config": {
+                        "items": [
+                            [
+                                "Buttonbox",
+                                "buttonbox",
+                                "",
+                                "",
+                                ""
+                            ],
+                            [
+                                "Expertenbox",
+                                "expertenbox",
+                                "",
+                                "",
+                                ""
+                            ],
+                            [
+                                "Iconbox",
+                                "iconbox",
+                                "",
+                                "",
+                                ""
+                            ],
+                            [
+                                "Textbox",
+                                "textbox",
+                                "",
+                                "",
+                                ""
+                            ],
+                            [
+                                "Bildbox",
+                                "bildbox",
+                                "",
+                                "",
+                                ""
+                            ]
+                        ],
+                        "maxitems": "1",
+                        "renderType": "selectSingle",
+                        "type": "select"
+                    },
+                    "fullKey": "tx_mask_konturboxtyp",
+                    "key": "konturboxtyp",
+                    "type": "select"
+                },
+                "tx_mask_link": {
+                    "config": {
+                        "eval": "trim",
+                        "renderType": "inputLink",
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_link",
+                    "key": "link",
+                    "type": "link"
+                },
+                "tx_mask_profilbild": {
+                    "allowedFileExtensions": "jpg,png",
+                    "config": {
+                        "maxitems": "1",
+                        "minitems": "0"
+                    },
+                    "fullKey": "tx_mask_profilbild",
+                    "imageoverlayPalette": 1,
+                    "key": "profilbild",
+                    "type": "file"
+                },
+                "tx_mask_teaser": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "eval": "required",
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_teaser",
+                    "key": "teaser",
+                    "type": "richtext"
+                },
+                "tx_mask_telephone": {
+                    "config": {
+                        "eval": "required",
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_telephone",
+                    "key": "telephone",
+                    "type": "string"
+                },
+                "tx_mask_text": {
+                    "config": {
+                        "eval": "required",
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_text",
+                    "key": "text",
+                    "type": "string"
+                },
+                "tx_mask_ueberschrift": {
+                    "config": {
+                        "eval": "required",
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_ueberschrift",
+                    "key": "ueberschrift",
+                    "type": "string"
+                }
+            }
+        }
+    }
+}

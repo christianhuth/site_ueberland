@@ -1,0 +1,4 @@
+######################
+####  TYPOSCRIPT  ####
+######################
+@import 'EXT:bootstrap_grids/Configuration/TypoScript/DataProcessingLibContentElement/setup.typoscript'

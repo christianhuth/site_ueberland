@@ -1,0 +1,4 @@
+######################
+####  TYPOSCRIPT  ####
+######################
+@import 'EXT:mask/Configuration/TypoScript/setup.typoscript'

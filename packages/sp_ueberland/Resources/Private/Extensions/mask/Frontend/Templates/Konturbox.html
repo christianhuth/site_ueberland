@@ -1,0 +1,40 @@
+<div class="konturbox konturbox-{data.tx_mask_konturboxtyp}">
+	<f:render section="konturbox-{data.tx_mask_konturboxtyp}" arguments="{data: data}"/>
+</div>
+
+<f:section name="konturbox-buttonbox">
+	<div class="highlightedtext">&#187;<f:format.nl2br>{data.tx_mask_highlightedtext}</f:format.nl2br>&#171;</div>
+	<button type="button" class="btn btn-primary"><f:link.typolink parameter="{data.tx_mask_buttonlink}">{data.tx_mask_buttontext} →</f:link.typolink></button>
+</f:section>
+
+<f:section name="konturbox-expertenbox">
+	<div class="highlightedtext">&#187;<f:format.nl2br>{data.tx_mask_highlightedtext}</f:format.nl2br>&#171;</div>
+	<div class="experten-subline">{data.tx_mask_experte}</div>
+</f:section>
+
+<f:section name="konturbox-iconbox">
+	<div class="icon">
+		<f:if condition="{data.tx_mask_image}">
+			<f:for each="{data.tx_mask_image}" as="file" iteration="iterator">
+				<f:if condition="{iterator.isFirst}">
+					<f:image image="{file}" alt="{file.alternative}" title="{file.title}" width="200" />
+				</f:if>
+			</f:for>
+		</f:if>
+	</div>
+	<div class="highlightedtext">&#187;<f:format.nl2br>{data.tx_mask_highlightedtext}</f:format.nl2br>&#171;</div>
+</f:section>
+
+<f:section name="konturbox-textbox">
+	<div class="highlightedtext">&#187;<f:format.nl2br>{data.tx_mask_highlightedtext}</f:format.nl2br>&#171;</div>
+</f:section>
+
+<f:section name="konturbox-bildbox">
+	<f:if condition="{data.tx_mask_image}">
+		<f:for each="{data.tx_mask_image}" as="file" iteration="iterator">
+			<f:if condition="{iterator.isFirst}">
+				<f:image image="{file}" alt="{file.alternative}" title="{file.title}" width="200" />
+			</f:if>
+		</f:for>
+	</f:if>
+</f:section>

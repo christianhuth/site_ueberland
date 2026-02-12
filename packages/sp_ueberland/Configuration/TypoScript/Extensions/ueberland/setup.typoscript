@@ -1,0 +1,8 @@
+######################
+####  TYPOSCRIPT  ####
+######################
+@import 'EXT:ueberland/Configuration/TypoScript/setup.typoscript'
+
+######################
+####  SITECONFIG  ####
+######################

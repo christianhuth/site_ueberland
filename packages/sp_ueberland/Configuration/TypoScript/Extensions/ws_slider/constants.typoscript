@@ -1,0 +1,25 @@
+######################
+####  TYPOSCRIPT  ####
+######################
+@import 'EXT:ws_slider/Configuration/TypoScript/constants.typoscript'
+@import 'EXT:ws_slider/Configuration/TypoScript/Assets/Owl/constants.typoscript'
+@import 'EXT:ws_slider/Configuration/TypoScript/Renderer/Owl/constants.typoscript'
+
+######################
+####  SITECONFIG  ####
+######################
+plugin.tx_wsslider.settings.owl.items = 1
+plugin.tx_wsslider.settings.owl.responsive.576.items = 1
+plugin.tx_wsslider.settings.owl.responsive.768.items = 1
+plugin.tx_wsslider.settings.owl.responsive.992.items = 1
+plugin.tx_wsslider.settings.owl.responsive.1200.items = 1
+plugin.tx_wsslider.settings.owl.responsive.1400.items = 1
+plugin.tx_wsslider.settings.owl.navSpeed = 3500
+plugin.tx_wsslider.settings.owl.loop = true
+plugin.tx_wsslider.settings.owl.autoplay = true
+plugin.tx_wsslider.settings.owl.autoplayHoverPause = true
+plugin.tx_wsslider.settings.owl.autoplaySpeed = 3500
+plugin.tx_wsslider.settings.owl.checkVisible = false
+plugin.tx_wsslider.view.partialRootPath = EXT:sp_ueberland/Resources/Private/Extensions/ws_slider/Partials/
+plugin.tx_wsslider.settings.owl.nav = true
+plugin.tx_wsslider.settings.owl.dots = false

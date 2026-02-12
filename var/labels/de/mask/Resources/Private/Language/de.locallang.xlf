@@ -1,0 +1,1443 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+  <file source-language="en" datatype="plaintext" original="messages" date="2015-02-12T18:53:00Z" product-name="mask" target-language="de">
+    <header/>
+    <body>
+      <trans-unit id="tx_mask.field.string" approved="yes">
+        <source>String</source>
+        <target state="final">Text</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.integer" approved="yes">
+        <source>Integer</source>
+        <target state="final">Ganzzahl</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.float" approved="yes">
+        <source>Float</source>
+        <target state="final">Fließkommazahl</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.link" approved="yes">
+        <source>Link</source>
+        <target state="final">Link</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.date" approved="yes">
+        <source>Date</source>
+        <target state="final">Datum</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.datetime" approved="yes">
+        <source>Datetime</source>
+        <target state="final">Datum / Zeit</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.timestamp" approved="yes">
+        <source>Timestamp</source>
+        <target state="final">Zeitstempel</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.timestamp_eval" approved="yes">
+        <source>Date type</source>
+        <target state="final">Datums Typ</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.text" approved="yes">
+        <source>Text</source>
+        <target state="final">Text</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.richtext" approved="yes">
+        <source>Richtext</source>
+        <target state="final">Rich Text</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.check" approved="yes">
+        <source>Checkbox</source>
+        <target state="final">Checkbox</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.radio" approved="yes">
+        <source>Radiobutton</source>
+        <target state="final">Radiobutton</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.select" approved="yes">
+        <source>Selectbox</source>
+        <target state="final">Selectbox</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.group" approved="yes">
+        <source>Group</source>
+        <target state="final">Gruppe</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.file" approved="yes">
+        <source>File</source>
+        <target state="final">Datei</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.inline" approved="yes">
+        <source>Repeating</source>
+        <target state="final">Wiederholung</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.tab" approved="yes">
+        <source>Tab</source>
+        <target state="final">Reiter</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.palette" approved="yes">
+        <source>Palette</source>
+        <target state="final">Palette</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.linebreak" approved="yes">
+        <source>Linebreak</source>
+        <target state="final">Zeilenumbruch</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.content" approved="yes">
+        <source>Content</source>
+        <target state="final">Inhalt</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.titleAdd" approved="yes">
+        <source>Add item</source>
+        <target state="final">Element hinzufügen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.titleDelete" approved="yes">
+        <source>Delete element</source>
+        <target state="final">Element löschen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.titleMove" approved="yes">
+        <source>Move item</source>
+        <target state="final">Element verschieben</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.required" approved="yes">
+        <source>Required</source>
+        <target state="final">Pflichtfeld</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.required.description" approved="yes">
+        <source>A non-empty value is required in the field</source>
+        <target state="final">Dieses Feld ist erforderlich</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.trim" approved="yes">
+        <source>Trim</source>
+        <target state="final">Leerzeichen entfernen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.trim.description" approved="yes">
+        <source>White spaces are trimmed away</source>
+        <target state="final">Leerzeichen werden entfernt</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.alpha.label" approved="yes">
+        <source>Alpha</source>
+        <target state="final">Alpha</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.alpha" approved="yes">
+        <source>Allows only a-zA-Z characters</source>
+        <target state="final">Erlaubt nur a-zA-Z Zeichen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.int" approved="yes">
+        <source>Value is casted to integer</source>
+        <target state="final">Wert wird zu einer Ganzzahl umgewandelt</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.alphanum.label" approved="yes">
+        <source>Alphanumeric</source>
+        <target state="final">Alphanumerisch</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.alphanum" approved="yes">
+        <source>Same as “alpha” but allows also “0-9”</source>
+        <target state="final">Wie „Alpha“, erlaubt aber auch „0-9“</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.alphanum_x.label" approved="yes">
+        <source>Alphanumeric X</source>
+        <target state="final">Alphanumerisch X</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.alphanum_x" approved="yes">
+        <source>Same as “alphanum” but allows also “_” and “-” chars</source>
+        <target state="final">Dasselbe wie „Alphanumerisch“, erlaubt aber auch „_“ und „-“Zeichen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.domainname.label" approved="yes">
+        <source>Domainname</source>
+        <target state="final">Domainname</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.domainname" approved="yes">
+        <source>Allows a domain name such as “example.com”</source>
+        <target state="final">Erlaubt einen Domain-Namen wie „beispiel.com“</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.email.label" approved="yes">
+        <source>E-Mail</source>
+        <target state="final">E-Mail</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.email" approved="yes">
+        <source>Server-side validation of an email address</source>
+        <target state="final">Serverseitige Überprüfung einer E-Mail-Adresse</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.lower.label" approved="yes">
+        <source>Lowercase</source>
+        <target state="final">Kleinbuchstaben</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.lower" approved="yes">
+        <source>Converts the string to lowercase</source>
+        <target state="final">Wandelt alle Buchstaben in Kleinbuchstaben um</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.md5.label" approved="yes">
+        <source>md5</source>
+        <target state="final">md5</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.md5" approved="yes">
+        <source>Will convert the input value to its md5-hash</source>
+        <target state="final">Konvertiert den Eingabewert in seinen md5-Hash</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.nospace.label" approved="yes">
+        <source>No space</source>
+        <target state="final">Keine Leerzeichen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.nospace" approved="yes">
+        <source>Removes all occurrences of space characters</source>
+        <target state="final">Entfernt alle Leerzeichen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.null.label" approved="yes">
+        <source>Null</source>
+        <target state="final">Null</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.null" approved="yes">
+        <source>An empty value will be stored as NULL in the database</source>
+        <target state="final">Ein leerer Wert wird als NULL in der Datenbank gespeichert</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.num.label" approved="yes">
+        <source>Numeric</source>
+        <target state="final">Numerisch</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.num" approved="yes">
+        <source>Allows only 0-9 characters</source>
+        <target state="final">Erlaubt nur 0-9 Zeichen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.double2" approved="yes">
+        <source>Convert to floating point</source>
+        <target state="final">In Dezimalzahl konvertieren</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.password.label" approved="yes">
+        <source>Password</source>
+        <target state="final">Passwort</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.password" approved="yes">
+        <source>Will show “*******” in the field</source>
+        <target state="final">Zeigt "*******" im Feld an</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.time" approved="yes">
+        <source>Time field (h:m)</source>
+        <target state="final">Zeitfeld (h:m)</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.timesec" approved="yes">
+        <source>Time field (h:m:s)</source>
+        <target state="final">Zeitfeld (h:m:s)</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.timestamp.eval" approved="yes">
+        <source>Attention: Influences default value and ranges</source>
+        <target state="final">Achtung: Beeinflusst den Standardwert und Von/Bis-Werte</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.date_selection" approved="yes">
+        <source>Date</source>
+        <target state="final">Datum</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.datetime_selection" approved="yes">
+        <source>Date and time</source>
+        <target state="final">Datum und Zeit</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.time_selection" approved="yes">
+        <source>Time</source>
+        <target state="final">Zeit</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.timesec_selection" approved="yes">
+        <source>Time and seconds</source>
+        <target state="final">Zeit in Sekunden</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.unique.label" approved="yes">
+        <source>Unique</source>
+        <target state="final">Einzigartig</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.unique" approved="yes">
+        <source>Requires the field to be unique for the whole table</source>
+        <target state="final">Erfordert ein eindeutiges Feld für die gesamte Tabelle</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.uniqueInPid.label" approved="yes">
+        <source>Unique in PID</source>
+        <target state="final">Eindeutig in PID</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.uniqueInPid" approved="yes">
+        <source>Requires the field to be unique for the current PID</source>
+        <target state="final">Erfordert ein eindeutiges Feld für die aktuelle PID</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.upper.label" approved="yes">
+        <source>Uppercase</source>
+        <target state="final">Großbuchstaben</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.upper" approved="yes">
+        <source>Converts the string to uppercase</source>
+        <target state="final">Wandelt alle Buchstaben in Großbuchstaben um</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.year" approved="yes">
+        <source>Only years between 1970 and 2038</source>
+        <target state="final">Nur Jahre zwischen 1970 und 2038</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.texttype" approved="yes">
+        <source>Texttype</source>
+        <target state="final">Texttyp</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.texttype.default" approved="yes">
+        <source>Default</source>
+        <target state="final">Standard</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.texttype.lower" approved="yes">
+        <source>Lowercase</source>
+        <target state="final">Kleinbuchstaben</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.texttype.upper" approved="yes">
+        <source>Uppercase</source>
+        <target state="final">Großbuchstaben</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.texttype.alpha" approved="yes">
+        <source>Letters</source>
+        <target state="final">Buchstaben</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.texttype.alphanum" approved="yes">
+        <source>Letters and Numbers</source>
+        <target state="final">Buchstaben und Zahlen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.texttype.alphanum_x" approved="yes">
+        <source>Letters, Numbers and -_</source>
+        <target state="final">Buchstaben, Zahlen und -_</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.choosefield" approved="yes">
+        <source>Choose field:</source>
+        <target state="final">Feld auswählen:</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.newfield" approved="yes">
+        <source>New field</source>
+        <target state="final">Neues Feld</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.fieldkey" approved="yes">
+        <source>Field key*</source>
+        <target state="final">Feldschlüssel*</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.fieldkey.description" approved="yes">
+        <source>No blanks, no dashes</source>
+        <target state="final">Keine Leerzeichen, keine Bindestriche</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.label" approved="yes">
+        <source>Label</source>
+        <target state="final">Beschriftung</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.description" approved="yes">
+        <source>Description</source>
+        <target state="final">Beschreibung</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.check.renderType" approved="yes">
+        <source>Rendertype</source>
+        <target state="final">Darstellungstyp</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.check.renderType.description" approved="yes">
+        <source>The following renderTypes are available</source>
+        <target state="final">Die folgenden Rendertypen sind verfügbar</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.check.renderType.default" approved="yes">
+        <source>Checkbox</source>
+        <target state="final">Checkbox</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.check.renderType.checkboxToggle" approved="yes">
+        <source>Toggle switch</source>
+        <target state="final">Umschalter</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.check.renderType.checkboxLabeledToggle" approved="yes">
+        <source>Labeled toggle switch</source>
+        <target state="final">Beschrifteter Umschalter</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.content.check.columns" approved="yes">
+        <source>Columns</source>
+        <target state="final">Spalten</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.content.check.columns.description" approved="yes">
+        <source>1-31 or inline. Default: 1</source>
+        <target state="final">1-31 oder inline. Standard: 1</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.content.check.items" approved="yes">
+        <source>Items</source>
+        <target state="final">Elemente</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.content.check.items.description" approved="yes">
+        <source>One label each line, max 31</source>
+        <target state="final">Eine Beschriftung pro Zeile, max 31</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.content.check.items.placeholder" approved="yes">
+        <source>option 1
+option 2
+option 3
+...</source>
+        <target state="final">Option 1
+Option 2
+Option 3
+...</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.content.select.items.placeholder" approved="yes">
+        <source>title1, value1, icon1, description1
+title2, value2, icon2, description2
+title3, value3, icon3, description3
+...</source>
+        <target state="final">title1, value1, icon1, description1
+title2, value2, icon2, description2
+title3, value3, icon3, description3
+...</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.check.default.description" approved="yes">
+        <source>The checked state of each checkbox corresponds to the bitset representation of the default value.</source>
+        <target state="final">Der markierte Zustand jedes Kontrollkästchens entspricht der Bitset-Darstellung des Standardwerts.</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.date.default" approved="yes">
+        <source>Default</source>
+        <target state="final">Standard</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.datetime.default" approved="yes">
+        <source>Default</source>
+        <target state="final">Standard</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.float.size" approved="yes">
+        <source>Size of Formfield</source>
+        <target state="final">Größe des Formularfeldes</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.float.max.description" approved="yes">
+        <source>Maximum number of characters</source>
+        <target state="final">Maximale Anzahl an Zeichen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.float.max" approved="yes">
+        <source>Maxlength</source>
+        <target state="final">Maximale Länge</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.float.default" approved="yes">
+        <source>Default</source>
+        <target state="final">Standard</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.float.range.lower" approved="yes">
+        <source>Range lower</source>
+        <target state="final">Bereichgrenze min</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.float.range.upper" approved="yes">
+        <source>Range upper</source>
+        <target state="final">Bereichgrenze max</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.inline.file_upload_allowed" approved="yes">
+        <source>The button “Select &amp; upload file” will be rendered</source>
+        <target state="final">Der Button „Dateien auswählen &amp; hochladen“ wird angezeigt</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.inline.file_upload_allowed.label" approved="yes">
+        <source>File upload allowed</source>
+        <target state="final">Datei-Upload erlaubt</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.inline.allowed_file_extensions" approved="yes">
+        <source>Allowed File Extensions</source>
+        <target state="final">Erlaubte Dateiendungen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.inline.elementBrowserAllowed.description" approved="yes">
+        <source>Sets the list of allowed file extensions (comma separated)</source>
+        <target state="final">Legt die Liste der erlaubten Dateierweiterungen fest (Komma getrennt)</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.inline.collapse_all" approved="yes">
+        <source>Show all child-records collapsed (if false, all are expanded)</source>
+        <target state="final">Zeige alle Einträge eingeklappt (sonst immer ausgeklappt)</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.inline.collapse_all.label" approved="yes">
+        <source>Collapse all</source>
+        <target state="final">Alle einklappen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.inline.expand_single" approved="yes">
+        <source>Show only one child-record expanded each time</source>
+        <target state="final">Zeige immer nur einen Eintrag ausgeklappt</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.inline.expand_single.label" approved="yes">
+        <source>Expand single</source>
+        <target state="final">Nur einen ausklappen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.inline.new_record_link_title.label" approved="yes">
+        <source>New record link title</source>
+        <target state="final">Neuer Datensatz Link Titel</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.inline.new_record_link_title" approved="yes">
+        <source>Overwrites the title of the “New record” link with a localised string</source>
+        <target state="final">Überschreibt den Titel des Links „Neuer Datensatz“ mit einem lokalisierten String</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.inline.use_sortable" approved="yes">
+        <source>Activate drag &amp; drop</source>
+        <target state="final">Drag &amp; Drop aktivieren</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.inline.use_sortable.label" approved="yes">
+        <source>Use sortable</source>
+        <target state="final">Sortierbar</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.inline.show_possible_localization_records.description" approved="yes">
+        <source>Show unlocalized records which are in the original language, but not yet localized</source>
+        <target state="final">Zeige nicht lokalisierte Datensätze, die in der Originalsprache sind, aber noch nicht übersetzt sind</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.inline.show_possible_localization_records" approved="yes">
+        <source>Unlocalized records</source>
+        <target state="final">Nicht lokalisierte Datensätze</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.inline.show_synchronization_link" approved="yes">
+        <source>Synchronization link</source>
+        <target state="final">Synchronisationslink</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.inline.show_synchronization_link_description" approved="yes">
+        <source>Show a “synchronize” link to update to a 1:1 translation with the original language</source>
+        <target state="final">Zeige den "Synchronize" Button, um auf eine 1:1 Übersetzung mit der Originalsprache upzudaten</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.inline.show_all_localization_link.description" approved="yes">
+        <source>Show the “localize all records” link to fetch untranslated records from the original language</source>
+        <target state="final">Link "Alle Einträge lokalisieren" anzeigen, um nicht übersetzte Datensätze aus der Originalsprache zu holen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.inline.show_all_localization_link" approved="yes">
+        <source>All localization link</source>
+        <target state="final">"Alle-Lokalisieren"-Button</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.inline.show_removed_localization_records" approved="yes">
+        <source>Removed localizations</source>
+        <target state="final">Entfernte Lokalisierungen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.inline.show_removed_localization_records.description" approved="yes">
+        <source>Show records which were once localized but do not exist in the original language anymore</source>
+        <target state="final">Zeige Datensätze, die vorher übersetzt waren aber nicht mehr in der originalen Sprache existieren</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.inline.level_links_position.label" approved="yes">
+        <source>New record link position</source>
+        <target state="final">Neuer Datensatz Link Position</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.inline.level_links_position" approved="yes">
+        <source>Defines where to show the “New record” link in relation to the child records</source>
+        <target state="final">Legt fest, wo der Link "Neuer Datensatz" in Bezug auf die Kind-Einträge angezeigt werden soll</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.inline.level_links_position.top" approved="yes">
+        <source>Top</source>
+        <target state="final">Oben</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.inline.level_links_position.bottom" approved="yes">
+        <source>Bottom</source>
+        <target state="final">Unten</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.inline.level_links_position.both" approved="yes">
+        <source>Both</source>
+        <target state="final">Beide</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.inline.level_links_position.none" approved="yes">
+        <source>None</source>
+        <target state="final">Nirgends</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.allowed_content" approved="yes">
+        <source>Allowed content elements</source>
+        <target state="final">Erlaubte Inhaltselemente</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.allowed_content.description" approved="yes">
+        <source>Choose one or more content elements, which should be selectable by the user. Hold CTRL for multi-select.</source>
+        <target state="final">Wählen Sie ein oder mehrere Inhaltselemente aus, die vom Benutzer ausgewählt werden können sollen. Halten Sie STRG für Mehrfachauswahl gedrückt.</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.inline.localization_mode" approved="yes">
+        <source>Localization Mode</source>
+        <target state="final">Übersetzungsmodus</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.inline.l10n_mode.default" approved="yes">
+        <source>Default</source>
+        <target state="final">Standard</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.inline.l10n_mode.prefixLangTitle" approved="yes">
+        <source>Copy with prefix</source>
+        <target state="final">Mit Präfix kopieren</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.inline.l10n_mode.exclude" approved="yes">
+        <source>Keep the value or data from original language</source>
+        <target state="final">Wert oder Daten aus der Originalsprache behalten</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.inline.localize_children_at_parent_localization" approved="yes">
+        <source>Localize Records when Content Element is localized</source>
+        <target state="final">Datensätze übersetzen, wenn Inhaltselement übersetzt ist</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.allowLanguageSynchronization" approved="yes">
+        <source>Language synchronization</source>
+        <target state="final">Sprach-Synchronisation</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.allowLanguageSynchronization.description" approved="yes">
+        <source>Allows to select from three options: Copy from default language, copy from source language or set own value.</source>
+        <target state="final">Erzeugt 3 Auswahlmöglichkeiten: Wert von Standardsprache kopieren, Wert von Quellsprache kopieren oder eigenen Wert setzen.</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.inline.inline_label" approved="yes">
+        <source>Field that should be used as label for inline element (starting with tx_mask_)</source>
+        <target state="final">Feld, das als Label für Inline-Element verwendet werden soll (beginnend mit tx_mask_)</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.inline.inline_icon.label" approved="yes">
+        <source>Icon path</source>
+        <target state="final">Icon-Pfad</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.inline.inline_icon" approved="yes">
+        <source>Pointing to the icon file to use for the table. Icons should be square SVGs.</source>
+        <target state="final">Zeigt auf das Icon, welches in der Tabelle genutzt werden soll. Icons sollten quadratische SVG sein.</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.integer.size" approved="yes">
+        <source>Size of Formfield</source>
+        <target state="final">Größe des Formularfeldes</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.integer.max" approved="yes">
+        <source>Maxlength</source>
+        <target state="final">Maximale Länge</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.integer.default" approved="yes">
+        <source>Default</source>
+        <target state="final">Standard</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.integer.range.lower" approved="yes">
+        <source>Range lower</source>
+        <target state="final">Bereichgrenze min</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.integer.range.upper" approved="yes">
+        <source>Range upper</source>
+        <target state="final">Bereichgrenze max</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.link.default" approved="yes">
+        <source>Default</source>
+        <target state="final">Standard</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.link.wizard.height" approved="yes">
+        <source>Height</source>
+        <target state="final">Höhe</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.link.wizard.width" approved="yes">
+        <source>Width</source>
+        <target state="final">Breite</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.link.wizard.state" approved="yes">
+        <source>Status</source>
+        <target state="final">Status</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.link.wizard.menubar" approved="yes">
+        <source>Menubar</source>
+        <target state="final">Menüleiste</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.link.wizard.scrollbars" approved="yes">
+        <source>Scrollbars</source>
+        <target state="final">Scrollbars</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.link.wizard.allowed_extensions" approved="yes">
+        <source>Allowed extensions</source>
+        <target state="final">Erlaubte Erweiterungen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.link.wizard.allowed_extensions.description" approved="yes">
+        <source>Comma separated list of allowed file extensions</source>
+        <target state="final">Kommagetrennte Liste der erlaubten Dateiendungen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.link.file" approved="yes">
+        <source>File</source>
+        <target state="final">Datei</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.link.mail" approved="yes">
+        <source>Mail</source>
+        <target state="final">E-Mail</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.link.page" approved="yes">
+        <source>Page</source>
+        <target state="final">Seite</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.link.folder" approved="yes">
+        <source>Folder</source>
+        <target state="final">Ordner</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.link.url" approved="yes">
+        <source>URL</source>
+        <target state="final">URL</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.link.telephone" approved="yes">
+        <source>Telephone</source>
+        <target state="final">Telefon</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.radio.items" approved="yes">
+        <source>One entry each line, comma separated. The first entry is the displayed title and the second entry is the value (title, value). Values must be integers.</source>
+        <target state="final">Ein Eintrag jede Zeile, Komma getrennt. Der erste Eintrag ist der angezeigte Titel und der zweite Eintrag ist der Wert (Titel, Wert). Werte müssen ganze Zahlen sein.</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.richtext.cols" approved="yes">
+        <source>Columns</source>
+        <target state="final">Spalten</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.richtext.rows" approved="yes">
+        <source>Rows</source>
+        <target state="final">Zeilen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.richtext.default" approved="yes">
+        <source>Default</source>
+        <target state="final">Standard</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.select.file_folder" approved="yes">
+        <source>File folder</source>
+        <target state="final">Dateiordner</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.select.file_folder.description" approved="yes">
+        <source>Specifying a folder from where files are added to the item array</source>
+        <target state="final">Geben Sie einen Ordner an, von dem aus Dateien zum Array hinzugefügt werden sollen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.select.file_folder_ext_list" approved="yes">
+        <source>File folder extension list</source>
+        <target state="final">Datei-Ordner-Erweiterungsliste</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.select.file_folder_ext_list.description" approved="yes">
+        <source>List of extensions to select. If blank, all files are selected. Specify list in lowercase.</source>
+        <target state="final">Liste der auszuwählenden Erweiterungen. Wenn leer, sind alle Dateien ausgewählt. Geben Sie eine Liste in Kleinbuchstaben an.</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.select.file_folder_recursions" approved="yes">
+        <source>File folder recursions</source>
+        <target state="final">Dateiordner Rekursionen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.select.file_folder_recursions.description" approved="yes">
+        <source>Depth of directory recursions. Default is 99. Specify in range from 0-99. 0 (zero) means no recursion into subdirectories.</source>
+        <target state="final">Tiefe der Verzeichnisrekursionen. Standard ist 99. Geben Sie im Bereich von 0-99 an. 0 bedeutet keine Rekursion in Unterverzeichnisse.</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.select.size" approved="yes">
+        <source>Size</source>
+        <target state="final">Größe</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.select.size.description" approved="yes">
+        <source>Minimum height of the box in FormEngine. The behaviour depends on the renderType.</source>
+        <target state="final">Minimale Höhe des Feldes in der FormEngine. Das Verhalten hängt vom RenderType ab.</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.select.autosizemax" approved="yes">
+        <source>AutoSizeMax</source>
+        <target state="final">AutoSizeMax</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.select.autosizemax.description" approved="yes">
+        <source>Maximum height. The height of the box will automatically be adjusted to the number of selected elements.</source>
+        <target state="final">Maximale Höhe. Die Höhe des Feldes wird automatisch an die Anzahl der ausgewählten Elemente angepasst.</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.select.maxitems" approved="yes">
+        <source>Maxitems</source>
+        <target state="final">Maximale Anzahl</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.select.maxitems.description" approved="yes">
+        <source>Maximum number of child items. Defaults to a high value.</source>
+        <target state="final">Maximale Anzahl von Unterelementen. Standardwert ist sehr hoch.</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.select.minitems" approved="yes">
+        <source>Minitems</source>
+        <target state="final">Minimum Anzahl</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.select.minitems.description" approved="yes">
+        <source>Minimum number of child items. Defaults to 0.</source>
+        <target state="final">Minimale Anzahl untergeordneter Elemente. Standard ist 0.</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.select.renderType" approved="yes">
+        <source>Rendertype</source>
+        <target state="final">Rendertype</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.select.renderType.selectSingle" approved="yes">
+        <source>Selectbox single</source>
+        <target state="final">Selectbox mit Einzelauswahl</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.select.renderType.selectSingleBox" approved="yes">
+        <source>Selectbox multiple</source>
+        <target state="final">Selectbox mit Mehrfachauswahl</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.select.renderType.selectCheckBox" approved="yes">
+        <source>Checkboxes</source>
+        <target state="final">Checkboxen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.select.renderType.selectMultipleSideBySide" approved="yes">
+        <source>Shuttle</source>
+        <target state="final">Pendel</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.select.renderType.selectTree" approved="yes">
+        <source>Tree</source>
+        <target state="final">Seitenbaum</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.select.foreign_table" approved="yes">
+        <source>Foreign table</source>
+        <target state="final">Fremdtabelle</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.select.foreign_table.description" approved="yes">
+        <source>The item-array will be filled with records from the table defined here</source>
+        <target state="final">Das Array wird mit Datensätzen aus der Tabelle gefüllt</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.select.foreign_table_where" approved="yes">
+        <source>Foreign table where</source>
+        <target state="final">Fremdtabelle "where"</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.select.foreign_table_where.description" approved="yes">
+        <source>The items from foreign_table are selected with this WHERE-clause</source>
+        <target state="final">Die Elemente aus der Fremdtabelle werden mit dieser WHERE-Klausel ausgewählt</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.group.internal_type" approved="yes">
+        <source>Internal Type</source>
+        <target state="final">Interner Typ</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.group.internal_type.description" approved="yes">
+        <source>Configures the internal type of the “group” type of element</source>
+        <target state="final">Konfiguriert den internen Typ des Elements „Gruppe“</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.group.allowed" approved="yes">
+        <source>Allowed</source>
+        <target state="final">Erlaubt</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.group.internalType.folder" approved="yes">
+        <source>Folder</source>
+        <target state="final">Ordner</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.group.internalType.db" approved="yes">
+        <source>Database</source>
+        <target state="final">Datenbank</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.group.minitems" approved="yes">
+        <source>Minitems</source>
+        <target state="final">Minimum Anzahl</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.group.editPopup" approved="yes">
+        <source>Edit Popup</source>
+        <target state="final">Im Popup bearbeiten</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.group.addRecord" approved="yes">
+        <source>Add Record</source>
+        <target state="final">Datensatz hinzufügen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.group.insertClipboard" approved="yes">
+        <source>Insert Clipboard</source>
+        <target state="final">Zwischenablage hinzufügen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.group.listModule" approved="yes">
+        <source>List Module</source>
+        <target state="final">Listen-Modul</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.group.recordsOverview" approved="yes">
+        <source>Records Overview</source>
+        <target state="final">Datensatz Übersicht</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.group.tableList" approved="yes">
+        <source>Table List</source>
+        <target state="final">Auswahl pro Tabelle</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.group.elementBrowser" approved="yes">
+        <source>Element Browser</source>
+        <target state="final">Datensatz Browser</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.group.multiple" approved="yes">
+        <source>Multiple</source>
+        <target state="final">Mehrfachauswahl</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.group.editPopup.description" approved="yes">
+        <source>Shortcut to edit referenced elements directly in a popup.</source>
+        <target state="final">Referenzierte Datensätze in einem Popup bearbeiten.</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.group.addRecord.description" approved="yes">
+        <source>Directly create and add a related record.</source>
+        <target state="final">Datensätze direkt neu erstellen und hinzufügen.</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.group.insertClipboard.description" approved="yes">
+        <source>Adds a button to paste records from a clipboard.</source>
+        <target state="final">Fügt eine Schaltfläche hinzu, um Datensätze aus der Zwischenablage einzufügen.</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.group.listModule.description" approved="yes">
+        <source>Open the list module for the first allowed table.</source>
+        <target state="final">Listenansicht für die erste erlaubte Tabelle öffnen.</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.group.recordsOverview.description" approved="yes">
+        <source>Render an overview of the selected records.</source>
+        <target state="final">Referenzierten Datensätze als Liste anzeigen.</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.group.tableList.description" approved="yes">
+        <source>Render a list of allowed tables and link to element browser.</source>
+        <target state="final">Erstellt Liste der erlaubten Tabellen und verlinkt sie zur Auswahl.</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.group.elementBrowser.description" approved="yes">
+        <source>Renders a button to open element browser.</source>
+        <target state="final">Datensatz Auswahl öffnen.</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.group.multiple.description" approved="yes">
+        <source>Allows the same item more than once in a list.</source>
+        <target state="final">Erlaubt den gleichen Datensatz mehrfach in der Liste.</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.string.size" approved="yes">
+        <source>Size of Formfield</source>
+        <target state="final">Größe des Formularfeldes</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.string.size.description" approved="yes">
+        <source>Number between 10 and 50. Default is 30.</source>
+        <target state="final">Zahl zwischen 10 und 50. Standard ist 30.</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.string.max" approved="yes">
+        <source>Maxlength</source>
+        <target state="final">Maximale Länge</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.string.default" approved="yes">
+        <source>Default</source>
+        <target state="final">Standard</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.string.default.description" approved="yes">
+        <source>Default value when a new record is created</source>
+        <target state="final">Standardwert, wenn ein neuer Datensatz erstellt wird</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.string.placeholder" approved="yes">
+        <source>Placeholder</source>
+        <target state="final">Platzhalter</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.string.placeholder.description" approved="yes">
+        <source>Placeholder text for the field</source>
+        <target state="final">Platzhaltertext für das Feld</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.string.is_in" approved="yes">
+        <source>Allowed Characters</source>
+        <target state="final">Erlaubte Zeichen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.string.is_in.description" approved="yes">
+        <source>The characters in the input should be found in this string</source>
+        <target state="final">Die Zeichen in der Eingabe sollten in dieser Zeichenkette gefunden werden</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.string.mode.label" approved="yes">
+        <source>Mode</source>
+        <target state="final">Modus</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.string.mode" approved="yes">
+        <source>Show override checkbox for placeholder</source>
+        <target state="final">Überschreiben-Checkbox für Platzhalter anzeigen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.string.renderType" approved="yes">
+        <source>Add RSA encryption prior to being submitted</source>
+        <target state="final">RSA-Verschlüsselung vor der Übermittlung hinzufügen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.string.autocomplete.label" approved="yes">
+        <source>HTML5 autocomplete</source>
+        <target state="final">HTML5 Autovervollständigung</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.string.autocomplete" approved="yes">
+        <source>Controls the autocomplete attribute of a given input field</source>
+        <target state="final">Steuert das automatische Vervollständigen-Attribut eines angegebenen Eingabefeldes</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.text.cols" approved="yes">
+        <source>Columns</source>
+        <target state="final">Spalten</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.text.cols.description" approved="yes">
+        <source>To set the textarea to the full width of the form area, use the value 50. Default is 30</source>
+        <target state="final">Um den Textbereich auf die volle Breite des Formularbereichs zu setzen, verwenden Sie den Wert 50. Standardwert ist 30</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.text.rows" approved="yes">
+        <source>Rows</source>
+        <target state="final">Zeilen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.text.rows.description" approved="yes">
+        <source>The number of rows in the textarea. Default is 5. Max value is 20.</source>
+        <target state="final">Die Anzahl der Zeilen im Textbereich. Standard ist 5. Maximalwert ist 20.</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.text.default" approved="yes">
+        <source>Default</source>
+        <target state="final">Standard</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.text.wrap" approved="yes">
+        <source>Virtual wrap</source>
+        <target state="final">Virtueller wrap</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.text.format" approved="yes">
+        <source>T3-Editor</source>
+        <target state="final">T3-Editor</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.text.format.none" approved="yes">
+        <source>-</source>
+        <target state="final">-</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.text.format.html" approved="yes">
+        <source>HTML</source>
+        <target state="final">HTML</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.text.format.typoscript" approved="yes">
+        <source>TypoScript</source>
+        <target state="final">TypoScript</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.text.format.javascript" approved="yes">
+        <source>Javascript</source>
+        <target state="final">JavaScript</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.text.format.css" approved="yes">
+        <source>CSS</source>
+        <target state="final">CSS</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.text.format.xml" approved="yes">
+        <source>XML</source>
+        <target state="final">XML</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.text.format.php" approved="yes">
+        <source>PHP</source>
+        <target state="final">PHP</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.text.format.sparql" approved="yes">
+        <source>SPARQL</source>
+        <target state="final">SPARQL</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.text.format.mixed" approved="yes">
+        <source>Mixed</source>
+        <target state="final">Mixed</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.blindLinkOptions" approved="yes">
+        <source>Link options that should be displayed</source>
+        <target state="final">Link Optionen, die angezeigt werden sollen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.content.title" approved="yes">
+        <source>Title</source>
+        <target state="final">Titel</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.content.error" approved="yes">
+        <source>Missing folders!</source>
+        <target state="final">Ordner fehlen!</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.content.image" approved="yes">
+        <source>Image</source>
+        <target state="final">Bild</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.content.titlekey" approved="yes">
+        <source>Title/Key</source>
+        <target state="final">Titel/Schlüssel</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.content.description" approved="yes">
+        <source>Description</source>
+        <target state="final">Beschreibung</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.content.header" approved="yes">
+        <source>Edit Content</source>
+        <target state="final">Inhalt bearbeiten</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.content.newheader" approved="yes">
+        <source>New Content</source>
+        <target state="final">Neuer Inhalt</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.content.save" approved="yes">
+        <source>Save</source>
+        <target state="final">Speichern</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.content.saveandcreate" approved="yes">
+        <source>Save and create further element</source>
+        <target state="final">Speichern und weiteres Element erstellen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.content.saveandexit" approved="yes">
+        <source>Save and close</source>
+        <target state="final">Speichern und schließen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.content.html.header" approved="yes">
+        <source>HTML Code Example</source>
+        <target state="final">HTML-Code Beispiel</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.content.html.line1" approved="yes">
+        <source>This is an example code for your frontend template.</source>
+        <target state="final">Dies ist ein Beispielcode für Ihre Frontend-Vorlage.</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.content.html.line2" approved="yes">
+        <source>On first creation of a contentelement this code is saved into the target folder, which you have specified in the extensionmanager configuration. Default is</source>
+        <target state="final">Bei der ersten Erstellung eines Inhalts wird dieser Code im Zielordner gespeichert, den Sie in der extensionmanager Konfiguration angegeben haben. Standard ist</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.content.html.line3a" approved="yes">
+        <source>Use the official</source>
+        <target state="final">Offizielle</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.content.html.line3b" approved="yes">
+        <source>Fluid-Documentation</source>
+        <target state="final">Fluid-Dokumentation</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.content.html.line3c" approved="yes">
+        <source>for more details on how to format the output.</source>
+        <target state="final">für weitere Details, wie man die Ausgabe formatiert.</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.content.multiuse" approved="yes">
+        <source>This field is in use in more than one content element.</source>
+        <target state="final">Dieses Feld wird in mehr als einem Inhaltselement verwendet.</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.content.multiuse.description" approved="yes">
+        <source>If you change this field, changes will affect other content elements.</source>
+        <target state="final">Wenn Sie dieses Feld ändern, werden Änderungen andere Inhaltselemente beeinflussen.</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.content.newcontentelement" approved="yes">
+        <source>New content element was created.</source>
+        <target state="final">Ein neues Inhaltselement wurde erstellt.</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.content.updatedcontentelement" approved="yes">
+        <source>Content element was updated.</source>
+        <target state="final">Inhaltselement wurde aktualisiert.</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.content.deletedcontentelement" approved="yes">
+        <source>Content element was deleted.</source>
+        <target state="final">Inhaltselement wurde gelöscht.</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.content.htmlmissing" approved="yes">
+        <source>Fluid-Template of this element is missing</source>
+        <target state="final">Fluid-Template dieses Inhaltselementes fehlt</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.content.hiddencontentelement" approved="yes">
+        <source>Content element was deactivated</source>
+        <target state="final">Inhaltselement wurde deaktiviert</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.content.activatedcontentelement" approved="yes">
+        <source>Content element was activated</source>
+        <target state="final">Inhaltselement wurde aktiviert</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.content.count" approved="yes">
+        <source>In Usage</source>
+        <target state="final">In Verwendung</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.page.title" approved="yes">
+        <source>Title</source>
+        <target state="final">Titel</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.page.image" approved="yes">
+        <source>Image</source>
+        <target state="final">Bild</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.page.titleuid" approved="yes">
+        <source>Title/Uid</source>
+        <target state="final">Titel/Uid</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.page.description" approved="yes">
+        <source>Description</source>
+        <target state="final">Beschreibung</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.page.header" approved="yes">
+        <source>Extend Backend-Layout</source>
+        <target state="final">Backend-Layout erweitern</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.page.nobackendlayout" approved="yes">
+        <source>Create at least one Backendlayout in module "List".</source>
+        <target state="final">Es sollte mindestens ein Backendlayout im Modul "List" existieren.</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.page.warning" approved="yes">
+        <source>No Backendlayout found</source>
+        <target state="final">Kein Backendlayout gefunden</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.page.updatedpage" approved="yes">
+        <source>Backend-Layout was updated.</source>
+        <target state="final">Backend-Layout wurde aktualisiert.</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.page.extend">
+        <source/>
+      </trans-unit>
+      <trans-unit id="tx_mask.all.create_content_element" approved="yes">
+        <source>Create new content element</source>
+        <target state="final">Neues Inhaltselement erstellen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.all.fields_of_element" approved="yes">
+        <source>Fields of this element</source>
+        <target state="final">Felder dieses Elements</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.all.fields_of_element_be_layout" approved="yes">
+        <source>Fields of backend layout</source>
+        <target state="final">Felder des Backendlayouts</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.all.add_new_fields" approved="yes">
+        <source>Add new fields</source>
+        <target state="final">Neue Felder hinzufügen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.content.createdHtml" approved="yes">
+        <source>File was created.</source>
+        <target state="final">Datei wurde erstellt.</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.all.label" approved="yes">
+        <source>Label</source>
+        <target state="final">Beschriftung</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.all.description" approved="yes">
+        <source>Description</source>
+        <target state="final">Beschreibung</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.all.shorttitle" approved="yes">
+        <source>Short title</source>
+        <target state="final">Kurztitel</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.all.fieldkey" approved="yes">
+        <source>Element key</source>
+        <target state="final">Elementschlüssel</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.all.fieldLabel" approved="yes">
+        <source>Element label</source>
+        <target state="final">Titel</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.all.fieldkey.description" approved="yes">
+        <source>unique, lowercase</source>
+        <target state="final">einzigartig, Kleinbuchstaben</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.all.icon" approved="yes">
+        <source>Icon</source>
+        <target state="final">Symbol</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.all.color" approved="yes">
+        <source>Colour</source>
+        <target state="final">Farbe</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.all.configure" approved="yes">
+        <source>Configure</source>
+        <target state="final">Konfigurieren</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.all.contentelements" approved="yes">
+        <source>Content Elements</source>
+        <target state="final">Inhaltselemente</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.all.pagetemplates" approved="yes">
+        <source>Page Templates</source>
+        <target state="final">Seitenvorlagen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.all.confirmdelete" approved="yes">
+        <source>Do you want to delete the content element?
+					"Delete" only deletes the configuration. "Purge" deletes the configuration and all the corresponding template files. The content in the database can be deleted via the install tool.</source>
+        <target state="final">Möchten Sie das Inhaltselement löschen?
+					„Löschen“ löscht nur die Konfiguration. "Bereinigen" löscht die Konfiguration und alle dazugehörigen Vorlagendateien. Der Inhalt der Datenbank kann über das Installtool gelöscht werden.</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.all.abort" approved="yes">
+        <source>Abort</source>
+        <target state="final">Abbrechen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.all.delete" approved="yes">
+        <source>Delete</source>
+        <target state="final">Löschen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.all.purge" approved="yes">
+        <source>Purge</source>
+        <target state="final">Bereinigen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.all.error.key" approved="yes">
+        <source>Field-Key is required!</source>
+        <target state="final">Feldschlüssel ist erforderlich!</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.all.error.missingfolder" approved="yes">
+        <source>Directory is missing. Create missing directory or change configuration in extension manager.
+				</source>
+        <target state="final">Verzeichnis fehlt. Erstelle fehlendes Verzeichnis oder ändere die Pfade im Extensionmanager.
+				</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.all.error.missingjson" approved="yes">
+        <source>Mask configuration mask.json is missing. Create missing file or change configuration in
+					extension manager.
+				</source>
+        <target state="final">Die Mask Konfigurationsdatei mask.json fehlt. Erstelle die Datei oder passe die Pfade im Extensionmanager an.</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.all.createdmissingfolders" approved="yes">
+        <source>Missing directories and files were created.</source>
+        <target state="final">Fehlende Verzeichnisse und Dateien wurden erstellt.</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.tabs.default" approved="yes">
+        <source>General</source>
+        <target state="final">Allgemein</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.tabs.validation" approved="yes">
+        <source>Validation</source>
+        <target state="final">Validierung</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.tabs.extended" approved="yes">
+        <source>Extended</source>
+        <target state="final">Erweitert</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.tabs.database" approved="yes">
+        <source>Database</source>
+        <target state="final">Datenbank</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.tabs.wizards" approved="yes">
+        <source>Wizards</source>
+        <target state="final">Assistenten</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.tabs.appearance" approved="yes">
+        <source>Appearance and Behaviour</source>
+        <target state="final">Aussehen und Verhalten</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.tabs.fieldControl" approved="yes">
+        <source>Field Control</source>
+        <target state="final">Funktionen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.tabs.localization" approved="yes">
+        <source>Localization</source>
+        <target state="final">Übersetzung</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.tabs.files" approved="yes">
+        <source>Files</source>
+        <target state="final">Dateien</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.imageoverlayPalette" approved="yes">
+        <source>Imageoverlay palette</source>
+        <target state="final">Imageoverlay palette</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.imageoverlayPalette.description" approved="yes">
+        <source>Shows additional fields for images: alternative, link and cropping.</source>
+        <target state="final">Zeigt zusätzliche Felder für Bilder: Alt, Link und Zuschneiden.</target>
+      </trans-unit>
+      <trans-unit id="mask_content_colpos" approved="yes">
+        <source>Mask-Nested-Content</source>
+        <target state="final">Mask-Nested-Content</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.content.multiuse.validation" approved="yes">
+        <source>Mind that changes in the validation also affect already existing content of these elements:
+				</source>
+        <target state="final">Beachten Sie, dass Änderungen an der Validierung auch bereits existierende Inhalte dieser Elemente beeinflussen:
+				</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.content.multiuse.validation.title" approved="yes">
+        <source>Changes on Validation</source>
+        <target state="final">Änderungen bei der Validierung</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.placeholder.description" approved="yes">
+        <source>Short and helpful description for your editors</source>
+        <target state="final">Kurze und hilfreiche Beschreibung für Ihre Redakteure</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.config.slider.step" approved="yes">
+        <source>Slider Step size</source>
+        <target state="final">Slider-Schrittgröße</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.config.slider.step.description" approved="yes">
+        <source>Default is 1</source>
+        <target state="final">Standard ist 1</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.config.slider.width" approved="yes">
+        <source>Slider width in px</source>
+        <target state="final">Slider Breite in px</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.config.slider.width.description" approved="yes">
+        <source>Default is 400</source>
+        <target state="final">Standard ist 400</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.config.fixedFont" approved="yes">
+        <source>Fixed font</source>
+        <target state="final">Feste Schriftart</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.config.fixedFont.description" approved="yes">
+        <source>Enables a fixed-width font (monospace) for the text field</source>
+        <target state="final">Aktiviert eine Schriftart mit fester Breite (Monospace) für das Textfeld</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.config.enableTabulator" approved="yes">
+        <source>Enable Tabulator</source>
+        <target state="final">Tabulator aktivieren</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.config.enableTabulator.description" approved="yes">
+        <source>Enabling this allows to use tabs in a text field</source>
+        <target state="final">Erlaubt Tabs in einem Textfeld zu verwenden</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.config.richtextConfiguration" approved="yes">
+        <source>Richtext Configuration</source>
+        <target state="final">Richtext-Konfiguration</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.config.richtextConfiguration.none" approved="yes">
+        <source>Use global default</source>
+        <target state="final">Globalen Standard verwenden</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.ok" approved="yes">
+        <source>OK</source>
+        <target state="final">OK</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.alert" approved="yes">
+        <source>Alert</source>
+        <target state="final">Warnung</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.fieldsMissing" approved="yes">
+        <source>One or more fields are missing or are invalid. Please fill in the marked fields correctly and press save again.</source>
+        <target state="final">Ein oder mehrere Felder fehlen oder sind ungültig. Bitte füllen Sie die markierten Felder korrekt aus und drücken Sie erneut speichern.</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.tooltip.edit_element" approved="yes">
+        <source>Edit Element</source>
+        <target state="final">Element bearbeiten</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.tooltip.disable_element" approved="yes">
+        <source>Disable element</source>
+        <target state="final">Element deaktivieren</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.tooltip.enable_element" approved="yes">
+        <source>Enable element</source>
+        <target state="final">Element aktivieren</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.tooltip.delete_element" approved="yes">
+        <source>Delete element</source>
+        <target state="final">Element löschen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.tooltip.html" approved="yes">
+        <source>Show fluid code</source>
+        <target state="final">Zeige Fluid-Code</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.no_fields" approved="yes">
+        <source>This element has no fields.</source>
+        <target state="final">Dieses Element hat keine Felder.</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.input" approved="yes">
+        <source>Input</source>
+        <target state="final">Eingabe</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.text" approved="yes">
+        <source>Text</source>
+        <target state="final">Text</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.date" approved="yes">
+        <source>Date</source>
+        <target state="final">Datum</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.choice" approved="yes">
+        <source>Choice</source>
+        <target state="final">Auswahl</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.repeating" approved="yes">
+        <source>Repeating</source>
+        <target state="final">Wiederholung</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.structure" approved="yes">
+        <source>Structure</source>
+        <target state="final">Struktur</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.close" approved="yes">
+        <source>Close</source>
+        <target state="final">Schließen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.fields" approved="yes">
+        <source>Fields</source>
+        <target state="final">Felder</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.field.delete" approved="yes">
+        <source>Delete field</source>
+        <target state="final">Feld löschen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.blindLinkOptions" approved="yes">
+        <source>Link Options</source>
+        <target state="final">Link Optionen, die angezeigt werden sollen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.blindLinkOptions.description" approved="yes">
+        <source>Link options that should be displayed</source>
+        <target state="final">Link Optionen, die angezeigt werden sollen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.showMultiuseElements" approved="yes">
+        <source>Show content elements</source>
+        <target state="final">Inhaltselemente anzeigen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.fieldControl" approved="yes">
+        <source>Field Control</source>
+        <target state="final">Funktionen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.fieldControl.description" approved="yes">
+        <source>If enabled the following options show buttons with special functionalities next to the field.</source>
+        <target state="final">Wenn aktiviert, werden die folgenden Optionen Buttons mit speziellen Funktionen neben dem Feld anzeigen.</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.fieldWizard" approved="yes">
+        <source>Field Wizard</source>
+        <target state="final">Feld Wizard</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.fieldWizard.description" approved="yes">
+        <source>If enabled the following options render helpful lists and buttons below the field.</source>
+        <target state="final">Wenn aktiviert, werden hilfreiche Listen und Schaltflächen unterhalb des Feldes dargestellt.</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.multistep.chooseLabel" approved="yes">
+        <source>Choose element label</source>
+        <target state="final">Elementbezeichnung auswählen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.multistep.chooseKey" approved="yes">
+        <source>Choose element key</source>
+        <target state="final">Elementschlüssel auswählen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.multistep.text1" approved="yes">
+        <source>You can change the label later on in "Element Meta Data".</source>
+        <target state="final">Sie können das Label später in "Meta-Daten des Elements" ändern.</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.multistep.text2" approved="yes">
+        <source>You can change the key later on in "Element Meta Data".</source>
+        <target state="final">Sie können den Schlüssel später in "Meta-Daten des Elements" ändern.</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.multistep.placeholder1" approved="yes">
+        <source>My Element Label</source>
+        <target state="final">Mein Element-Label</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.multistep.placeholder2" approved="yes">
+        <source>my_element_key</source>
+        <target state="final">mein_element_key</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.reset_settings" approved="yes">
+        <source>Reset to default</source>
+        <target state="final">Auf Standardwert zurücksetzen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.reset_settings_description" approved="yes">
+        <source>Click this button to reset all settings of this field to the default values.</source>
+        <target state="final">Klicken Sie auf diese Schaltfläche, um alle Einstellungen dieses Feldes auf die Standardwerte zurückzusetzen.</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.reset_button" approved="yes">
+        <source>Reset</source>
+        <target state="final">Zurücksetzen</target>
+      </trans-unit>
+      <trans-unit id="tx_mask.reset_settings_success" approved="yes">
+        <source>Settings reset to default</source>
+        <target state="final">Einstellungen auf Standard zurückgesetzt</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

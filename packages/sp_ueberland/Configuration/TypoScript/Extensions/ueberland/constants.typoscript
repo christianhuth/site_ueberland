@@ -1,0 +1,8 @@
+######################
+####  TYPOSCRIPT  ####
+######################
+@import 'EXT:tgm_copyright/Configuration/TypoScript/constants.typoscript'
+
+######################
+####  SITECONFIG  ####
+######################

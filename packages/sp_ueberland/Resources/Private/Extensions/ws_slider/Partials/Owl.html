@@ -1,0 +1,19 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	 xmlns:f="http://typo3.org/ns/fluid/ViewHelpers"
+	 xmlns:wsslider="http://typo3.org/ns/WapplerSystems/WsSlider/ViewHelpers">
+	
+	<f:section name="Default">
+		
+		<div id="wsslider-{data.uid}" class="test owl-theme">
+			<div class="owl-carousel">
+				<f:for each="{items}" as="item" iteration="iterator">
+					<f:render partial="Item/Owl" section="{sliderSettings.layout}" arguments="{item: item, settings: settings, iterator:iterator}"/>
+				</f:for>
+			</div>
+		</div>
+		
+		<wsslider:addStartJavaScriptCode functionName="owlCarousel" useJQuery="true" selector="#wsslider-{data.uid} .owl-carousel" name="wsslider-{data.uid}" defaultParameters="{sliderSettings.parameters}" />
+		
+	</f:section>
+
+</div>

@@ -1,0 +1,11 @@
+######################
+####  TYPOSCRIPT  ####
+######################
+@import 'EXT:ueberland/Configuration/TypoScript/constants.txt'
+
+######################
+####  SITECONFIG  ####
+######################
+plugin.tx_ueberland_ueberland {
+    persistence.storagePid = 14, 15, 22, 21, 12, 43, 20
+}

@@ -1,0 +1,45 @@
+<div xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/fluid/ViewHelpers">
+
+    <f:section name="Default">
+
+        <div>
+
+            <f:if condition="{item.foregroundMedia.0}">
+				<f:if condition="{item.data.link}">
+					<f:then>
+						<f:link.typolink parameter="{item.data.link}">
+							<f:image image="{item.foregroundMedia.0}" width="1877" class="img-fluid mb-4 test"  />
+						</f:link.typolink>
+					</f:then>
+					<f:else>
+						<f:image image="{item.foregroundMedia.0}" width="1877" class="img-fluid mb-4 test"  />
+					</f:else>
+				</f:if>
+            </f:if>
+			
+			<div class="item-meta">
+				<div class="row">
+					<f:if condition="{item.data.link}">
+						<f:then>
+							<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 item-title"><h3><f:format.raw><f:link.typolink parameter="{item.data.link}">{item.data.title}</f:link.typolink></f:format.raw></h3></div>
+							<div class="hidden-xs col-sm-4 col-md-4 col-lg-4 item-detail"><h4><f:format.raw><f:link.typolink parameter="{item.data.link}">&rarr; <f:translate key="slider_link" extensionName="sp_ueberland"/></f:link.typolink></f:format.raw></h4></div>
+						</f:then>
+						<f:else>
+							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 item-title"><h3>{item.data.title}</h3></div>
+						</f:else>
+					</f:if>
+				</div>
+			</div>
+
+        </div>
+
+    </f:section>
+
+    <f:section name="Cards">
+
+        <f:render partial="Item/Layout/Card" arguments="{_all}" />
+
+    </f:section>
+
+</div>

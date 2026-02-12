@@ -1,0 +1,17 @@
+import: 
+  - recipe/typo3.php
+
+config:
+  repository: 'git@github.com:christianhuth/site_ueberland.git'
+
+hosts:
+  v2202110159088166570.ultrasrv.de:
+    remote_user: knellcn
+    deploy_path: '~/sp_ueberland'
+
+tasks:
+  build:
+    - run: uptime  
+
+after:
+  deploy:failed: deploy:unlock

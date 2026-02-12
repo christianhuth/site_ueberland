@@ -1,0 +1,18 @@
+######################
+####  TYPOSCRIPT  ####
+######################
+@import 'EXT:news/Configuration/TypoScript/setup.typoscript'
+
+######################
+####  SITECONFIG  ####
+######################
+plugin.tx_news {
+	settings {
+		detail.media.image.maxWidth = 925
+		list {
+			media.image.maxHeight = 925
+			media.image.maxWidth = 925
+			paginate.insertAbove = 0
+		}
+	}
+}

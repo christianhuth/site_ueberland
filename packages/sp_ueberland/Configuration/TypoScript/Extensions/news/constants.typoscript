@@ -1,0 +1,16 @@
+######################
+####  TYPOSCRIPT  ####
+######################
+@import 'EXT:news/Configuration/TypoScript/constants.typoscript'
+
+######################
+####  SITECONFIG  ####
+######################
+plugin.tx_news {
+    settings.cssFile = EXT:sp_ueberland/Resources/Public/Css/news.css
+    view {
+        layoutRootPath = EXT:sp_ueberland/Resources/Private/Extensions/news/Layouts/
+        partialRootPath = EXT:sp_ueberland/Resources/Private/Extensions/news/Partials/
+        templateRootPath = EXT:sp_ueberland/Resources/Private/Extensions/news/Templates/
+    }
+}

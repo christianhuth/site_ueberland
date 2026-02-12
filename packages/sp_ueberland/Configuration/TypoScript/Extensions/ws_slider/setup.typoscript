@@ -1,0 +1,37 @@
+######################
+####  TYPOSCRIPT  ####
+######################
+@import 'EXT:ws_slider/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:ws_slider/Configuration/TypoScript/Assets/Owl/setup.typoscript'
+@import 'EXT:ws_slider/Configuration/TypoScript/Renderer/Owl/setup.typoscript'
+
+######################
+####  SITECONFIG  ####
+######################
+page.includeCSS.ws_slider = EXT:sp_ueberland/Resources/Public/Css/ws_slider.css
+
+plugin.tx_wsslider.settings.renderer.owl.navText {
+	0.data =
+	0.stdWrap.wrap = <span class='fa-stack'><i class='fa fa-chevron-left fa-stack-2x'>|</i></span>
+	1.data =
+	1.stdWrap.wrap = <span class='fa-stack'><i class='fa fa-chevron-right fa-stack-2x'>|</i></span>
+}
+
+tt_content.ws_slider.settings.slider.renderer.owl.navText {
+	0.data =
+	0.stdWrap.wrap = <span class='fa-stack'><i class='fa fa-chevron-left fa-stack-2x'>|</i></span>
+	1.data =
+	1.stdWrap.wrap = <span class='fa-stack'><i class='fa fa-chevron-right fa-stack-2x'>|</i></span>
+}
+
+plugin.tx_wsslider.settings.renderer.owl.items = 1
+plugin.tx_wsslider.settings.renderer.owl.responsive.576.items = 1
+plugin.tx_wsslider.settings.renderer.owl.responsive.768.items = 1
+plugin.tx_wsslider.settings.renderer.owl.responsive.992.items = 1
+plugin.tx_wsslider.settings.renderer.owl.responsive.1200.items = 1
+plugin.tx_wsslider.settings.renderer.owl.navSpeed = 3500
+plugin.tx_wsslider.settings.renderer.owl.loop = true
+plugin.tx_wsslider.settings.renderer.owl.autoplay = true
+plugin.tx_wsslider.settings.renderer.owl.autoplayHoverPause = true
+plugin.tx_wsslider.settings.renderer.owl.autoplaySpeed = 3500
+plugin.tx_wsslider.settings.renderer.owl.checkVisible = false

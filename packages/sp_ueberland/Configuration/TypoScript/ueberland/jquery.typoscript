@@ -1,0 +1,10 @@
+## jQuery
+page.includeJSLibs.jquery = EXT:sp_ueberland/Resources/Public/JavaScript/jquery-3.3.1.min.js
+
+## jQuery UI
+page.includeJSLibs.jqueryui = EXT:sp_ueberland/Resources/Public/JavaScript/jquery-ui.min.js
+page.includeCSS.jqueryui = EXT:sp_ueberland/Resources/Public/Css/jquery-ui.min.css
+
+## jQuery Mobile
+#page.includeJSLibs.jquerymobile = EXT:sp_ueberland/Resources/Public/JavaScript/jquery.mobile-1.4.5.min.css
+#page.includeCSS.jquerymobile = EXT:sp_ueberland/Resources/Public/JavaScript/jquery.mobile-1.4.5.min.js

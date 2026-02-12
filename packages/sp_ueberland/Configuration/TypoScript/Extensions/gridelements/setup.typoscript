@@ -1,0 +1,4 @@
+######################
+####  TYPOSCRIPT  ####
+######################
+@import 'EXT:gridelements/Configuration/TypoScript/DataProcessingLibContentElement/setup.typoscript'

@@ -1,0 +1,134 @@
+config.no_cache = 0
+config.doctype = html5
+config.spamProtectEmailAddresses = 2
+
+page = PAGE
+page.typeNum = 0
+
+page.10 = FLUIDTEMPLATE
+page.10 {
+    format = html
+    file = fileadmin/templates/layouts/main_layout.html
+    partialRootPath = EXT:sp_ueberland/Resources/Private/Partials/
+    layoutRootPath = fileadmin/templates/layouts/
+    variables {
+        content_main < styles.content.get
+        content_main.select.where = colPos = 0
+        content_slider < styles.content.get
+        content_slider.select.where = colPos = 1
+        content_main2 < styles.content.get
+        content_main2.select.where = colPos = 2
+    }
+}
+
+## Backend Layouts
+page.10.file.stdWrap.cObject = CASE
+page.10.file.stdWrap.cObject {
+    
+    key.data = levelfield:-1, backend_layout_next_level, slide
+    key.override.field = backend_layout
+    
+    default = TEXT
+    default.value = fileadmin/templates/main_1_column_without_sidebar.html
+    
+    6 = TEXT
+    6.value = fileadmin/templates/genussreisen-startseite.html
+    
+    7 = TEXT
+    7.value = fileadmin/templates/genussreisen.html
+    
+    8 = TEXT
+    8.value = fileadmin/templates/genussreisen-region.html
+
+}
+
+## CSS
+page.includeCSS {
+    file10 = EXT:sp_ueberland/Resources/Public/Css/ueberland.css
+}
+
+## Meta Tags
+page {
+  meta {
+    author {
+    	data = levelfield:-1, author, slide
+    	field = author
+    }
+    description {
+    	data = levelfield:-1, description, slide
+    	field = description
+    }
+    keywords {
+    	data = levelfield:-1, keywords, slide
+    	field = keywords
+    }
+    summary {
+    	data = levelfield:-1, summary, slide
+    	field = summary
+    }
+    viewport = width=device-width, initial-scale=1
+    X-UA-Compatible = IE=edge
+    X-UA-Compatible.httpEquivalent = 1
+  }
+}
+
+## Favicon
+page {
+  headerData {
+    10 = TEXT
+    10.value = <link rel="apple-touch-icon" sizes="57x57" href="/fileadmin/templates/images/favicon/apple-icon-57x57.png">
+    20 = TEXT
+    20.value = <link rel="apple-touch-icon" sizes="60x60" href="/fileadmin/templates/images/favicon/apple-icon-60x60.png">
+    30 = TEXT
+    30.value = <link rel="apple-touch-icon" sizes="72x72" href="/fileadmin/templates/images/favicon/apple-icon-72x72.png">
+    40 = TEXT
+    40.value = <link rel="apple-touch-icon" sizes="76x76" href="/fileadmin/templates/images/favicon/apple-icon-76x76.png">
+    50 = TEXT
+    50.value = <link rel="apple-touch-icon" sizes="114x114" href="/fileadmin/templates/images/favicon/apple-icon-114x114.png">
+    60 = TEXT
+    60.value = <link rel="apple-touch-icon" sizes="120x120" href="/fileadmin/templates/images/favicon/apple-icon-120x120.png">
+    70 = TEXT
+    70.value = <link rel="apple-touch-icon" sizes="144x144" href="/fileadmin/templates/images/favicon/apple-icon-144x144.png">
+    80 = TEXT
+    80.value = <link rel="apple-touch-icon" sizes="152x152" href="/fileadmin/templates/images/favicon/apple-icon-152x152.png">
+    90 = TEXT
+    90.value = <link rel="apple-touch-icon" sizes="180x180" href="/fileadmin/templates/images/favicon/apple-icon-180x180.png">
+    100 = TEXT
+    100.value = <link rel="icon" type="image/png" sizes="192x192" href="/fileadmin/templates/images/favicon/android-icon-192x192.png">
+    110 = TEXT
+    110.value = <link rel="icon" type="image/png" sizes="32x32" href="/fileadmin/templates/images/favicon/favicon-32x32.png">
+    120 = TEXT
+    120.value = <link rel="icon" type="image/png" sizes="96x96" href="/fileadmin/templates/images/favicon/favicon-96x96.png">
+    130 = TEXT
+    130.value = <link rel="icon" type="image/png" sizes="16x16" href="/fileadmin/templates/images/favicon/favicon-16x16.png">
+    140 = TEXT
+    140.value = <meta name="msapplication-TileColor" content="#ffffff">
+    150 = TEXT
+    150.value = <meta name="msapplication-TileImage" content="/fileadmin/templates/images/favicon/ms-icon-144x144.png">
+    160 = TEXT
+    160.value = <meta name="theme-color" content="#ffffff">
+  }
+}
+
+## TitleTag [Begin]
+config.noPageTitle = 2
+page.headerData.1 = TEXT
+page.headerData.1.field = title
+page.headerData.1.htmlSpecialChars = 1
+page.headerData.1.noTrimWrap = |<title>überland Tecklenburg &#124; | </title>|
+[globalVar = GP:tx_ueberland_ueberland|angebot > 0]
+temp.angebotTitle = RECORDS
+temp.angebotTitle {
+  source = {GP:tx_ueberland_ueberland|angebot}
+  source.insertData = 1
+  tables = tx_ueberland_domain_model_angebot
+  conf.tx_ueberland_domain_model_angebot >
+  conf.tx_ueberland_domain_model_angebot = TEXT
+  conf.tx_ueberland_domain_model_angebot.field = title
+  wrap = <title>überland Tecklenburg &#124;&nbsp;|</title>
+  htmlSpecialChars = 1
+}
+page.headerData.1 >
+page.headerData.1 < temp.angebotTitle
+[global]
+## TitleTag [End]

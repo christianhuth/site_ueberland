@@ -1,0 +1,26 @@
+######################
+####  EXTENSIONS  ####
+######################
+@import 'EXT:sp_ueberland/Configuration/TypoScript/Extensions/bootstrap_grids/setup.typoscript'
+@import 'EXT:sp_ueberland/Configuration/TypoScript/Extensions/fluid_styled_content/setup.typoscript'
+@import 'EXT:sp_ueberland/Configuration/TypoScript/Extensions/form/setup.typoscript'
+@import 'EXT:sp_ueberland/Configuration/TypoScript/Extensions/gridelements/setup.typoscript'
+@import 'EXT:sp_ueberland/Configuration/TypoScript/Extensions/mask/setup.typoscript'
+@import 'EXT:sp_ueberland/Configuration/TypoScript/Extensions/news/setup.typoscript'
+@import 'EXT:sp_ueberland/Configuration/TypoScript/Extensions/sr_language_menu/setup.typoscript'
+@import 'EXT:sp_ueberland/Configuration/TypoScript/Extensions/tgm_copyright/setup.typoscript'
+@import 'EXT:sp_ueberland/Configuration/TypoScript/Extensions/ueberland/setup.typoscript'
+@import 'EXT:sp_ueberland/Configuration/TypoScript/Extensions/ws_slider/setup.typoscript'
+
+######################
+####  SITECONFIG  ####
+######################
+@import 'EXT:sp_ueberland/Configuration/TypoScript/ueberland/jquery.typoscript'
+@import 'EXT:sp_ueberland/Configuration/TypoScript/ueberland/bootstrap.typoscript'
+@import 'EXT:sp_ueberland/Configuration/TypoScript/ueberland/fontawesome.typoscript'
+@import 'EXT:sp_ueberland/Configuration/TypoScript/ueberland/top.typoscript'
+@import 'EXT:sp_ueberland/Configuration/TypoScript/ueberland/header/navigation.typoscript'
+@import 'EXT:sp_ueberland/Configuration/TypoScript/ueberland/header/langmenu.typoscript'
+@import 'EXT:sp_ueberland/Configuration/TypoScript/ueberland/header/umami.typoscript'
+@import 'EXT:sp_ueberland/Configuration/TypoScript/ueberland/footer/navigation.typoscript'
+@import 'EXT:sp_ueberland/Configuration/TypoScript/ueberland/main.typoscript'

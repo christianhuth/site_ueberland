@@ -1,0 +1,19 @@
+<div class="angebot listItem col-sm-6 col-md-4">
+	<div class="angebot-wrapper">
+		<f:if condition="{data.header_link}">
+			<f:link.typolink parameter="{data.header_link}">
+				<div class="angebot-image">
+					<f:if condition="{data.image}">
+						<f:for each="{data.image}" as="file">
+							<f:image image="{file}" alt="{file.alternative}" title="{file.title}"/>
+						</f:for>
+					</f:if>
+				</div>
+				<div class="angebot-body">
+					<h3>{data.header}</h3>
+					<div class="angebot-subtitle">{data.subheader}</div>
+				</div>
+			</f:link.typolink>
+		</f:if>
+	</div>
+</div>

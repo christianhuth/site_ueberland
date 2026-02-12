@@ -1,0 +1,12 @@
+<div class="icon-mit-text">
+	<div class="icon">
+		<f:for each="{data.tx_mask_icon}" as="file">
+			<f:link.typolink parameter="{data.tx_mask_link}">
+				<f:image image="{file}" alt="{file.alternative}" title="{file.title}" width="200" />
+			</f:link.typolink>
+		</f:for>
+	</div>
+	<div class="text">
+		<h3><f:link.typolink parameter="{data.tx_mask_link}">{data.tx_mask_text}</f:link.typolink> <span class="arrow">→</span></h3>
+	</div>
+</div>

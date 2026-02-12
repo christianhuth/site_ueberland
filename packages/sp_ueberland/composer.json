@@ -1,0 +1,46 @@
+{
+    "name": "christianknell/sp_ueberland",
+    "description": "Sitepackage for Ueberland Tecklenburg",
+    "type": "typo3-cms-extension",
+    "license": "GPL-2.0-or-later",
+    "homepage": "https://github.com/christianhuth/sp_ueberland",
+    "keywords": [
+        "TYPO3 CMS"
+    ],
+    "authors": [
+        {
+            "name": "Christian Huth",
+            "role": "Developer",
+            "email": "christian@knell.it",
+            "homepage": "https://christianhuth.de"
+        }
+    ],
+    "config": {
+        "allow-plugins": {
+            "php-http/discovery": true,
+            "typo3/class-alias-loader": true,
+            "typo3/cms-composer-installers": true
+        },
+        "audit": {
+            "block-insecure": false
+        },
+        "platform": {
+            "php": "7.4.1"
+        },
+        "sort-packages": true
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "sp_ueberland"
+        }
+    },
+    "scripts": {
+        "typo3-cms-scripts": [
+            "typo3cms install:fixfolderstructure"
+        ],
+        "post-autoload-dump": [
+            "@typo3-cms-scripts"
+        ]
+    },
+    "version": "1.0.0"
+}

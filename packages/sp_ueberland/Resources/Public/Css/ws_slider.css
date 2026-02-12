@@ -1,0 +1,80 @@
+.owl-theme {
+	margin-top: 25px;
+}
+
+/*
+ * BILDUNTERSCHRIFT
+ */
+.item-meta {
+	background-color: #FFF087;
+	line-height: 54px;
+	min-height: 54px;
+	padding: 15px;
+	width: 100%;
+}
+.item-meta .row {
+	align-items: center;
+	display: flex;
+}
+.item-meta .item-title,
+.item-meta .item-detail {
+	#height: 24px;
+	line-height: 24px;
+	vertical-align: middle;
+}
+.item-meta .item-title h3 {
+	border-bottom: none !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	text-align: left;
+}
+.item-meta .item-detail {
+	color: black;
+	text-align: right;
+}
+.item-meta a {
+	color: black;
+}
+.item-meta a:hover {
+	color: #009D3C;;
+	text-decoration: none;
+}
+.item-meta .item-detail h4 {
+	border-bottom: none !important;
+	font-weight: bold;
+	line-height: 24px;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+/*
+ * NAVIGATION
+ */
+.owl-theme .owl-nav [class*='owl-']:hover {
+	background: transparent;
+	color: #FFF087;
+	display: block;
+	opacity: 1;
+}
+.owl-theme .owl-nav [class*='owl-'] {
+	background: transparent;
+	color: #FFF087;
+	font-size: 40px;
+	margin: 0;
+	opacity: 0.25;
+	padding: 0 60px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-60%);
+}
+.owl-theme .owl-nav .owl-prev {
+	left: 0;
+	padding-left: 0;
+}
+.owl-theme .owl-nav .owl-next {
+	right: 0;
+	padding-right: 0;
+}
+.fa, .far, .fas {
+	font-family: "Font Awesome 5 Free" !important;
+}

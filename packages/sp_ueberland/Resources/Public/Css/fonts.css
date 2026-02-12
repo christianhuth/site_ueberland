@@ -1,0 +1,97 @@
+/* Gudea */
+@font-face {
+    font-family: 'Gudea';
+    src: 	url('../Fonts/gudea-bold-webfont.woff2') format('woff2'),
+         	url('../Fonts/gudea-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gudea';
+    src: 	url('../Fonts/gudea-italic-webfont.woff2') format('woff2'),
+         	url('../Fonts/gudea-italic-webfont.woff') format('woff'),
+         	url('../Fonts/gudea-italic-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Gudea';
+    src: 	url('../Fonts/gudea-regular-webfont.woff') format('woff'),
+         	url('../Fonts/gudea-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Droid Sans */
+@font-face {
+    font-family: 'Droid Sans';
+    src: url('../Fonts/DroidSans-webfont.eot');
+    src: url('../Fonts/DroidSans-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../Fonts/DroidSans-webfont.woff2') format('woff2'),
+         url('../Fonts/DroidSans-webfont.woff') format('woff'),
+         url('../Fonts/DroidSans-webfont.ttf') format('truetype'),
+         url('../Fonts/DroidSans-webfont.svg#droid_sansregular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Droid Sans';
+    src: url('../Fonts/DroidSans-Bold-webfont.eot');
+    src: url('../Fonts/DroidSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../Fonts/DroidSans-Bold-webfont.woff2') format('woff2'),
+         url('../Fonts/DroidSans-Bold-webfont.woff') format('woff'),
+         url('../Fonts/DroidSans-Bold-webfont.ttf') format('truetype'),
+         url('../Fonts/DroidSans-Bold-webfont.svg#droid_sansbold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Open Sans Condensed */
+@font-face {
+    font-family: 'Open Sans Condensed';
+    src: url('../Fonts/OpenSans-CondLight-webfont.eot');
+    src: url('../Fonts/OpenSans-CondLight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../Fonts/OpenSans-CondLight-webfont.woff2') format('woff2'),
+         url('../Fonts/OpenSans-CondLight-webfont.woff') format('woff'),
+         url('../Fonts/OpenSans-CondLight-webfont.ttf') format('truetype'),
+         url('../Fonts/OpenSans-CondLight-webfont.svg#open_sanscondensed_light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans Condensed';
+    src: url('../Fonts/OpenSans-CondLightItalic-webfont.eot');
+    src: url('../Fonts/OpenSans-CondLightItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../Fonts/OpenSans-CondLightItalic-webfont.woff2') format('woff2'),
+         url('../Fonts/OpenSans-CondLightItalic-webfont.woff') format('woff'),
+         url('../Fonts/OpenSans-CondLightItalic-webfont.ttf') format('truetype'),
+         url('../Fonts/OpenSans-CondLightItalic-webfont.svg#open_sansCnLtIt') format('svg');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Open Sans Condensed';
+    src: url('../Fonts/OpenSans-CondBold-webfont.eot');
+    src: url('../Fonts/OpenSans-CondBold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../Fonts/OpenSans-CondBold-webfont.woff2') format('woff2'),
+         url('../Fonts/OpenSans-CondBold-webfont.woff') format('woff'),
+         url('../Fonts/OpenSans-CondBold-webfont.ttf') format('truetype'),
+         url('../Fonts/OpenSans-CondBold-webfont.svg#open_sans_condensedbold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: "flexslider-icon";
+  src: url("../Fonts/flexslider-icon.eot?#iefix") format("embedded-opentype"), 
+	  	url("../Fonts/flexslider-icon.woff") format("woff"), 
+	  url("../Fonts/flexslider-icon.ttf") format("truetype"), 
+	  url("../Fonts/flexslider-icon.svg#flexslider-icon") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}

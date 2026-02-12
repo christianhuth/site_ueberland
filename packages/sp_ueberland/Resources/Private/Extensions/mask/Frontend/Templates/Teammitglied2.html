@@ -1,0 +1,21 @@
+<div itemscope itemtype="http://schema.org/Person" class="person">
+	<div itemprop="photo" class="photo">
+		<figure>
+			<picture>
+				<f:for each="{data.tx_mask_profilbild}" as="file">
+					<f:image image="{file}" alt="{file.alternative}" title="{file.title}" width="200" />
+				</f:for>
+			</picture>
+		</figure>
+	</div>
+	<div class="contact clearfix">
+		<div itemprop="name" class="name">{data.tx_mask_fullname}</div>
+		<div itemprop="jobtitle" class="function">
+			{data.tx_mask_function}
+		</div>
+		<div itemprop="email"><f:link.typolink parameter="{data.tx_mask_email}">{data.tx_mask_email}</f:link.typolink></div>
+		<div class="email">
+			Tel. <span itemprop="telephone">{data.tx_mask_telephone}</span>
+		</div>
+	</div>
+</div>

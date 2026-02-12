@@ -1,0 +1,75 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+<f:layout name="General" />
+<!--
+	=====================
+		Templates/News/List.html
+-->
+
+<f:section name="content">
+	<!--TYPO3SEARCH_end-->
+	<f:if condition="{news}">
+		<f:then>
+			<f:if condition="{settings.limit}">
+				<f:then>
+					<f:for each="{news}" as="newsItem" iteration="iterator">
+						<div class="angebot listItem col-sm-12 col-md-4">
+							<div class="angebot-wrapper">
+								<f:link.page pageUid="{settings.detailPid}" section="news-{newsItem.uid}">
+									<div class="angebot-image">
+										<f:for each="{newsItem.mediaNonPreviews}" as="mediaElement">
+											<f:image image="{mediaElement}" title="{mediaElement.title}" alt="{mediaElement.alternative}" maxWidth="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.detail.media.image.maxWidth)}" maxHeight="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else: settings.detail.media.image.maxHeight)}" additionalAttributes="{itemprop:'image'}" />
+										</f:for>
+									</div>
+									<div class="angebot-body">
+										<h3>{newsItem.title}</h3>
+										<div class="angebot-subtitle">
+											<f:if condition="{newsItem.teaser}">
+												<f:then>
+													<div itemprop="description">{newsItem.teaser -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</div>
+												</f:then>
+												<f:else>
+													<div itemprop="description">{newsItem.bodytext -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</div>
+												</f:else>
+											</f:if>
+										</div>
+									</div>
+								</f:link.page>
+							</div>
+						</div>
+					</f:for>
+				</f:then>
+				<f:else>
+					<div class="news-list-view" id="news-container-{contentObjectData.uid}">
+						<f:if condition="{settings.hidePagination}">
+							<f:then>
+								<f:for each="{news}" as="newsItem" iteration="iterator">
+									<f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+								</f:for>
+							</f:then>
+							<f:else>
+								<f:if condition="{settings.list.paginate.insertAbove}">
+									<f:render partial="List/Pagination" arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" />
+								</f:if>
+								<f:for each="{pagination.paginator.paginatedItems}" as="newsItem" iteration="iterator">
+									<f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+								</f:for>
+								<f:if condition="{settings.list.paginate.insertBelow}">
+									<f:render partial="List/Pagination" arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" />
+								</f:if>
+							</f:else>
+						</f:if>
+					</div>
+				</f:else>
+			</f:if>
+		</f:then>
+		<f:else>
+			<div class="no-news-found">
+				<f:translate key="list_nonewsfound" />
+			</div>
+		</f:else>
+	</f:if>
+	<!--TYPO3SEARCH_begin-->
+</f:section>
+</html>

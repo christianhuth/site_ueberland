@@ -1,0 +1,41 @@
+lib.footerNavigation = COA
+lib.footerNavigation {
+  wrap = <ul id="footerNavigation">|</ul>
+  20 = HMENU
+  20 {
+    special = directory
+    special.value = 49
+    1 = TMENU
+    1 {
+      NO = 1
+      NO {
+        wrapItemAndSub = <li>|</li>
+        doNotLinkIt = 1
+        stdWrap.cObject = CASE
+        stdWrap.cObject {
+          key.field = doktype
+          3 = TEXT
+          3 {   
+            field = title // nav_title
+            typolink.parameter.field = url
+            typolink.extTarget = _blank
+            stdWrap.htmlSpecialChars = 1
+          }
+          default = TEXT
+          default {
+            field = title // nav_title
+            typolink.parameter.field = uid
+            typolink.extTarget = _blank
+            stdWrap.htmlSpecialChars = 1
+          }
+        }
+      }
+      CUR < .NO
+      SPC = 1
+      SPC {
+        doNotLinkIt = 1
+        wrapItemAndSub = <li>|</li>
+      }
+    }
+  }
+}

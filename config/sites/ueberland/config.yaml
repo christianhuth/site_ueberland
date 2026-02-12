@@ -1,13 +1,8 @@
 base: 'https://ueberland-tecklenburg.de'
 baseVariants:
   -
-    base: 'https://sp-ueb.ddev.site'
+    base: 'https://sp-ueberland.ddev.site'
     condition: 'applicationContext == "Development"'
-errorHandling:
-  -
-    errorCode: 404
-    errorHandler: Page
-    errorContentSource: '1'
 languages:
   -
     title: Deutsch
@@ -21,6 +16,8 @@ languages:
     direction: ltr
     flag: de
     languageId: 0
+    deeplTargetLanguage: DE
+    websiteTitle: ''
   -
     title: Englisch
     enabled: true
@@ -36,6 +33,7 @@ languages:
     flag: gb
     languageId: 1
     websiteTitle: ''
+    deeplTargetLanguage: EN-US
 rootPageId: 1
 routeEnhancers:
   NewsPlugin:
@@ -45,15 +43,20 @@ routeEnhancers:
     limitToPages:
       - 109
     routes:
-      -
-        routePath: '/seite/{page}'
+      - routePath: '/{localized_seite}/{page}'
         _controller: 'News::list'
         _arguments:
-          page: '@widget_0/currentPage'
+          page: currentPage
     defaultController: 'News::list'
     defaults:
       page: '0'
     aspects:
+      localized_seite:
+        type: LocaleModifier
+        default: 'seite'
+        localeMap:
+          - locale: 'en_.*'
+            value: 'page'
       page:
         type: StaticRangeMapper
         start: '1'
@@ -81,157 +84,157 @@ routeEnhancers:
     extension: ueberland
     plugin: ueberland
     limitToPages:
-      - 10000
+      - 18
     routes:
       -
-        routePath: '/bundesland/{bundesland_slug}'
+        routePath: '/{localized_bundesland}/{bundesland_slug}'
         _controller: 'Angebot::list'
         _arguments:
           bundesland_slug: section
       -
-        routePath: '/bundesland/{bundesland_slug}/seite/{page}'
+        routePath: '/{localized_bundesland}/{bundesland_slug}/{localized_seite}/{page}'
         _controller: 'Angebot::list'
         _arguments:
           bundesland_slug: section
-          page: '@widget_0/currentPage'
+          page: currentPage
       -
-        routePath: '/kategorie/{category_slug}'
+        routePath: '/{localized_category}/{category_slug}'
         _controller: 'Angebot::list'
         _arguments:
           category_slug: category
       -
-        routePath: '/kategorie/{category_slug}/seite/{page}'
+        routePath: '/{localized_category}/{category_slug}/{localized_seite}/{page}'
         _controller: 'Angebot::list'
         _arguments:
           category_slug: category
-          page: '@widget_0/currentPage'
+          page: currentPage
       -
-        routePath: '/land/{land_slug}'
+        routePath: '/{localized_land}/{land_slug}'
         _controller: 'Angebot::list'
         _arguments:
           land_slug: country
       -
-        routePath: '/land/{land_slug}/seite/{page}'
+        routePath: '/{localized_land}/{land_slug}/{localized_seite}/{page}'
         _controller: 'Angebot::list'
         _arguments:
           land_slug: country
-          page: '@widget_0/currentPage'
+          page: currentPage
       -
-        routePath: '/stadt/{stadt_slug}'
+        routePath: '/{localized_stadt}/{stadt_slug}'
         _controller: 'Angebot::list'
         _arguments:
           stadt_slug: city
       -
-        routePath: '/stadt/{stadt_slug}/seite/{page}'
+        routePath: '/{localized_stadt}/{stadt_slug}/{localized_seite}/{page}'
         _controller: 'Angebot::list'
         _arguments:
           stadt_slug: city
-          page: '@widget_0/currentPage'
+          page: currentPage
       -
-        routePath: '/land/{land_slug}/bundesland/{bundesland_slug}'
-        _controller: 'Angebot::list'
-        _arguments:
-          land_slug: country
-          bundesland_slug: section
-      -
-        routePath: '/land/{land_slug}/bundesland/{bundesland_slug}/seite/{page}'
+        routePath: '/{localized_land}/{land_slug}/{localized_bundesland}/{bundesland_slug}'
         _controller: 'Angebot::list'
         _arguments:
           land_slug: country
           bundesland_slug: section
-          page: '@widget_0/currentPage'
       -
-        routePath: '/land/{land_slug}/stadt/{stadt_slug}'
+        routePath: '/{localized_land}/{land_slug}/{localized_bundesland}/{bundesland_slug}/{localized_seite}/{page}'
+        _controller: 'Angebot::list'
+        _arguments:
+          land_slug: country
+          bundesland_slug: section
+          page: currentPage
+      -
+        routePath: '/{localized_land}/{land_slug}/{localized_stadt}/{stadt_slug}'
         _controller: 'Angebot::list'
         _arguments:
           land_slug: country
           stadt_slug: city
       -
-        routePath: '/land/{land_slug}/stadt/{stadt_slug}/seite/{page}'
+        routePath: '/{localized_land}/{land_slug}/{localized_stadt}/{stadt_slug}/{localized_seite}/{page}'
         _controller: 'Angebot::list'
         _arguments:
           land_slug: country
           stadt_slug: city
-          page: '@widget_0/currentPage'
+          page: currentPage
       -
-        routePath: '/land/{land_slug}/kategorie/{category_slug}'
+        routePath: '/{localized_land}/{land_slug}/{localized_category}/{category_slug}'
         _controller: 'Angebot::list'
         _arguments:
           land_slug: country
           category_slug: category
       -
-        routePath: '/land/{land_slug}/kategorie/{category_slug}/seite/{page}'
+        routePath: '/{localized_land}/{land_slug}/{localized_category}/{category_slug}/{localized_seite}/{page}'
         _controller: 'Angebot::list'
         _arguments:
           land_slug: country
           category_slug: category
-          page: '@widget_0/currentPage'
+          page: currentPage
       -
-        routePath: '/land/{land_slug}/kategorie/{category_slug}/seite/{page}'
+        routePath: '/{localized_land}/{land_slug}/{localized_category}/{category_slug}/{localized_seite}/{page}'
         _controller: 'Angebot::list'
         _arguments:
           land_slug: country
           category_slug: category
-          page: '@widget_0/currentPage'
+          page: currentPage
       -
-        routePath: 'bundesland/{bundesland_slug}/stadt/{stadt_slug}'
+        routePath: 'bundesland/{bundesland_slug}/{localized_stadt}/{stadt_slug}'
         _controller: 'Angebot::list'
         _arguments:
           bundesland_slug: section
           stadt_slug: city
       -
-        routePath: '/bundesland/{bundesland_slug}/kategorie/{category_slug}'
+        routePath: '/{localized_bundesland}/{bundesland_slug}/{localized_category}/{category_slug}'
         _controller: 'Angebot::list'
         _arguments:
           bundesland_slug: section
           category_slug: category
       -
-        routePath: '/stadt/{stadt_slug}/kategorie/{category_slug}'
+        routePath: '/{localized_stadt}/{stadt_slug}/{localized_category}/{category_slug}'
         _controller: 'Angebot::list'
         _arguments:
           stadt_slug: city
           category_slug: category
       -
-        routePath: '/land/{land_slug}/bundesland/{bundesland_slug}/stadt/{stadt_slug}'
+        routePath: '/{localized_land}/{land_slug}/{localized_bundesland}/{bundesland_slug}/{localized_stadt}/{stadt_slug}'
         _controller: 'Angebot::list'
         _arguments:
           land_slug: country
           bundesland_slug: section
           stadt_slug: city
       -
-        routePath: '/land/{land_slug}/bundesland/{bundesland_slug}/kategorie/{category_slug}'
-        _controller: 'Angebot::list'
-        _arguments:
-          bundesland_slug: section
-          category_slug: category
-          land_slug: country
-      -
-        routePath: '/land/{land_slug}/stadt/{stadt_slug}/kategorie/{category_slug}'
-        _controller: 'Angebot::list'
-        _arguments:
-          category_slug: category
-          land_slug: country
-          stadt_slug: city
-      -
-        routePath: '/bundesland/{bundesland_slug}/stadt/{stadt_slug}/kategorie/{category_slug}'
-        _controller: 'Angebot::list'
-        _arguments:
-          bundesland_slug: section
-          category_slug: category
-          stadt_slug: city
-      -
-        routePath: '/land/{land_slug}/bundesland/{bundesland_slug}/stadt/{stadt_slug}/kategorie/{category_slug}'
+        routePath: '/{localized_land}/{land_slug}/{localized_bundesland}/{bundesland_slug}/{localized_category}/{category_slug}'
         _controller: 'Angebot::list'
         _arguments:
           bundesland_slug: section
           category_slug: category
           land_slug: country
-          stadt_slug: city
       -
-        routePath: '/seite/{page}'
+        routePath: '/{localized_land}/{land_slug}/{localized_stadt}/{stadt_slug}/{localized_category}/{category_slug}'
         _controller: 'Angebot::list'
         _arguments:
-          page: '@widget_0/currentPage'
+          category_slug: category
+          land_slug: country
+          stadt_slug: city
+      -
+        routePath: '/{localized_bundesland}/{bundesland_slug}/{localized_stadt}/{stadt_slug}/{localized_category}/{category_slug}'
+        _controller: 'Angebot::list'
+        _arguments:
+          bundesland_slug: section
+          category_slug: category
+          stadt_slug: city
+      -
+        routePath: '/{localized_land}/{land_slug}/{localized_bundesland}/{bundesland_slug}/{localized_stadt}/{stadt_slug}/{localized_category}/{category_slug}'
+        _controller: 'Angebot::list'
+        _arguments:
+          bundesland_slug: section
+          category_slug: category
+          land_slug: country
+          stadt_slug: city
+      -
+        routePath: '/{localized_seite}/{page}'
+        _controller: 'Angebot::list'
+        _arguments:
+          page: currentPage
     defaultController: 'Angebot::list'
     defaults:
       page: '0'
@@ -256,4 +259,34 @@ routeEnhancers:
         type: StaticRangeMapper
         start: '1'
         end: '100'
+      localized_bundesland:
+        type: LocaleModifier
+        default: 'bundesland'
+        localeMap:
+          - locale: 'en_.*'
+            value: 'section'
+      localized_category:
+        type: LocaleModifier
+        default: 'kategorie'
+        localeMap:
+          - locale: 'en_.*'
+            value: 'category'
+      localized_land:
+        type: LocaleModifier
+        default: 'land'
+        localeMap:
+          - locale: 'en_.*'
+            value: 'country'
+      localized_stadt:
+        type: LocaleModifier
+        default: 'stadt'
+        localeMap:
+          - locale: 'en_.*'
+            value: 'city'
+      localized_seite:
+        type: LocaleModifier
+        default: 'seite'
+        localeMap:
+          - locale: 'en_.*'
+            value: 'page'
 websiteTitle: ''

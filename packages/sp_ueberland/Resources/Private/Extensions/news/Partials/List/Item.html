@@ -1,0 +1,44 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+	<!--
+		=====================
+			Partials/List/Item.html
+	-->
+	<div class="article articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" id="news-{newsItem.uid}" itemscope="itemscope" itemtype="http://schema.org/Article">
+		
+		<n:excludeDisplayedNews newsItem="{newsItem}"/>
+		
+		<div class="news-header">
+			<h2 class="news-headline">
+				{newsItem.title}
+			</h2>
+			<span class="news-list-date">
+				<time itemprop="datePublished" datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
+					// &nbsp; <f:format.date format="%d. %B %Y">{newsItem.datetime}</f:format.date>
+				</time>
+			</span>
+		</div>
+		
+		<div class="news-content row">
+			<div class="news-image col-xs-12 col-sm-4 col-md-4">
+				<f:for each="{newsItem.mediaNonPreviews}" as="mediaElement">
+					<f:if condition="{mediaElement.link}">
+						<f:then>
+							<f:link.typolink parameter="{mediaElement.link}">
+								<f:image image="{mediaElement}" title="{mediaElement.title}" alt="{mediaElement.alternative}" maxWidth="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.detail.media.image.maxWidth)}" maxHeight="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else: settings.detail.media.image.maxHeight)}" additionalAttributes="{itemprop:'image'}" />
+							</f:link.typolink>
+						</f:then>
+						<f:else>
+							<f:image image="{mediaElement}" title="{mediaElement.title}" alt="{mediaElement.alternative}" maxWidth="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.detail.media.image.maxWidth)}" maxHeight="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else: settings.detail.media.image.maxHeight)}" additionalAttributes="{itemprop:'image'}" />
+						</f:else>
+					</f:if>
+				</f:for>
+			</div>
+			<div class="news-text col-xs-12 col-sm-8 col-md-8">
+				<div itemprop="description">{newsItem.bodytext -> f:format.html()}</div>
+			</div>
+		</div>
+		
+	</div>
+</html>
