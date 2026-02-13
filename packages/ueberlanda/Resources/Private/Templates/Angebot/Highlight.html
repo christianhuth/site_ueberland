@@ -1,0 +1,79 @@
+<html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	
+	<f:layout name="Default" />
+
+	<f:section name="content">
+		<div id="highlightSlider" class="carousel slide" data-ride="carousel">
+			<div class="container">
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner">
+					<f:for each="{angebote}" as="angebot" iteration="iterator">
+						<f:if condition="{iterator.isFirst}">
+							<f:then>
+								<f:render partial="Angebot/HighlightItem" arguments="{angebot : angebot, active: 1}" />
+							</f:then>
+							<f:else>
+								<f:render partial="Angebot/HighlightItem" arguments="{angebot : angebot}" />
+							</f:else>
+						</f:if>
+					</f:for>
+				</div>
+				<!--
+				<ul class="nav nav-pills nav-justified highlightSlider">
+					<f:for each="{angebote}" as="angebot" iteration="iterator">
+						<f:if condition="{iterator.isFirst}">
+							<f:then>
+								<li data-target="#highlightSlider" data-slide-to="{iterator.index}" class="active">
+									<a href="#">
+										<f:for each="{angebot.city}" as="city" iteration="iterator2">
+											{city.name}
+											<f:if condition="!{iterator2.isLast}">//</f:if>
+										</f:for>
+									</a>
+								</li>
+							</f:then>
+							<f:else>
+								<li data-target="#highlightSlider" data-slide-to="{iterator.index}">
+									<a href="#">{angebot.title}
+										<f:for each="{angebot.city}" as="city" iteration="iterator2">
+											{city.name}
+											<f:if condition="!{iterator2.isLast}">//</f:if>
+										</f:for>
+									</a>
+								</li>
+							</f:else>
+						</f:if>
+					</f:for>
+				</ul>
+				-->
+			</div>
+		</div>
+		
+		<script>
+		$(document).ready( function() {
+			$('#highlightSlider').carousel({
+				interval:   4000
+			});
+
+			var clickEvent = false;
+			$('#highlightSlider').on('click', '.highlightSlider a', function() {
+					clickEvent = true;
+					$('.highlightSlider li').removeClass('active');
+					$(this).parent().addClass('active');		
+			}).on('slid.bs.carousel', function(e) {
+				if(!clickEvent) {
+					var count = $('.highlightSlider').children().length -1;
+					var current = $('.highlightSlider li.active');
+					current.removeClass('active').next().addClass('active');
+					var id = parseInt(current.data('slide-to'));
+					if(count == id) {
+						$('.highlightSlider li').first().addClass('active');	
+					}
+				}
+				clickEvent = false;
+			});
+		});
+		</script>
+	</f:section>
+	
+</html>

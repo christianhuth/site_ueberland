@@ -1,0 +1,16 @@
+<html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:if condition="{active} == 1">
+		<f:then>
+			<div id="tab-events" class="tab-pane fade active in">
+		</f:then>
+		<f:else>
+			<div id="tab-events" class="tab-pane fade">
+		</f:else>
+	</f:if>
+		<div class="listing event-listing">
+			<f:for each="{events}" as="event">
+				<f:render partial="Event/ListingItem" arguments="{event : event}" />
+			</f:for>
+		</div>
+	</div>
+</html>

@@ -1,0 +1,52 @@
+<html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:layout name="Default" />
+
+	This Template is responsible for creating a table of domain objects.
+
+	If you modify this template, do not forget to change the overwrite settings
+	in /Configuration/ExtensionBuilder/settings.yaml:
+	  Resources:
+		Private:
+		  Templates:
+			List.html: keep
+
+	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+	<f:section name="content">
+		<h1>Listing for Sight</h1>
+
+		<f:flashMessages />
+
+		<table  class="tx_ueberland" >
+			<tr>
+				<th><f:translate key="tx_ueberland_domain_model_sight.title" /></th>
+				<th><f:translate key="tx_ueberland_domain_model_sight.subtitle" /></th>
+				<th><f:translate key="tx_ueberland_domain_model_sight.description" /></th>
+				<th><f:translate key="tx_ueberland_domain_model_sight.street" /></th>
+				<th><f:translate key="tx_ueberland_domain_model_sight.housenumber" /></th>
+				<th><f:translate key="tx_ueberland_domain_model_sight.postalcode" /></th>
+				<th><f:translate key="tx_ueberland_domain_model_sight.url" /></th>
+				<th><f:translate key="tx_ueberland_domain_model_sight.image" /></th>
+				<th> </th>
+				<th> </th>
+			</tr>
+
+			<f:for each="{sights}" as="sight">
+				<tr>
+					<td><f:link.action action="show" arguments="{sight : sight}"> {sight.title}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{sight : sight}"> {sight.subtitle}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{sight : sight}"> {sight.description}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{sight : sight}"> {sight.street}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{sight : sight}"> {sight.housenumber}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{sight : sight}"> {sight.postalcode}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{sight : sight}"> {sight.url}</f:link.action></td>
+					<td><f:link.action action="show" arguments="{sight : sight}"> {sight.image.originalResource.name}</f:link.action></td>
+					<td><f:link.action action="edit" arguments="{sight : sight}">Edit</f:link.action></td>
+					<td><f:link.action action="delete" arguments="{sight : sight}">Delete</f:link.action></td>
+				</tr>
+			</f:for>
+		</table>
+
+		<f:link.action action="new">New Sight</f:link.action>
+	</f:section>
+</html>

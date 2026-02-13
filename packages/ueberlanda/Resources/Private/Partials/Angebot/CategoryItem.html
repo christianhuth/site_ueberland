@@ -1,0 +1,31 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+<!--
+	=====================
+		Partials/Angebot/categoryItem.html
+-->
+	<f:if condition="{iterator.isFirst}">
+		<f:then>
+			<div class="item active">
+		</f:then>
+		<f:else>
+			<div class="item">	
+		</f:else>
+	</f:if>
+		<div class="angebot listItem col-xs-12 col-sm-6 col-md-4">
+			<div class="angebot-wrapper">
+					<f:link.action action="list" arguments="{category : category}" pageUid="18">
+					<div class="angebot-image">
+						<f:for each="{category.txUeberlandImage}" as="image" iteration="iterator">
+							<f:if condition="{iterator.isFirst}"><f:image src="{image.uid}" alt="" treatIdAsReference="TRUE" /></f:if>
+						</f:for>
+					</div>
+					<div class="angebot-body">
+						<h3>{category.title}</h3>
+						<div class="angebot-subtitle"><f:format.html>{category.txUeberlandDescription}</f:format.html></div>
+					</div>
+				</f:link.action>
+			</div>
+		</div>
+	</div>
+	
+</html>

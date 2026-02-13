@@ -1,0 +1,122 @@
+<html 	xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+<!--
+	=====================
+		Partials/Angebot/inquiry.html
+-->
+	
+	<f:if condition="{angebotsanfrage}">
+		<f:if condition="{angebotsanfrage.status}">
+			<f:then>
+				<div class="alert alert-success" role="alert">
+					<f:translate key="angebot_inquiry_success"/>
+				</div>
+			</f:then>
+			<f:else>
+				<div class="alert alert-danger" role="alert">
+					<f:translate key="angebot_inquiry_warning_before_mail"/> <f:link.email email="noreply@ueberland-tecklenburg.de"/><f:translate key="angebot_inquiry_warning_after_mail"/>
+				</div>
+			</f:else>
+		</f:if>
+	</f:if>
+	
+	<f:form method="post" action="show" arguments="{angebot : angebot}" pageUid="61">
+		<div class="row">
+			<f:form.hidden name="angebotsanfrage[angebotId]" value="{angebot.uid}"/>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+				<div class="form-group">
+					<label class="control-label"><f:translate key="angebot_inquiry_participants"/><span class="required">*</span></label>
+					<div class="input">
+						<f:form.textfield required="TRUE" class="form-control" name="angebotsanfrage[teilnehmer]"/>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+				<div class="form-group">
+					<label class="control-label"><f:translate key="angebot_inquiry_date_start"/><span class="required">*</span></label>
+					<div class="input">
+						<f:form.textfield placeholder="DD.MM.YYYY" required="TRUE" class="form-control" name="angebotsanfrage[dateStart]" type="date"/>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+				<div class="form-group">
+					<label class="control-label"><f:translate key="angebot_inquiry_date_end"/><span class="required">*</span></label>
+					<div class="input">
+						<f:form.textfield placeholder="DD.MM.YYYY" required="TRUE" class="form-control" name="angebotsanfrage[dateEnd]" type="date"/>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="form-group">
+					<label class="control-label"><f:translate key="angebot_inquiry_name"/><span class="required">*</span></label>
+					<div class="input">
+						<f:form.textfield placeholder="" required="TRUE" class="form-control" name="angebotsanfrage[name]"/>
+					</div>
+				</div>
+			</div>		
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="form-group">
+					<label class="control-label"><f:translate key="angebot_inquiry_company"/><span class="required">*</span></label>
+					<div class="input">
+						<f:form.textfield placeholder="" required="TRUE" class="form-control" name="angebotsanfrage[firma]"/>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="form-group">
+					<label class="control-label"><f:translate key="angebot_inquiry_mail"/><span class="required">*</span></label>
+					<div class="input">
+						<f:form.textfield placeholder="" required="TRUE" class="form-control" name="angebotsanfrage[mail]" type="email"/>
+					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<div class="form-group">
+					<label class="control-label"><f:translate key="angebot_inquiry_phone"/></label>
+					<div class="input">
+						<f:form.textfield placeholder="" required="FALSE" class="form-control" name="angebotsanfrage[phone]"/>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="form-group">
+					<label class="control-label"><f:translate key="angebot_inquiry_message"/></label>
+					<div class="input">
+						<f:form.textarea placeholder="" class="form-control" name="angebotsanfrage[message]"/>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="input checkbox">
+				<div class="form-check">
+					<label class="add-on form-check-label">
+						<f:form.checkbox name="angebotsanfrage[datenschutz]" value="0" additionalAttributes="{required:'required'}"/>
+						<span><f:translate key="angebot_inquiry_data_privacy"/><span class="required">*</span>
+						</span>
+					</label>
+				</div>
+			</div>
+		</div>
+			<div class="actions">
+				<nav class="form-navigation">
+					<div class="btn-toolbar" role="toolbar">
+						<div class="btn-group" role="group">
+							<span class="next submit">
+								<f:form.submit value='<f:translate key="angebot_inquiry_submit"/>' name="angebotsanfrage[submit]" class="btn btn-primary"/>
+							</span>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</f:form>
+			
+</html>

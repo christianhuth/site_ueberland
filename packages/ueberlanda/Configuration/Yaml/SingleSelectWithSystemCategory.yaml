@@ -1,0 +1,12 @@
+TYPO3:
+  CMS:
+    Form:
+      prototypes:
+        standard:
+          formElementsDefinition:
+            SingleSelectWithSystemCategory:
+              __inheritances:
+                10: 'TYPO3.CMS.Form.prototypes.standard.formElementsDefinition.SingleSelect'
+              implementationClassName: 'BaluMedien\Ueberland\Domain\Model\FormElements\SystemCategoryOptions'
+              renderingOptions:
+                templateName: 'SingleSelect'

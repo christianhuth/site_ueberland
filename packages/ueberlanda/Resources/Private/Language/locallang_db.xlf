@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-08-31T22:59:22Z" product-name="ueberland">
+		<header/>
+		<body>
+			<trans-unit id="tx_ueberland_domain_model_land">
+				<source>Land</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_land.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_land.beschreibung">
+				<source>Beschreibung</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_land.bild">
+				<source>Bild</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_land.bundesland">
+				<source>Bundesländer/Provinzen</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_bundesland">
+				<source>Bundesland</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_bundesland.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_bundesland.beschreibung">
+				<source>Beschreibung</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_bundesland.bild">
+				<source>Bild</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_bundesland.land">
+				<source>Land</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_bundesland.stadt">
+				<source>Städte</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_programmkategorie">
+				<source>Programmkategorie</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_programmpunkt">
+				<source>Programmpunkt</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_programmpunkt.title">
+				<source>Titel</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_programmpunkt.description">
+				<source>Beschreibung</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_programmpunkt.country">
+				<source>Land</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_programmpunkt.programmkategorie">
+				<source>Programmkategorien</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_programmpunkt.image">
+				<source>Bilder</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_stadt">
+				<source>Stadt</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_stadt.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_stadt.beschreibung">
+				<source>Beschreibung</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_stadt.bild">
+				<source>Bild</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_stadt.top_stadt">
+				<source>Top Reiseziel</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_stadt.historische_alstadt">
+				<source>Historische Alstadt</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_stadt.welthafen">
+				<source>Welthafen</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_stadt.kueste">
+				<source>Kueste</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_stadt.kunststadt">
+				<source>Kunststadt</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_stadt.bundesland">
+				<source>Bundesland</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_stadt.latitude">
+				<source>Latitude</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_stadt.longitude">
+				<source>Longitude</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_event">
+				<source>Event</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_event.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_event.startdatum">
+				<source>Startdatum</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_event.enddatum">
+				<source>Enddatum</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_event.stadt">
+				<source>Stadt</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_sight">
+				<source>Sight</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_sight.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_sight.subtitle">
+				<source>Subtitle</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_sight.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_sight.street">
+				<source>Street</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_sight.housenumber">
+				<source>Housenumber</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_sight.postalcode">
+				<source>Postalcode</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_sight.url">
+				<source>Url</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_sight.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_sight.city">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_angebot">
+				<source>Angebot</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_angebot.id">
+				<source>Id</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_angebot.title">
+				<source>Titel</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_angebot.subtitle">
+				<source>Untertitel</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_angebot.extension_price">
+				<source>Verlängerungstag</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_angebot.price">
+				<source>Preis</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_angebot.price_type">
+				<source>Price Type</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_angebot.duration_in_days">
+				<source>Dauer in Tagen</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_angebot.overnight_with_breakfast">
+				<source>Übernachtung mit Frühstück</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_angebot.half_board">
+				<source>Halbpension</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_angebot.full_board">
+				<source>Vollpension</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_angebot.benefits">
+				<source>Leistungen</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_angebot.last_minute">
+				<source>Last Minute</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_angebot.last_minute_from">
+				<source>Last Minute From</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_angebot.last_minute_to">
+				<source>Last Minute To</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_angebot.image">
+				<source>Bild(er)</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_angebot.highlight">
+				<source>Highlight</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_angebot.current">
+				<source>Aktuelles Angebot?</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_angebot.available">
+				<source>Reisezeitraum</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_angebot.available_from">
+				<source>von</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_angebot.available_till">
+				<source>bis</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_angebot.city">
+				<source>Stadt</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_angebot.day_program">
+				<source>Tagesprogramm</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_angebot.intro">
+				<source>Introtext</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_angebot.newsletter_image">
+				<source>Bild(er)</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_angebot.newsletter_show_time_of_travel">
+				<source>Zeige Reisezeiträume</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_angebot.newsletter_text_1">
+				<source>Textbaustein 1</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_angebot.newsletter_text_2">
+				<source>Textbaustein 2</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_tagesprogramm">
+				<source>Tagesprogramm</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_tagesprogramm.day">
+				<source>Day</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_tagesprogramm.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_tagesprogramm.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_ueberland.name">
+				<source>Überland</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_ueberland.description">
+				<source>Plugin für die Darstellung der Überland-Angebote.</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

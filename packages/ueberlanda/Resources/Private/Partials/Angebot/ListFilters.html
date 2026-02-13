@@ -1,0 +1,67 @@
+<html 	xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      		xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
+<!--
+	=====================
+		Partials/Angebot/listFilters.html
+-->
+	
+	<div class="angebote-filter">
+		<form action="{f:uri.action(action:'list')}" method="GET" class="search-form">
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-4">
+					<div class="form-group">
+						<f:form.select class="form-control" name="tx_ueberland_ueberland[country]" value="{selectedCountry.uid}" options="{countries}" optionValueField="uid" optionLabelField="name" sortByOptionLabel="name" prependOptionValue="" prependOptionLabel="<f:translate key='angebot_filter_countries'/>"/>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+					<div class="form-group">
+						<f:form.select class="form-control" name="tx_ueberland_ueberland[section]" value="{selectedSection.uid}" optionValueField="uid" optionLabelField="name">
+							<f:form.select.option value=""><f:translate key='angebot_filter_sections'/></f:form.select.option>
+                            <f:groupedFor each="{sections}" as="sectionsByCountry" groupBy="land" groupKey="land">
+                                <f:form.select.optgroup class="form-control" label="{land.name}" title="{land.name}" />
+                                <f:for each="{sectionsByCountry}" as="sectionByCountry">
+                              		<f:form.select.option value="{sectionByCountry.uid}">{sectionByCountry.name}</f:form.select.option>
+                                </f:for>
+                            </f:groupedFor>
+                        </f:form.select>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+					<div class="form-group">
+						<f:form.select class="form-control" name="tx_ueberland_ueberland[city]" value="{selectedCity.uid}" optionValueField="uid" optionLabelField="name">
+                            <f:form.select.option value=""><f:translate key='angebot_filter_cities'/></f:form.select.option>
+                            <f:form.select.optgroup class="form-control" label="{f:translate(key: 'angebot_search_city_top')}" title="{f:translate(key: 'angebot_search_city_top')}" />
+							<f:for each="{topCities}" as="topCity">
+                            	<f:form.select.option value="{topCity.uid}">{topCity.name}</f:form.select.option>
+							</f:for>
+                            <f:groupedFor each="{cities}" as="citiesByCountry" groupBy="bundesland.land" groupKey="land">
+                                <f:form.select.optgroup class="form-control" label="{land.name}" title="{land.name}" />
+                                <f:for each="{citiesByCountry}" as="cityByCountry">
+                              		<f:form.select.option value="{cityByCountry.uid}">{cityByCountry.name}</f:form.select.option>
+                                </f:for>
+                            </f:groupedFor>
+                        </f:form.select>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4">
+					<div class="form-group">
+						<f:form.select class="form-control" name="tx_ueberland_ueberland[category]" value="{selectedCategory.uid}" options="{categories}" optionValueField="uid" optionLabelField="title" prependOptionValue="" prependOptionLabel="<f:translate key='angebot_filter_categories'/>"/>
+					</div>
+				</div>
+				
+				<div class="col-xs-12 col-sm-6 col-md-4">
+					<div class="form-group">
+						<f:form.textfield class="form-control" name="tx_ueberland_ueberland[suchtext]" value="{suchtext}" placeholder="{f:translate(key: 'angebot_search_text')}"/>
+					</div>
+				</div>
+				
+				<div class="col-xs-12 col-sm-6 col-md-4">
+					<div class="form-group">
+						<f:form.submit class="btn btn-primary" value="<f:translate key='angebot_show'/>"/>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+	
+</html>

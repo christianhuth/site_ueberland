@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2018-06-03T04:27:54Z" product-name="ueberland">
+		<header/>
+		<body>
+			<trans-unit id="angebot_anfrage">
+				<target>Jetzt anfragen</target>
+			</trans-unit>
+			<trans-unit id="angebot_season">
+				<target>Saison</target>
+			</trans-unit>
+			<trans-unit id="angebot_days">
+				<target>Tage</target>
+			</trans-unit>
+			<trans-unit id="angebot_overnight_with_breakfast">
+				<target>Übernachtung mit Frühstück</target>
+			</trans-unit>
+			<trans-unit id="angebot_overnight_with_breakfast_abbr">
+				<target>ÜF</target>
+			</trans-unit>
+			<trans-unit id="angebot_half_board">
+				<target>Halbpension</target>
+			</trans-unit>
+			<trans-unit id="angebot_half_board_abbr">
+				<target>HP</target>
+			</trans-unit>
+			<trans-unit id="angebot_full_board">
+				<target>Vollpension</target>
+			</trans-unit>
+			<trans-unit id="angebot_full_board_abbr">
+				<target>VP</target>
+			</trans-unit>
+			<trans-unit id="angebot_price_start">
+				<target>ab</target>
+			</trans-unit>
+			<trans-unit id="angebot_extension_price">
+				<target>Verlängerungstag</target>
+			</trans-unit>
+			<trans-unit id="angebot_availability">
+				<target>Reisezeitraum</target>
+			</trans-unit>
+			<trans-unit id="angebot_id">
+				<target>Reise-Code</target>
+			</trans-unit>
+			<trans-unit id="angebot_id_not_available">
+				<target>Nicht vorhanden</target>
+			</trans-unit>
+			<trans-unit id="angebot_leistungen">
+				<target>Leistungen</target>
+			</trans-unit>
+			<trans-unit id="angebot_dayprogram">
+				<target>Programmablauf</target>
+			</trans-unit>
+			<trans-unit id="angebot_dayprogram.day">
+				<target>%d. Tag</target>
+			</trans-unit>
+			<trans-unit id="angebot_dayprogram.empty_1">
+				<target>Das ausführliche Reiseprogramm lassen wir Ihnen gerne auf Anfrage zukommen. Schreiben Sie uns über das</target>
+			</trans-unit>
+			<trans-unit id="angebot_dayprogram.empty_2">
+				<target>unten stehende Anfrageformular</target>
+			</trans-unit>
+			<trans-unit id="angebot_dayprogram.empty_3">
+				<target>wir freuen uns auf Ihre Nachricht!</target>
+			</trans-unit>
+			<trans-unit id="angebot_programmpunkt">
+				<target>Aktivitäten</target>
+			</trans-unit>
+			<trans-unit id="angebot_sights">
+				<target>Sehenswürdigkeiten</target>
+			</trans-unit>
+			<trans-unit id="angebot_angebote">
+				<target>Weitere Angebote</target>
+			</trans-unit>
+			<trans-unit id="angebot_map">
+				<target>Karte</target>
+			</trans-unit>
+			<trans-unit id="angebot_filter_categories">
+				<target>Alle Kategorien</target>
+			</trans-unit>
+			<trans-unit id="angebot_filter_countries">
+				<target>Alle Länder</target>
+			</trans-unit>
+			<trans-unit id="angebot_filter_sections">
+				<target>Alle Bundesländer/Provinzen</target>
+			</trans-unit>
+			<trans-unit id="angebot_filter_regions">
+				<target>Alle Regionen</target>
+			</trans-unit>
+			<trans-unit id="angebot_filter_cities">
+				<target>Alle Städte</target>
+			</trans-unit>
+			<trans-unit id="angebot_search_category">
+				<target>Reisekategorie</target>
+			</trans-unit>
+			<trans-unit id="angebot_search_country">
+				<target>Land</target>
+			</trans-unit>
+			<trans-unit id="angebot_search_region">
+				<target>Region</target>
+			</trans-unit>
+			<trans-unit id="angebot_search_city">
+				<target>Stadt</target>
+			</trans-unit>
+			<trans-unit id="angebot_search_city_top">
+				<target>Top-Städte</target>
+			</trans-unit>
+			<trans-unit id="angebot_search_empty_1">
+				<target>Gerne erstellen wir Ihnen</target>
+			</trans-unit>
+			<trans-unit id="angebot_search_empty_2">
+				<target>ein maßgeschneidertes Angebot passend zu Ihrer Suche</target>
+			</trans-unit>
+			<trans-unit id="angebot_search_own">
+				<target>Noch Fragen?</target>
+			</trans-unit>
+			<trans-unit id="angebot_search_text">
+				<target>Suchtext</target>
+			</trans-unit>
+			<trans-unit id="angebot_show">
+				<target>Angebote zeigen</target>
+			</trans-unit>
+			<trans-unit id="angebot_inquiry_headline.1">
+				<target>Angebot</target>
+			</trans-unit>
+			<trans-unit id="angebot_inquiry_headline.2">
+				<target>anfragen</target>
+			</trans-unit>
+			<trans-unit id="angebot_inquiry_success">
+				<target>Vielen Dank für Ihre Anfrage! Wir werden uns schnellstmöglich bei Ihnen melden!</target>
+			</trans-unit>
+			<trans-unit id="angebot_inquiry_warning_before_mail">
+				<target>Vielen Dank für Ihre Anfrage! Leider gab es ein Problem beim Mail-Versand. Versuchen Sie es bitte erneut oder wenden Sie sich direkt an</target>
+			</trans-unit>
+			<trans-unit id="angebot_inquiry_warning_after_mail">
+				<target>. Entschuldigen Sie vielmals die Umstände.</target>
+			</trans-unit>
+			<trans-unit id="angebot_inquiry_participants">
+				<target>Anzahl der Teilnehmer</target>
+			</trans-unit>
+			<trans-unit id="angebot_inquiry_date_start">
+				<target>Datum: von</target>
+			</trans-unit>
+			<trans-unit id="angebot_inquiry_date_end">
+				<target>Datum: bis</target>
+			</trans-unit>
+			<trans-unit id="angebot_inquiry_name">
+				<target>Name</target>
+			</trans-unit>
+			<trans-unit id="angebot_inquiry_company">
+				<target>Firma</target>
+			</trans-unit>
+			<trans-unit id="angebot_inquiry_mail">
+				<target>E-Mail-Adresse</target>
+			</trans-unit>
+			<trans-unit id="angebot_inquiry_phone">
+				<target>Telefonnummer</target>
+			</trans-unit>
+			<trans-unit id="angebot_inquiry_message">
+				<target>Weitere Hinweise oder Angaben</target>
+			</trans-unit>
+			<trans-unit id="angebot_inquiry_data_privacy">
+				<target>Ich stimme zu, dass meine Angaben aus dem Kontaktformular zur Beantwortung meiner Anfrage erhoben und verarbeitet werden. Die Daten werden nach abgeschlossener Bearbeitung Ihrer Anfrage gelöscht. Hinweis: Sie können Ihre Einwilligung jederzeit für die Zukunft per E-Mail an info@ueberland-tecklenburg.de widerrufen.</target>
+			</trans-unit>
+			<trans-unit id="angebot_inquiry_submit">
+				<target>Absenden</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_success">
+				<target>Vielen Dank für Ihre Anfrage! Wir werden uns schnellstmöglich bei Ihnen melden!</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_contact">
+				<target>Kontaktinformationen</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_company_type">
+				<target>Form des Unternehmens</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_company_type.1">
+				<target>Busunternehmen</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_company_type.2">
+				<target>Reiseveranstalter</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_company_type.3">
+				<target>Reisebüro</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_company_type.4">
+				<target>Sonstiges</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_company">
+				<target>Firma</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_firstname">
+				<target>Vorname</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_lastname">
+				<target>Nachname</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_street">
+				<target>Straße</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_zipcode">
+				<target>Postleitzahl</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_location">
+				<target>Ort</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_country">
+				<target>Land</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_phone">
+				<target>Telefon</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_fax">
+				<target>Fax</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_mail">
+				<target>Mail</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_language">
+				<target>Sprache für Korrespondenz</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_language.german">
+				<target>Deutsch</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_language.english">
+				<target>Englisch</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_travel_goal">
+				<target>Reiseziel</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_travel_goal.country">
+				<target>Land</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_travel_goal.city">
+				<target>Stadt</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_travel_date">
+				<target>Termin</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_travel_date.start">
+				<target>Terminwunsch von</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_travel_date.end">
+				<target>bis</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_travel_date.number_of_nights">
+				<target>Anzahl an Übernachtungen</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_travel_accomodation">
+				<target>Unterkunft</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_travel_accomodation.participants">
+				<target>Personenanzahl</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_travel_accomodation.single_room_count">
+				<target>Anzahl Einzelzimmer</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_travel_accomodation.double_room_count">
+				<target>Anzahl Doppelzimmer</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_travel_accomodation.multi_room_count">
+				<target>Anzahl Mehrbettzimmer</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_travel_accomodation.type">
+				<target>Typ</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_travel_accomodation.type.1">
+				<target>First Class Hotel</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_travel_accomodation.type.2">
+				<target>2 Sterne</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_travel_accomodation.type.3">
+				<target>3 Sterne</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_travel_accomodation.type.4">
+				<target>4 Sterne</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_travel_accomodation.type.5">
+				<target>Pension</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_travel_accomodation.type.6">
+				<target>Jugendhotel</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_travel_accomodation.provision">
+				<target>Verpflegung</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_travel_accomodation.provision.1">
+				<target>Übernachtung mit Frühstück</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_travel_accomodation.provision.2">
+				<target>Halbpension</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_travel_accomodation.provision.3">
+				<target>Vollpension</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_travel_accomodation.provision.4">
+				<target>Lunchpaket</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_travel_accomodation.programme">
+				<target>Programm</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_travel_accomodation.programme.1">
+				<target>Reiseleitung</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_travel_accomodation.programme.2">
+				<target>Stadtrundfahrt/-rundgang</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_travel_accomodation.programme.3">
+				<target>Restaurant</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_travel_accomodation.programme.4">
+				<target>Theater/Musical</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_travel_accomodation.programme.5">
+				<target>Bootsfahrt</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_travel_accomodation.programme.6">
+				<target>Museum</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_travel_accomodation.programme.7">
+				<target>Sonstiges</target>
+			</trans-unit>
+			
+			
+			<trans-unit id="travel_inquiry_travel_submit">
+				<target>Wünsche und Anmerkungen</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_travel_submit.additional">
+				<target>Zusatzwünsche</target>
+			</trans-unit>
+			<trans-unit id="travel_inquiry_travel_submit.submit">
+				<target>Absenden</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

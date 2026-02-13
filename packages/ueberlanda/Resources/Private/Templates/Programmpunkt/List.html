@@ -1,0 +1,17 @@
+<html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	
+	<f:layout name="Default" />
+	
+	<f:section name="content">
+		<div class="programmpunkte-header">
+			<h3>Unsere Programm-Tipps</h3>
+			<p><b>Entdecken Sie jetzt unsere ausgewählten Programmvorschläge für {country.name}!</b></p>
+		</div>
+		<div class="programmpunkte">
+			<f:for each="{programmpunkte}" as="programmpunkt" iteration="iterator">
+				<f:render partial="Programmpunkt/ListItem" arguments="{programmpunkt : programmpunkt}" />
+			</f:for>
+		</div>
+	</f:section>
+	
+</html>

@@ -1,0 +1,29 @@
+# Configuration/Yaml/BaseSetup.yaml
+
+TYPO3:
+  CMS:
+    Form:
+      prototypes:
+        standard:
+          formEditor:
+            formEditorPartials:
+              FormElement-YourCustomElement: 'Stage/SimpleTemplate'
+
+          formElementsDefinition:
+            Form:
+              renderingOptions:
+                templateRootPaths:
+                  100: 'EXT:ueberland/Resources/Private/Frontend/Templates/'
+                partialRootPaths:
+                  100: 'EXT: ueberland/Resources/Private/Frontend/Partials/'
+                layoutRootPaths:
+                  100: 'EXT: ueberland/Resources/Private/Frontend/Layouts/'
+
+            YourCustomElement:
+              __inheritances:
+                10: 'TYPO3.CMS.Form.mixins.formElementMixins.YourCustomElementMixin'
+      mixins:
+        formElementMixins:
+          YourCustomElementMixin:
+            __inheritances:
+              10: 'TYPO3.CMS.Form.mixins.formElementMixins.FormElementMixin'

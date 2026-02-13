@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-05-06T14:18:49Z" product-name="ueberland">
+		<header/>
+		<body>
+			<trans-unit id="strasse.description">
+				<source>strasse</source>
+			</trans-unit>
+			<trans-unit id="hausnummer.description">
+				<source>hausnummer</source>
+			</trans-unit>
+			<trans-unit id="plz.description">
+				<source>plz</source>
+			</trans-unit>
+			<trans-unit id="stadt.description">
+				<source>stadt</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

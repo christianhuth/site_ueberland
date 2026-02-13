@@ -1,0 +1,75 @@
+<html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	
+	<f:layout name="Default" />
+	
+	<f:section name="content">
+		<div class="angebote-search">
+			<form action="{f:uri.action(action:'list', pageUid: '18')}" method="GET" class="search-form">
+				<div class="row">
+					<div class="searchItem col-xs-6 col-sm-6 col-md-3">
+						<div class="angebot-search-box search-box-category">
+							<div class="angebot-search-box-label">
+								<label for="category"><f:translate key='angebot_search_category'/></label>
+							</div>
+							<div class="form-group">
+								<f:form.select class="form-control" name="tx_ueberland_ueberland[category]" optionValueField="uid" optionLabelField="name">
+								  	<f:form.select.option value=""><f:translate key='angebot_filter_categories'/></f:form.select.option>
+									<f:for each="{categories}" as="category">
+										<f:if condition="{category.parent}">
+											<f:then>
+											</f:then>
+											<f:else>
+								  				<f:form.select.option value="{category.uid}">{category.title}</f:form.select.option>
+											</f:else>
+										</f:if>
+									</f:for>
+                        		</f:form.select>
+							</div>
+						</div>
+					</div>
+					<f:render partial="Angebot/SearchItem" arguments="{selectOptions : countries, name : 'tx_ueberland_ueberland[country]', labelTranslationKey : 'angebot_search_country', labelField : 'name', translationKey : 'angebot_filter_countries', sortField : 'name'}" />
+					
+					
+					<div class="searchItem col-xs-6 col-sm-6 col-md-3">
+						<div class="angebot-search-box search-box-city">
+							<div class="angebot-search-box-label">
+								<label for="category"><f:translate key='angebot_search_city'/></label>
+							</div>
+							<div class="form-group">
+								<f:form.select class="form-control" name="tx_ueberland_ueberland[city]" value="" optionValueField="uid" optionLabelField="name">
+									<f:form.select.option value=""><f:translate key='angebot_filter_cities'/></f:form.select.option>
+									<f:form.select.optgroup class="form-control" label="{f:translate(key: 'angebot_search_city_top')}" title="{f:translate(key: 'angebot_search_city_top')}" />
+									<f:for each="{topCities}" as="topCity">
+										<f:form.select.option value="{topCity.uid}">{topCity.name}</f:form.select.option>
+									</f:for>
+									<f:groupedFor each="{cities}" as="citiesByCountry" groupBy="bundesland.land" groupKey="land">
+										<f:form.select.optgroup class="form-control" label="{land.name}" title="{land.name}" />
+										<f:for each="{citiesByCountry}" as="cityByCountry">
+											<f:form.select.option value="{cityByCountry.uid}">{cityByCountry.name}</f:form.select.option>
+										</f:for>
+									</f:groupedFor>
+								</f:form.select>
+							</div>
+						</div>
+					</div>
+					
+					<div class="searchItem col-xs-6 col-sm-6 col-md-3">
+						<div class="angebot-search-box">
+							<span><f:translate key='angebot_search_own'/></span>
+							<p class="search-contact search-phone"><a href="tel: 0049-5451-93747-0">0049-5451-93747-0</a></p>
+							<p class="search-contact search-mail"><f:link.email email="info@ueberland-tecklenburg.de"/></p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12" style="margin-top: 20px;">
+						<div class="form-group">
+							<f:form.submit id="searchSubmit" class="btn btn-primary" value="<f:translate key='angebot_show'/>"/>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</f:section>
+	
+</html>
