@@ -43,7 +43,8 @@ routeEnhancers:
     limitToPages:
       - 109
     routes:
-      - routePath: '/{localized_seite}/{page}'
+      - 
+        routePath: '/{localized_seite}/{page}'
         _controller: 'News::list'
         _arguments:
           page: currentPage
@@ -53,10 +54,11 @@ routeEnhancers:
     aspects:
       localized_seite:
         type: LocaleModifier
-        default: 'seite'
+        default: seite
         localeMap:
-          - locale: 'en_.*'
-            value: 'page'
+          - 
+            locale: 'en_.*'
+            value: page
       page:
         type: StaticRangeMapper
         start: '1'
@@ -261,32 +263,37 @@ routeEnhancers:
         end: '100'
       localized_bundesland:
         type: LocaleModifier
-        default: 'bundesland'
+        default: bundesland
         localeMap:
-          - locale: 'en_.*'
-            value: 'section'
+          - 
+            locale: 'en_.*'
+            value: section
       localized_category:
         type: LocaleModifier
-        default: 'kategorie'
+        default: kategorie
         localeMap:
-          - locale: 'en_.*'
-            value: 'category'
+          - 
+            locale: 'en_.*'
+            value: category
       localized_land:
         type: LocaleModifier
-        default: 'land'
+        default: land
         localeMap:
-          - locale: 'en_.*'
-            value: 'country'
+          - 
+            locale: 'en_.*'
+            value: country
       localized_stadt:
         type: LocaleModifier
-        default: 'stadt'
+        default: stadt
         localeMap:
-          - locale: 'en_.*'
-            value: 'city'
+          - 
+            locale: 'en_.*'
+            value: city
       localized_seite:
         type: LocaleModifier
-        default: 'seite'
+        default: seite
         localeMap:
-          - locale: 'en_.*'
-            value: 'page'
+          - 
+            locale: 'en_.*'
+            value: page
 websiteTitle: ''
