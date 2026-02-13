@@ -1,5 +1,5 @@
 {
-    "version": "0.1.0",
+    "version": "8.1.0",
     "restructuringDone": false,
     "tables": {
         "sys_file_reference": {
