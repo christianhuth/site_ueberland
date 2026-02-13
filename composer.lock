@@ -66,7 +66,7 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/ueberland",
-                "reference": "b110fba4d11215fa436e0d3ab12bba0634cfd2eb"
+                "reference": "06fd9d5e1cc9612bac119ee8e573b97282a25cce"
             },
             "require": {
                 "typo3/cms-core": "^11.5.0"
