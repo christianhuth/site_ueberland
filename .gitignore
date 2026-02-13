@@ -4,6 +4,7 @@ auth.json
 /public/_assets/
 /public/fileadmin/
 /public/typo3/
+/public/typo3conf/
 /public/typo3temp/
 /var/
 /vendor/
