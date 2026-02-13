@@ -1,0 +1,148 @@
+<html
+	xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	xmlns:balu="Balumedien\Ueberland\ViewHelpers"
+>
+<!--
+	=====================
+		Partials/Angebot/newsletterItem.html
+-->
+				
+	
+	<f:if condition="({layout} == 'a1') || ({layout} == 'b1')">
+		<table border="0" cellpadding="0" cellspacing="0" width="598" style="max-width: 598px; min-width: 598px; width: 598px;">
+			<tr>
+				<td align="left" valign="top" width="299" style="color: black; font-family: 'Gudea', Helvetica, sans-serif; font-size:12px; line-height:150%; padding-top:20px; padding-right:20px; padding-bottom:20px; padding-left:20px; text-align:left; padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;max-width:299px;min-width:299px;width:299px;">
+					<f:link.action action="show" arguments="{angebot : arrangement}" pageUid="61" target="_blank">
+						<f:for each="{arrangement.image}" as="image" iteration="iterator">
+							<f:if condition="{iterator.isFirst}">
+								<f:image src="{image.uid}" alt="" treatIdAsReference="TRUE" width="270" style="padding-top:20px; padding-right:0; padding-bottom:0; padding-left:20px;"/>
+							</f:if>
+						</f:for>
+					</f:link.action>
+				</td>
+				<td align="right" valign="top" width="269" style="color: black; font-family: 'Gudea', Helvetica, sans-serif; font-size:12px; line-height:150%; padding-top:20px; padding-right:20px; padding-bottom:20px; padding-left:20px; text-align:left; padding-top:20px;padding-right:20px;padding-bottom:0;padding-left:10px;max-width:269px;min-width:269px;width:269px;">
+					<h2 style="color: black !important;display:block;font-family: 'Gudea', Helvetica, sans-serif;font-size:20px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:normal;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-align:left;">{arrangement.title}</h2>
+					<h5 style="font-size: 12px; margin-bottom: 5px; margin-top: 5px;">{arrangement.subtitle}</h5>
+					<f:if condition="{arrangement.newsletterText1}">
+						<p><f:format.html>{arrangement.newsletterText1}</f:format.html></p>
+					</f:if>
+					<p><f:format.html>{arrangement.benefits}</f:format.html></p>
+					<f:if condition="{arrangement.newsletterText2}">
+						<p><f:format.html>{arrangement.newsletterText2}</f:format.html></p>
+					</f:if>
+					<p><b>
+						{arrangement.durationInDays} 
+						<f:translate key="angebot_days"/> 
+						<balu:food angebot="{arrangement}"/>
+						<f:translate key="angebot_price_start"/> 
+						€ {arrangement.price},-
+						|
+						CODE {arrangement.id}
+					</b></p>
+					<p><b><f:link.action action="show" arguments="{angebot : arrangement}" pageUid="61" target="_blank">&rarr; Details</f:link.action></b></p>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" valign="top" style="color: black; font-family: 'Gudea', Helvetica, sans-serif; font-size:12px; line-height:150%; padding-top:20px; padding-right:20px; padding-bottom:20px; padding-left:20px; text-align:left;, padding-top: 0; padding-right: 20px; padding-bottom: 0; padding-left: 20px;">
+					<hr style="border-color: #CCCCCC;"/>
+				</td>
+			</tr>
+		</table>
+	</f:if>
+	
+	<f:if condition="({layout} == 'a2') || ({layout} == 'b2')">
+		<table border="0" cellpadding="0" cellspacing="0" width="299" style="max-width: 299px; min-width: 299px; width: 299px;">
+			<tr>
+				<td valign="top" style="color: black; font-family: 'Gudea', Helvetica, sans-serif; font-size:12px; line-height:150%; padding-top:20px; padding-right:20px; padding-bottom:20px; padding-left:20px; text-align:left;">
+					<f:link.action action="show" arguments="{angebot : arrangement}" pageUid="61" target="_blank">
+						<f:for each="{arrangement.image}" as="image" iteration="iterator">
+							<f:if condition="{iterator.isFirst}">
+								<f:image src="{image.uid}" alt="" treatIdAsReference="TRUE" width="259" style="margin-bottom: 10px; max-width: 259px; min-width: 259px; width: 259px;"/>
+							</f:if>
+						</f:for>
+					</f:link.action>
+					<h2 style="color: black !important;display:block;font-family: 'Gudea', Helvetica, sans-serif;font-size:20px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:normal;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-align:left;">{arrangement.title}</h2>
+					<h5 style="font-size: 12px; margin-bottom: 5px; margin-top: 5px;">{arrangement.subtitle}</h5>
+					<f:if condition="{arrangement.newsletterText1}">
+						<p><f:format.html>{arrangement.newsletterText1}</f:format.html></p>
+					</f:if>
+					<p><f:format.html>{arrangement.benefits}</f:format.html></p>
+					<f:if condition="{arrangement.newsletterText2}">
+						<p><f:format.html>{arrangement.newsletterText2}</f:format.html></p>
+					</f:if>
+					<p><b>
+						{arrangement.durationInDays} 
+						<f:translate key="angebot_days"/> 
+						<balu:food angebot="{arrangement}"/>
+						<f:translate key="angebot_price_start"/> 
+						€ {arrangement.price},-
+						|
+						CODE {arrangement.id}
+					</b></p>
+					<p><b><f:link.action action="show" arguments="{angebot : arrangement}" pageUid="61" target="_blank">&rarr; zur Buchungsanfrage</f:link.action></b></p>
+					<f:for each="{arrangement.newsletterImage}" as="newsletterImage" iteration="iterator">
+						<f:if condition="{iterator.isFirst}">
+							<p style="text-align: right;">
+								<f:image src="{newsletterImage.uid}" alt="" treatIdAsReference="TRUE" width="200" style="-webkit-border-radius:50%; -moz-border-radius:50%; border-radius: 50%; height: 200px; max-width: 200px; min-width: 200px; object-fit: cover; width: 200px;"/>
+							</p>
+						</f:if>
+					</f:for>
+					<f:for each="{arrangement.dayprogram}" as="dayprogram">
+						<p><b><f:format.html>Tag {dayprogram.day} | {dayprogram.title}</f:format.html></b></p>
+						<p><f:format.html>{dayprogram.description}</f:format.html></p>
+					</f:for>
+				</td>
+			</tr>
+		</table>
+	</f:if>
+	
+	<f:if condition="({layout} == 'c1')">
+		<table border="0" cellpadding="0" cellspacing="0" id="layout-c1">
+			<tr>
+				<td align="left" valign="top" width="358" style="color: black; font-family: 'Gudea', Helvetica, sans-serif; font-size:12px; line-height:150%; padding-top:20px; padding-right:20px; padding-bottom:20px; padding-left:20px; text-align:left;max-width: 358px; min-width: 358px;padding-top:20px;padding-right:10px;padding-bottom:0;padding-left:20px;width: 358px;">
+					<h2 style="color: black !important;display:block;font-family: 'Gudea', Helvetica, sans-serif;font-size:20px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:normal;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-align:left;">{arrangement.title}</h2>
+					<h5 style="font-size: 12px; margin-bottom: 5px; margin-top: 5px;">{arrangement.subtitle}</h5>
+					<f:if condition="{arrangement.newsletterText1}">
+						<p><f:format.html>{arrangement.newsletterText1}</f:format.html></p>
+					</f:if>
+					<p><f:format.html>{arrangement.benefits}</f:format.html></p>
+					<f:if condition="{arrangement.newsletterText2}">
+						<p><f:format.html>{arrangement.newsletterText2}</f:format.html></p>
+					</f:if>
+					<p><b>
+						{arrangement.durationInDays} 
+						<f:translate key="angebot_days"/> 
+						<balu:food angebot="{arrangement}"/>
+						<f:translate key="angebot_price_start"/> 
+						€ {arrangement.price},-
+						|
+						CODE {arrangement.id}
+					</b></p>
+					<p><b><f:link.action action="show" arguments="{angebot : arrangement}" pageUid="61" target="_blank">&rarr; zur Buchungsanfrage</f:link.action></b></p>
+					<f:if condition="{arrangement.dayprogram}">
+						<hr style="border-color: #CCCCCC;"/>
+						<f:for each="{arrangement.dayprogram}" as="dayprogram">
+							<p><b><f:format.html>Tag {dayprogram.day} | {dayprogram.title}</f:format.html></b></p>
+							<p><f:format.html>{dayprogram.description}</f:format.html></p>
+						</f:for>
+					</f:if>
+				</td>
+				<td align="right" valign="top" width="180" style="color: black; font-family: 'Gudea', Helvetica, sans-serif; font-size:12px; line-height:150%; padding-top:20px; padding-right:20px; padding-bottom:20px; padding-left:20px; text-align:left;max-width: 180px; min-width: 180px; padding-top: 20px; padding-right: 20px; padding-bottom: 0; padding-left: 10px; width: 180px;">
+					<f:for each="{arrangement.newsletterImage}" as="image" iteration="iterator">
+						<span id="arrangementImageRoundWrapper" style="display: block; margin: 20px 0 50px 0;">
+							<f:link.action action="show" arguments="{angebot : arrangement}" pageUid="61" target="_blank">
+								<f:image src="{image.uid}" alt="" treatIdAsReference="TRUE" width="150" style="-webkit-border-radius:50%; -moz-border-radius:50%; border-radius: 50%; height: 150px; max-width: 150px; min-width: 150px; object-fit: cover; width: 150px;"/>
+							</f:link.action>
+						</span>
+					</f:for>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" valign="top" style="color: black; font-family: 'Gudea', Helvetica, sans-serif; font-size:12px; line-height:150%; padding-top:20px; padding-right:20px; padding-bottom:20px; padding-left:20px; text-align:left;padding-top: 0; padding-right: 20px; padding-bottom: 0; padding-left: 20px;">
+					<hr style="border-color: #CCCCCC;"/>
+				</td>
+			</tr>
+		</table>
+	</f:if>
+
+</html>

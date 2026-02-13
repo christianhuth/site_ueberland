@@ -1,0 +1,9 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+	<div class="item">
+		<div class="row">
+			<div class="title col-xs-12 col-sm-6"><f:link.action action="show" arguments="{angebot : angebot}" pageUid="61">{angebot.title}</f:link.action></div>
+			<div class="price col-xs-12 col-sm-3"><f:for each="{angebot.city}" as="city" iteration="iterator"><f:link.action action="list" arguments="{city : city}" pageUid="18">{city.name}</f:link.action><f:if condition="!{iterator.isLast}">, </f:if></f:for></div>
+			<div class="price col-xs-12 col-sm-3">{angebot.durationInDays} <f:translate key="angebot_days"/> <f:translate key="angebot_price_start"/> {angebot.price} €</div>
+		</div>
+	</div>
+</html>

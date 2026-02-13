@@ -1,0 +1,15 @@
+
+plugin.tx_ueberland_ueberland {
+    view {
+        # cat=plugin.tx_ueberland_ueberland/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:ueberland/Resources/Private/Templates/
+        # cat=plugin.tx_ueberland_ueberland/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:ueberland/Resources/Private/Partials/
+        # cat=plugin.tx_ueberland_ueberland/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:ueberland/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_ueberland_ueberland//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}

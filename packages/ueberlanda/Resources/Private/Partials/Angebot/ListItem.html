@@ -1,0 +1,61 @@
+<html
+	xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true"
+	xmlns:balu="Balumedien\Ueberland\ViewHelpers"
+>
+<!--
+	=====================
+		Partials/Angebot/listItem.html
+-->
+	
+	<f:if condition="{angebot.uid} == 10173">
+		<f:debug>{angebot}</f:debug>
+	</f:if>
+
+	<div class="angebot listItem col-xs-12 col-sm-6 col-md-4">
+		<div class="angebot-wrapper">
+				<f:link.action action="show" arguments="{angebot : angebot}" pageUid="61">
+				<div class="angebot-meta">
+					<span class="angebot-city">
+						<f:for each="{angebot.city}" as="city" iteration="iterator2">
+							{city.name}
+							<f:if condition="!{iterator2.isLast}"> // </f:if>
+						</f:for>
+					</span>
+					<span class="angebot-category">
+						<f:for each="{angebot.categories}" as="category" iteration="iterator">
+							{category.title}<f:if condition="!{iterator.isLast}">, </f:if>
+						</f:for>
+					</span>
+				</div>
+				<f:if condition="{angebot.categories}">
+					<f:for each="{angebot.categories}" as="category">
+						<f:if condition="{category.uid}==16">
+							<span class="genussreise-overlay">
+								<f:image src="EXT:ueberland/Resources/Public/Icons/category-genussreisen.svg"/>
+							</span>
+						</f:if>
+					</f:for>
+				</f:if>
+				<div class="angebot-image">
+					<f:for each="{angebot.image}" as="image" iteration="iterator">
+						<f:if condition="{iterator.isFirst}"><f:image src="{image.uid}" alt="" treatIdAsReference="TRUE" /></f:if>
+					</f:for>
+				</div>
+				<div class="angebot-body">
+					<h3>{angebot.title}</h3>
+					<div class="angebot-subtitle">{angebot.subtitle}</div>
+					<div class="angebot-season"><f:translate key="angebot_season"/> {angebot.season}</div>
+				</div>
+			<div class="angebot-footer">
+				<span class="angebot-duration">{angebot.durationInDays} <f:translate key="angebot_days"/> </span>
+				<balu:food angebot="{angebot}"/>
+				<f:translate key="angebot_price_start"/>
+				<span class="angebot-price">
+					<f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator="." prependCurrency="true">{angebot.price}</f:format.currency>
+				</span>
+			</div>
+				 </f:link.action>
+		</div>
+	</div>
+	
+</html>

@@ -1,0 +1,23 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+<!--
+	=====================
+		Partials/Angebot/searchItem.html
+-->
+	<div class="searchItem col-xs-6 col-sm-6 col-md-3">
+		<div class="angebot-search-box search-box-{name}">
+			<div class="angebot-search-box-label">
+				<label for="{name}"><f:translate key='{labelTranslationKey}'/></label>
+			</div>
+			<div class="form-group">
+				<f:if condition="{sortField}">
+					<f:then>
+						<f:form.select class="form-control" name="{name}" options="{selectOptions}" optionValueField="uid" optionLabelField="{labelField}" sortByOptionLabel="{sortField}" prependOptionLabel="<f:translate key='{translationKey}'/>"/>
+					</f:then>
+					<f:else>
+						<f:form.select class="form-control" name="{name}" options="{selectOptions}" optionValueField="uid" optionLabelField="{labelField}" prependOptionLabel="<f:translate key='angebot_filter_categories'/>"/>
+					</f:else>
+				</f:if>
+			</div>
+		</div>
+	</div>
+</html>

@@ -1,0 +1,16 @@
+<html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:if condition="{active} == 1">
+		<f:then>
+			<div id="tab-programmpunkte" class="tab-pane fade active in">
+		</f:then>
+		<f:else>
+			<div id="tab-programmpunkte" class="tab-pane fade">
+		</f:else>
+	</f:if>
+		<div class="listing programmpunkte-listing">
+			<f:for each="{programmpunkte}" as="programmpunkt">
+				<f:render partial="Programmpunkt/ListingItem" arguments="{programmpunkt: programmpunkt}" />
+			</f:for>
+		</div>
+	</div>
+</html>

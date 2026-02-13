@@ -1,0 +1,607 @@
+<T3DataStructure>
+	<sheets>
+		<!--
+			################################
+			  SHEET General Settings
+			################################
+		-->
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:ueberland/Resources/Private/Language/locallang_be.xlf:flexforms_tab.general</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					
+					<!-- View -->
+					<switchableControllerActions>
+						<TCEforms>
+							<label>LLL:EXT:ueberland/Resources/Private/Language/locallang_be.xlf:flexforms_general.mode</label>
+							<config>
+								<type>select</type>
+								<renderType>selectSingle</renderType>
+								<items>
+									<numIndex index="1">
+										<numIndex index="0">LLL:EXT:ueberland/Resources/Private/Language/locallang_be.xlf:flexforms_general.mode.angebot_list</numIndex>
+										<numIndex index="1">Angebot->list</numIndex>
+									</numIndex>
+									<numIndex index="2">
+										<numIndex index="0">LLL:EXT:ueberland/Resources/Private/Language/locallang_be.xlf:flexforms_general.mode.angebot_show</numIndex>
+										<numIndex index="1">Angebot->show</numIndex>
+									</numIndex>
+									<numIndex index="3">
+										<numIndex index="0">LLL:EXT:ueberland/Resources/Private/Language/locallang_be.xlf:flexforms_general.mode.angebot_latest</numIndex>
+										<numIndex index="1">Angebot->latest</numIndex>
+									</numIndex>
+									<numIndex index="4">
+										<numIndex index="0">LLL:EXT:ueberland/Resources/Private/Language/locallang_be.xlf:flexforms_general.mode.angebot_categories</numIndex>
+										<numIndex index="1">Angebot->categories</numIndex>
+									</numIndex>
+									<numIndex index="5">
+										<numIndex index="0">LLL:EXT:ueberland/Resources/Private/Language/locallang_be.xlf:flexforms_general.mode.angebot_search</numIndex>
+										<numIndex index="1">Angebot->search</numIndex>
+									</numIndex>
+									<numIndex index="6">
+										<numIndex index="0">LLL:EXT:ueberland/Resources/Private/Language/locallang_be.xlf:flexforms_general.mode.angebot_highlight</numIndex>
+										<numIndex index="1">Angebot->highlight</numIndex>
+									</numIndex>
+									<numIndex index="7">
+										<numIndex index="0">LLL:EXT:ueberland/Resources/Private/Language/locallang_be.xlf:flexforms_general.mode.angebot_inquiry</numIndex>
+										<numIndex index="1">Angebot->inquiry</numIndex>
+									</numIndex>
+									<numIndex index="8">
+										<numIndex index="0">LLL:EXT:ueberland/Resources/Private/Language/locallang_be.xlf:flexforms_general.mode.angebot_newsletter</numIndex>
+										<numIndex index="1">Angebot->newsletter</numIndex>
+									</numIndex>
+									<numIndex index="9">
+										<numIndex index="0">LLL:EXT:ueberland/Resources/Private/Language/locallang_be.xlf:flexforms_general.mode.programmpunkt_list</numIndex>
+										<numIndex index="1">Programmpunkt->list</numIndex>
+									</numIndex>
+									<numIndex index="10">
+										<numIndex index="0">LLL:EXT:ueberland/Resources/Private/Language/locallang_be.xlf:flexforms_general.mode.programmkategorie_list</numIndex>
+										<numIndex index="1">Programmkategorie->list</numIndex>
+									</numIndex>
+								</items>
+							</config>
+							<onChange>reload</onChange>
+						</TCEforms>
+					</switchableControllerActions>
+
+					<!-- startingpoint -->
+					<persistence.storagePid>
+						<TCEforms>
+							<label>LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.startingpoint</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+								<size>3</size>
+								<maxitems>50</maxitems>
+								<minitems>0</minitems>
+							</config>
+						</TCEforms>
+					</persistence.storagePid>
+
+				</el>
+			</ROOT>
+		</sDEF>
+		
+		<list>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:ueberland/Resources/Private/Language/locallang_be.xlf:flexforms_tab.list</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+
+					<!-- PID List Page -->
+					<settings.listPid>
+						<TCEforms>
+							<label>LLL:EXT:ueberland/Resources/Private/Language/locallang_be.xlf:flexforms_list.listPid</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<minitems>0</minitems>
+							</config>
+							<displayCond>FIELD:sDEF.switchableControllerActions:=:Angebot->list</displayCond>
+						</TCEforms>
+					</settings.listPid>
+					
+					<!-- Filter -->
+					<settings.showFilters>
+						<TCEforms>
+							<label>LLL:EXT:ueberland/Resources/Private/Language/locallang_be.xlf:flexforms_list.showFilters</label>
+							<config>
+								<type>select</type>
+								<renderType>selectSingle</renderType>
+								<items>
+									<numIndex index="0" type="array">
+										<numIndex index="0">LLL:EXT:ueberland/Resources/Private/Language/locallang_be.xlf:flexforms_list.showFilters.yes</numIndex>
+										<numIndex index="1">1</numIndex>
+									</numIndex>
+									<numIndex index="1">
+										<numIndex index="0">LLL:EXT:ueberland/Resources/Private/Language/locallang_be.xlf:flexforms_list.showFilters.no</numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+								</items>
+							</config>
+							<displayCond>FIELD:sDEF.switchableControllerActions:=:Angebot->list</displayCond>
+						</TCEforms>
+					</settings.showFilters>
+
+					<!-- order -->
+					<settings.orderBy>
+						<TCEforms>
+							<label>LLL:EXT:ueberland/Resources/Private/Language/locallang_be.xlf:flexforms_list.orderBy</label>
+							<config>
+								<type>select</type>
+								<renderType>selectSingle</renderType>
+								<items>
+									<numIndex index="0" type="array">
+										<numIndex index="0"></numIndex>
+										<numIndex index="1"></numIndex>
+									</numIndex>
+									<numIndex index="1">
+										<numIndex index="0">LLL:EXT:ueberland/Resources/Private/Language/locallang_be.xlf:flexforms_list.orderBy.uid</numIndex>
+										<numIndex index="1">uid</numIndex>
+									</numIndex>
+									<numIndex index="2">
+										<numIndex index="0">LLL:EXT:ueberland/Resources/Private/Language/locallang_be.xlf:flexforms_list.orderBy.tstamp</numIndex>
+										<numIndex index="1">tstamp</numIndex>
+									</numIndex>
+									<numIndex index="3">
+										<numIndex index="0">LLL:EXT:ueberland/Resources/Private/Language/locallang_be.xlf:flexforms_list.orderBy.title</numIndex>
+										<numIndex index="1">title</numIndex>
+									</numIndex>
+								</items>
+							</config>
+							<displayCond>FIELD:sDEF.switchableControllerActions:=:Angebot->list</displayCond>
+						</TCEforms>
+					</settings.orderBy>
+
+					<!-- order direction  -->
+					<settings.orderDirection>
+						<TCEforms>
+							<label>LLL:EXT:ueberland/Resources/Private/Language/locallang_be.xlf:flexforms_list.orderDirection</label>
+							<config>
+								<type>select</type>
+								<renderType>selectSingle</renderType>
+								<items>
+									<numIndex index="0" type="array">
+										<numIndex index="0"></numIndex>
+										<numIndex index="1"></numIndex>
+									</numIndex>
+									<numIndex index="1">
+										<numIndex index="0">LLL:EXT:ueberland/Resources/Private/Language/locallang_be.xlf:flexforms_list.orderDirection.asc</numIndex>
+										<numIndex index="1">asc</numIndex>
+									</numIndex>
+									<numIndex index="2">
+										<numIndex index="0">LLL:EXT:ueberland/Resources/Private/Language/locallang_be.xlf:flexforms_list.orderDirection.desc</numIndex>
+										<numIndex index="1">desc</numIndex>
+									</numIndex>
+								</items>
+							</config>
+							<displayCond>FIELD:sDEF.switchableControllerActions:=:Angebot->list</displayCond>
+						</TCEforms>
+					</settings.orderDirection>
+
+					<!-- Limit Start -->
+					<settings.limit>
+						<TCEforms>
+							<label>LLL:EXT:ueberland/Resources/Private/Language/locallang_be.xlf:flexforms_list.limit</label>
+							<config>
+								<type>input</type>
+								<size>5</size>
+								<eval>num</eval>
+							</config>
+							<displayCond>FIELD:sDEF.switchableControllerActions:=:Angebot->list</displayCond>
+						</TCEforms>
+					</settings.limit>
+
+					<!-- Offset -->
+					<settings.offset>
+						<TCEforms>
+							<label>LLL:EXT:ueberland/Resources/Private/Language/locallang_be.xlf:flexforms_list.offset</label>
+							<config>
+								<type>input</type>
+								<size>5</size>
+								<eval>num</eval>
+							</config>
+							<displayCond>FIELD:sDEF.switchableControllerActions:=:Angebot->list</displayCond>
+						</TCEforms>
+					</settings.offset>
+
+					<settings.list.paginate.itemsPerPage>
+						<TCEforms>
+							<label>LLL:EXT:ueberland/Resources/Private/Language/locallang_be.xlf:flexforms_list.itemsPerPage</label>
+							<config>
+								<type>input</type>
+								<size>2</size>
+							</config>
+							<displayCond>FIELD:sDEF.switchableControllerActions:=:Angebot->list</displayCond>
+						</TCEforms>
+					</settings.list.paginate.itemsPerPage>
+				</el>
+			</ROOT>
+		</list>
+		
+		<show>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:ueberland/Resources/Private/Language/locallang_be.xlf:flexforms_tab.show</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+
+					<!-- PID Detail Page -->
+					<settings.detailPid>
+						<TCEforms>
+							<config>
+								<allowed>pages</allowed>
+								<internal_type>db</internal_type>
+								<maxitems>1</maxitems>
+								<minitems>0</minitems>
+								<size>1</size>
+								<type>group</type>
+							</config>
+							<displayCond>FIELD:sDEF.switchableControllerActions:=:Angebot->show</displayCond>
+							<label>LLL:EXT:ueberland/Resources/Private/Language/locallang_be.xlf:flexforms_show.detailPid</label>
+						</TCEforms>
+					</settings.detailPid>
+
+					<!-- PID Back -->
+					<settings.backPid>
+						<TCEforms>
+							<label>LLL:EXT:ueberland/Resources/Private/Language/locallang_be.xlf:flexforms_show.backPid</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>pages</allowed>
+								<size>1</size>
+								<maxitems>1</maxitems>
+								<minitems>0</minitems>
+							</config>
+							<displayCond>FIELD:sDEF.switchableControllerActions:=:Angebot->show</displayCond>
+						</TCEforms>
+					</settings.backPid>
+
+					<!-- Inquiry Mail -->
+					<settings.show.inquiry.mail>
+						<TCEforms>
+							<label>LLL:EXT:ueberland/Resources/Private/Language/locallang_be.xlf:flexforms_show.inquiryMail</label>
+							<config>
+								<type>input</type>
+								<size>6</size>
+							</config>
+							<displayCond>FIELD:sDEF.switchableControllerActions:=:Angebot->show</displayCond>
+						</TCEforms>
+					</settings.show.inquiry.mail>
+					
+				</el>
+			</ROOT>
+		</show>
+		
+		<newsletter>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:ueberland/Resources/Private/Language/locallang_be.xlf:flexforms_tab.newsletter</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					
+					<!-- Layout -->
+					<settings.newsletter.layout>
+						<TCEforms>
+							<label>LLL:EXT:ueberland/Resources/Private/Language/locallang_be.xlf:flexforms_newsletter.layout</label>
+							<config>
+								<type>select</type>
+								<renderType>selectSingle</renderType>
+								<items>
+									<numIndex index="0" type="array">
+										<numIndex index="0">Layout A - einspaltig</numIndex>
+										<numIndex index="1">a1</numIndex>
+									</numIndex>
+									<numIndex index="1">
+										<numIndex index="0">Layout A - zweispaltig</numIndex>
+										<numIndex index="1">a2</numIndex>
+									</numIndex>
+									<numIndex index="2">
+										<numIndex index="0">Layout B - einspaltig</numIndex>
+										<numIndex index="1">b1</numIndex>
+									</numIndex>
+									<numIndex index="3">
+										<numIndex index="0">Layout B - zweispaltig</numIndex>
+										<numIndex index="1">b2</numIndex>
+									</numIndex>
+									<numIndex index="4">
+										<numIndex index="0">Layout C - Angebote</numIndex>
+										<numIndex index="1">c1</numIndex>
+									</numIndex>
+									<numIndex index="5">
+										<numIndex index="0">Layout C - Frei</numIndex>
+										<numIndex index="1">c2</numIndex>
+									</numIndex>
+								</items>
+							</config>
+							<onChange>reload</onChange>
+							<displayCond>FIELD:sDEF.switchableControllerActions:=:Angebot->newsletter</displayCond>
+						</TCEforms>
+					</settings.newsletter.layout>
+
+					<!-- Headline -->
+					<!--
+					<settings.newsletter.headline>
+						<TCEforms>
+							<label>LLL:EXT:ueberland/Resources/Private/Language/locallang_be.xlf:flexforms_newsletter.headline</label>
+							<config>
+								<type>input</type>
+							</config>
+						</TCEforms>
+					</settings.newsletter.headline>
+					-->
+
+					<!-- Introduction -->
+					<settings.newsletter.introduction>
+						<TCEforms>
+							<label>LLL:EXT:ueberland/Resources/Private/Language/locallang_be.xlf:flexforms_newsletter.introduction</label>
+							<config>
+								<enableRichtext>1</enableRichtext>
+								<type>text</type>
+							</config>
+							<displayCond>FIELD:sDEF.switchableControllerActions:=:Angebot->newsletter</displayCond>
+						</TCEforms>
+					</settings.newsletter.introduction>
+
+					<!-- Arrangements -->
+					<settings.newsletter.arrangements>
+						<TCEforms>
+							<label>LLL:EXT:ueberland/Resources/Private/Language/locallang_be.xlf:flexforms_newsletter.arrangements</label>
+							<config>
+								<type>group</type>
+								<internal_type>db</internal_type>
+								<allowed>tx_ueberland_domain_model_angebot</allowed>
+								<size>3</size>
+								<maxitems>5</maxitems>
+								<minitems>0</minitems>
+							</config>
+							<displayCond>
+								<AND>
+									<numIndex index="0">FIELD:sDEF.switchableControllerActions:=:Angebot->newsletter</numIndex>
+									<OR>
+										<numIndex index="0">FIELD:newsletter.settings.newsletter.layout:=:a1</numIndex>
+										<numIndex index="1">FIELD:newsletter.settings.newsletter.layout:=:a2</numIndex>
+										<numIndex index="2">FIELD:newsletter.settings.newsletter.layout:=:b1</numIndex>
+										<numIndex index="3">FIELD:newsletter.settings.newsletter.layout:=:b2</numIndex>
+										<numIndex index="4">FIELD:newsletter.settings.newsletter.layout:=:c1</numIndex>
+									</OR>
+								</AND>
+							</displayCond>
+						</TCEforms>
+					</settings.newsletter.arrangements>
+					
+					<!-- StartImage -->
+					<settings.newsletter.startimage>
+						<TCEforms>
+							<label>LLL:EXT:ueberland/Resources/Private/Language/locallang_be.xlf:flexforms_newsletter.startimage</label>
+							<config>
+								<type>inline</type>
+								<foreign_table>sys_file_reference</foreign_table>
+								<foreign_field>uid_foreign</foreign_field>
+								<foreign_sortby>sorting_foreign</foreign_sortby>
+								<foreign_table_field>tablenames</foreign_table_field>
+								<foreign_match_fields>
+									<!-- this will be stored in sys_file_reference.fieldname -->
+									<fieldname>settings.newsletter.startimage</fieldname>
+								</foreign_match_fields>
+								<foreign_label>uid_local</foreign_label>
+								<foreign_selector>uid_local</foreign_selector>
+								<maxitems>1</maxitems>
+								<overrideChildTca>
+									<columns>
+										<uid_local>
+											<config>
+												<appearance>
+													<elementBrowserType>file</elementBrowserType>
+													<elementBrowserAllowed>jpg,png,svg,jpeg,gif</elementBrowserAllowed>
+												</appearance>
+											</config>
+										</uid_local>
+									</columns>
+								</overrideChildTca>
+								<filter>
+									<userFunc>TYPO3\CMS\Core\Resource\Filter\FileExtensionFilter->filterInlineChildren</userFunc>
+									<parameters>
+										<allowedFileExtensions>jpg,png,svg,jpeg,gif</allowedFileExtensions>
+										<disallowedFileExtensions></disallowedFileExtensions>
+									</parameters>
+								</filter>
+								<appearance>
+									<useSortable>1</useSortable>
+									<headerThumbnail>
+										<field>uid_local</field>
+										<width>45</width>
+										<height>45c</height>
+									</headerThumbnail>
+									<enabledControls>
+										<info>1</info>
+										<new>0</new>
+										<dragdrop>1</dragdrop>
+										<sort>0</sort>
+										<hide>1</hide>
+										<delete>1</delete>
+									</enabledControls>
+								</appearance>
+							</config>
+							<displayCond>
+								<AND>
+									<numIndex index="0">FIELD:sDEF.switchableControllerActions:=:Angebot->newsletter</numIndex>
+									<OR>
+										<numIndex index="0">FIELD:newsletter.settings.newsletter.layout:=:b1</numIndex>
+										<numIndex index="1">FIELD:newsletter.settings.newsletter.layout:=:b2</numIndex>
+										<numIndex index="2">FIELD:newsletter.settings.newsletter.layout:=:c1</numIndex>
+										<numIndex index="3">FIELD:newsletter.settings.newsletter.layout:=:c2</numIndex>
+									</OR>
+								</AND>
+							</displayCond>
+						</TCEforms>
+					</settings.newsletter.startimage>
+
+					<!-- Layout C2 Headline -->
+					<settings.newsletter.c2.headline>
+						<TCEforms>
+							<label>LLL:EXT:ueberland/Resources/Private/Language/locallang_be.xlf:flexforms_newsletter.c2.headline</label>
+							<config>
+								<type>input</type>
+							</config>
+							<displayCond>
+								<AND>
+									<numIndex index="0">FIELD:sDEF.switchableControllerActions:=:Angebot->newsletter</numIndex>
+									<numIndex index="1">FIELD:newsletter.settings.newsletter.layout:=:c2</numIndex>
+								</AND>
+							</displayCond>
+						</TCEforms>
+					</settings.newsletter.c2.headline>
+
+					<!-- Layout C2 Subheadline -->
+					<settings.newsletter.c2.subheadline>
+						<TCEforms>
+							<label>LLL:EXT:ueberland/Resources/Private/Language/locallang_be.xlf:flexforms_newsletter.c2.subheadline</label>
+							<config>
+								<type>input</type>
+							</config>
+							<displayCond>
+								<AND>
+									<numIndex index="0">FIELD:sDEF.switchableControllerActions:=:Angebot->newsletter</numIndex>
+									<numIndex index="1">FIELD:newsletter.settings.newsletter.layout:=:c2</numIndex>
+								</AND>
+							</displayCond>
+						</TCEforms>
+					</settings.newsletter.c2.subheadline>
+
+					<!-- Layout C2 Text -->
+					<settings.newsletter.c2.text>
+						<TCEforms>
+							<label>LLL:EXT:ueberland/Resources/Private/Language/locallang_be.xlf:flexforms_newsletter.c2.text</label>
+							<config>
+								<enableRichtext>1</enableRichtext>
+								<type>text</type>
+							</config>
+							<displayCond>
+								<AND>
+									<numIndex index="0">FIELD:sDEF.switchableControllerActions:=:Angebot->newsletter</numIndex>
+									<numIndex index="1">FIELD:newsletter.settings.newsletter.layout:=:c2</numIndex>
+								</AND>
+							</displayCond>
+						</TCEforms>
+					</settings.newsletter.c2.text>
+					
+					<!-- Layout C2 Images -->
+					<settings.newsletter.c2.images>
+						<TCEforms>
+							<label>LLL:EXT:ueberland/Resources/Private/Language/locallang_be.xlf:flexforms_newsletter.c2.images</label>
+							<config>
+								<type>inline</type>
+								<foreign_table>sys_file_reference</foreign_table>
+								<foreign_field>uid_foreign</foreign_field>
+								<foreign_sortby>sorting_foreign</foreign_sortby>
+								<foreign_table_field>tablenames</foreign_table_field>
+								<foreign_match_fields>
+									<!-- this will be stored in sys_file_reference.fieldname -->
+									<fieldname>settings.newsletter.c2.images</fieldname>
+								</foreign_match_fields>
+								<foreign_label>uid_local</foreign_label>
+								<foreign_selector>uid_local</foreign_selector>
+								<overrideChildTca>
+									<columns>
+										<uid_local>
+											<config>
+												<appearance>
+													<elementBrowserType>file</elementBrowserType>
+													<elementBrowserAllowed>jpg,png,svg,jpeg,gif</elementBrowserAllowed>
+												</appearance>
+											</config>
+										</uid_local>
+									</columns>
+								</overrideChildTca>
+								<filter>
+									<userFunc>TYPO3\CMS\Core\Resource\Filter\FileExtensionFilter->filterInlineChildren</userFunc>
+									<parameters>
+										<allowedFileExtensions>jpg,png,svg,jpeg,gif</allowedFileExtensions>
+										<disallowedFileExtensions></disallowedFileExtensions>
+									</parameters>
+								</filter>
+								<appearance>
+									<useSortable>1</useSortable>
+									<headerThumbnail>
+										<field>uid_local</field>
+										<width>45</width>
+										<height>45c</height>
+									</headerThumbnail>
+									<enabledControls>
+										<info>1</info>
+										<new>0</new>
+										<dragdrop>1</dragdrop>
+										<sort>0</sort>
+										<hide>1</hide>
+										<delete>1</delete>
+									</enabledControls>
+								</appearance>
+							</config>
+							<displayCond>
+								<AND>
+									<numIndex index="0">FIELD:sDEF.switchableControllerActions:=:Angebot->newsletter</numIndex>
+									<numIndex index="1">FIELD:newsletter.settings.newsletter.layout:=:c2</numIndex>
+								</AND>
+							</displayCond>
+						</TCEforms>
+					</settings.newsletter.c2.images>
+					
+					<!-- Show Footer -->
+					<settings.newsletter.showfooter>
+						<TCEforms>
+							<label>LLL:EXT:ueberland/Resources/Private/Language/locallang_be.xlf:flexforms_newsletter.showfooter</label>
+							<config>
+								<default>1</default>
+								<type>check</type>
+							</config>
+							<displayCond>FIELD:sDEF.switchableControllerActions:=:Angebot->newsletter</displayCond>
+						</TCEforms>
+					</settings.newsletter.showfooter>
+					
+				</el>
+			</ROOT>
+		</newsletter>
+		
+		<programmpunkt>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:ueberland/Resources/Private/Language/locallang_be.xlf:flexforms_tab.programmpunkt</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<settings.programmpunkt.country>
+						<TCEforms>
+							<label>Welches Land soll gezeigt werden?</label>
+							<config>
+								<foreign_table>tx_ueberland_domain_model_land</foreign_table>
+								<foreign_table_where>AND tx_ueberland_domain_model_land.sys_language_uid = 0 ORDER BY name ASC</foreign_table_where>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">Bitte wählen</numIndex>
+									</numIndex>
+								</items>
+								<renderType>selectSingle</renderType>
+								<type>select</type>
+							</config>
+							<displayCond>FIELD:sDEF.switchableControllerActions:=:Programmpunkt->list</displayCond>
+						</TCEforms>
+					</settings.programmpunkt.country>
+				</el>
+			</ROOT>
+		</programmpunkt>
+
+	</sheets>
+</T3DataStructure>

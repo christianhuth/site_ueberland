@@ -1,0 +1,210 @@
+<html	xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+		xmlns:balu="Balumedien\Ueberland\ViewHelpers"
+		data-namespace-typo3-fluid="true">
+	<center>
+		<table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable" style="background-color: #DEE0E2;">
+			<tr>
+				<td align="center" valign="top" style="border-top:4px solid #BBBBBB; height:100% !important; margin:0; padding-top:20px; padding-right:20px; padding-bottom:20px; padding-left: 20px; width:100% !important;">
+					<!-- BEGIN TEMPLATE // -->
+					<table border="0" cellpadding="0" cellspacing="0" width="600" id="templateContainer" style="border:1px solid #BBBBBB; max-width:600px; min-width: 600px; width: 600px;">
+						<tr>
+							<td align="center" valign="top">
+								<!-- BEGIN PREHEADER // -->
+								<table border="0" cellpadding="0" cellspacing="0" width="598" id="templatePreheader" style="background-color:#F4F4F4;border-bottom:1px solid #CCCCCC; max-width: 598px; min-width: 598px; width: 598px;">
+									<tr style="color:#808080;font-family: 'Gudea', Helvetica, sans-serif;font-size:10px;line-height:125%;text-align:left;">
+										<td valign="top" style="padding-top:10px; padding-right:20px; padding-bottom:10px; padding-left:20px;">
+										</td>
+										<td valign="top" width="180" style="padding-top:10px; padding-right:20px; padding-bottom:10px; padding-left:0;">
+											E-Mail wird nicht richtig angezeigt?<br /><f:link.page style="color:#606060;font-weight:normal;text-decoration:underline;">&rarr; Im Browser anschauen.</f:link.page>.
+										</td>
+									</tr>
+								</table>
+								<!-- // END PREHEADER -->
+							</td>
+						</tr>
+						<tr>
+							<td align="center" valign="top">
+								<!-- BEGIN HEADER // -->
+								<table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color:#F4F4F4; border-top:1px solid #FFFFFF; border-bottom:1px solid #CCCCCC;">
+									<tr>
+										<td valign="top" style="color:#505050;font-family: 'Gudea', Helvetica, sans-serif;font-size:20px;font-weight:bold;line-height:100%;padding-top:0;padding-right:0;padding-bottom:0;padding-left:0;text-align:left;vertical-align:middle;">
+											<a href="https://ueberland-tecklenburg.de" target="_blank" style="color:#009d3c; text-decoration:none;">
+												<img src="/fileadmin/templates/images/newsletter-header-mit-subline.jpg" style="display: block; height: auto !important; max-width: 598px; min-width: 598px; width: 598px;"/>
+											</a>
+										</td>
+									</tr>
+								</table>
+								<!-- // END HEADER -->
+							</td>
+						</tr>
+						<tr>	
+							<td align="center" valign="top" id="newsletter-layout-{settings.newsletter.layout}">
+								<!-- BEGIN BODY // -->
+								<table border="0" cellpadding="0" cellspacing="0" width="598" style="background-color:#F4F4F4; border-bottom: 1px solid transparent; max-width: 598px; min-width: 598px; width: 598px;">
+									<f:if condition="({settings.newsletter.layout} == 'b1') || ({settings.newsletter.layout} == 'b2')">
+										<tr>
+											<td valign="top" style="color: black; font-family: 'Gudea', Helvetica, sans-serif; font-size:12px; line-height:150%; padding-top:20px; padding-right:20px; padding-bottom:20px; padding-left:20px; text-align:left;padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;">
+												<f:for each="{balu:FAL(uid=contentObject.uid, field='settings.newsletter.startimage', table='tt_content')}" as="preview">
+													<f:image src="{f:uri.image(image=preview)}" title="{preview.title}" width="800" style="border-bottom: 1px solid #FFFFFF; display: block; height: auto !important; max-width: 598px; min-width: 598px; width: 598px;"/>
+												</f:for>
+											</td>
+										</tr>
+									</f:if>
+									<tr>
+										<td valign="top" style="color: black; font-family: 'Gudea', Helvetica, sans-serif; font-size:12px; line-height:150%; padding-top:20px; padding-right:20px; padding-bottom:20px; padding-left:20px; text-align:left;padding-bottom: 0; padding-top: 0;">
+											<p><f:format.html>{introduction}</f:format.html></p>
+										</td>
+									</tr>
+									<f:if condition="({settings.newsletter.layout} == 'c1') || ({settings.newsletter.layout} == 'c2')">
+										<f:then>
+										<tr>
+											<td valign="top" style="color: black; font-family: 'Gudea', Helvetica, sans-serif; font-size:12px; line-height:150%; padding-top:20px; padding-right:20px; padding-bottom:20px; padding-left:20px; text-align:left;padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;">
+												<f:for each="{balu:FAL(uid=contentObject.uid, field='settings.newsletter.startimage', table='tt_content')}" as="preview">
+													<f:image src="{f:uri.image(image=preview)}" title="{preview.title}" width="800" style="border-bottom: 1px solid #FFFFFF; display: block; height: auto !important; max-width: 598px; min-width: 598px; width: 598px;"/>
+												</f:for>
+											</td>
+										</tr>
+										</f:then>
+										<f:else>
+											<tr>
+												<td valign="top" style="color: black; font-family: 'Gudea', Helvetica, sans-serif; font-size:12px; line-height:150%; padding-top:20px; padding-right:20px; padding-bottom:20px; padding-left:20px; text-align:left;padding-bottom: 0; padding-top: 0;">
+													<hr style="border-color: #CCCCCC;"/>
+												</td>
+											</tr>
+										</f:else>
+									</f:if>
+									<tr>
+										<td valign="top">
+											<f:if condition="{settings.newsletter.layout} != 'c2'">
+												<f:then>
+												<f:if condition="{arrangements}">
+													<f:for each="{arrangements}" as="arrangement" iteration="iterator" reverse="true">
+														<f:if condition="({settings.newsletter.layout} == 'a1') || ({settings.newsletter.layout} == 'b1')">
+															<table border="0" cellpadding="0" cellspacing="0" width="598" style="max-width: 598px; min-width: 598px; width: 598px;">
+																<tr>
+																	<td valign="top" width="299" style="max-width: 299px; min-width: 299px; width: 299px;">
+																		<f:render partial="Angebot/NewsletterItem" arguments="{arrangement : arrangement, layout : settings.newsletter.layout}" />
+																	</td>
+																</tr>
+															</table>
+														</f:if>
+														<f:if condition="(({settings.newsletter.layout} == 'a2') || ({settings.newsletter.layout} == 'b2')) && ({iterator.index} == 0)">
+															<table border="0" cellpadding="0" cellspacing="0" width="598" style="max-width: 598px; min-width: 598px; width: 598px;">
+																<tr>
+														</f:if>
+														<f:if condition="((({settings.newsletter.layout} == 'a2') || ({settings.newsletter.layout} == 'b2')) && ({iterator.index} <= 1))">
+															<td valign="top" width="299" style="max-width: 299px; min-width: 299px; width: 299px;">
+																<f:render partial="Angebot/NewsletterItem" arguments="{arrangement : arrangement, layout : settings.newsletter.layout}" />
+															</td>
+														</f:if>
+														<f:if condition="(({settings.newsletter.layout} == 'a2') || ({settings.newsletter.layout} == 'b2')) && ({iterator.index} == 1)">
+																</tr>
+															</table>
+														</f:if>
+														<f:if condition="(({settings.newsletter.layout} == 'c1') && ({iterator.index} == 0))">
+															<table border="0" cellpadding="0" cellspacing="0" width="598" style="max-width: 598px; min-width: 598px; width: 598px;">
+																<tr>
+																	<td valign="top" width="299" style="max-width: 299px; min-width: 299px; width: 299px;">
+																		<f:render partial="Angebot/NewsletterItem" arguments="{arrangement : arrangement, layout : settings.newsletter.layout}" />
+																	</td>
+																</tr>
+															</table>
+														</f:if>
+													</f:for>
+												</f:if>
+												</f:then>
+												<f:else>
+													<table border="0" cellpadding="0" cellspacing="0" width="598" style="max-width: 598px; min-width: 598px; width: 598px;">
+														<tr>
+															<td valign="top">
+																<table border="0" cellpadding="0" cellspacing="0" id="layout-c2" width="598" style="max-width: 598px; min-width: 598px; width: 598px;">
+																	<tr>
+																		<td align="left" valign="top" width="358" style="color: black; font-family: 'Gudea', Helvetica, sans-serif; font-size:12px; line-height:150%; padding-top:20px; padding-right:20px; padding-bottom:20px; padding-left:20px; text-align:left;max-width: 358px; min-width: 358px;padding-top:20px;padding-right:10px;padding-bottom:0;padding-left:20px;width: 358px;">
+																			<h2 style="color: black !important;display:block;font-family: 'Gudea', Helvetica, sans-serif;font-size:20px;font-style:normal;font-weight:bold;line-height:125%;letter-spacing:normal;margin-top:0;margin-right:0;margin-bottom:0;margin-left:0;text-align:left;">{settings.newsletter.c2.headline}</h2>
+																			<h5 style="font-size: 12px; margin-bottom: 5px; margin-top: 5px;">{settings.newsletter.c2.subheadline}</h5>
+																			<p><f:format.html>{settings.newsletter.c2.text}</f:format.html></p>
+																		</td>
+																		<td align="right" valign="top" width="180" style="color: black; font-family: 'Gudea', Helvetica, sans-serif; font-size:12px; line-height:150%; padding-top:20px; padding-right:20px; padding-bottom:20px; padding-left:20px; text-align:left;max-width: 180px; min-width: 180px; padding-top: 20px; padding-right: 20px; padding-bottom: 0; padding-left: 10px; width: 180px;">
+																			<f:for each="{balu:FAL(uid=contentObject.uid, field='settings.newsletter.c2.images', table='tt_content')}" as="image">
+																				<span id="arrangementImageRoundWrapper" style="display: block; margin: 20px 0 50px 0;">
+																					<f:image src="{f:uri.image(image=image)}" title="{image.title}" width="300" style="-webkit-border-radius:50%; -moz-border-radius:50%; border-radius: 50%; height: 150px; max-width: 150px; min-width: 150px; object-fit: cover; width: 150px;"/>
+																				</span>
+																			</f:for>
+																		</td>
+																	</tr>
+																	<tr>
+																		<td colspan="2" valign="top" style="color: black; font-family: 'Gudea', Helvetica, sans-serif; font-size:12px; line-height:150%; padding-top:20px; padding-right:20px; padding-bottom:20px; padding-left:20px; text-align:left;padding-top: 0; padding-right: 20px; padding-bottom: 0; padding-left: 20px;"><hr style="border-color: #CCCCCC;"/></td>
+																	</tr>
+															</table>
+															</td>
+														</tr>
+													</table>
+												</f:else>
+											</f:if>
+										</td>
+									</tr>
+									<f:if condition="({settings.newsletter.layout} == 'a2') || ({settings.newsletter.layout} == 'b2')">
+										<tr>
+											<td colspan="2" valign="top" style="color: black; font-family: 'Gudea', Helvetica, sans-serif; font-size:12px; line-height:150%; padding-top:20px; padding-right:20px; padding-bottom:20px; padding-left:20px; text-align:left;padding-top: 0; padding-right: 20px; padding-bottom: 0; padding-left: 20px;"><hr style="border-color: #CCCCCC;"/></td>
+										</tr>
+									</f:if>
+								</table>
+								<!-- // END BODY -->
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<table border="0" cellpadding="0" cellspacing="0" width="598" style="background-color:#F4F4F4; border-bottom: 1px solid transparent; max-width: 598px; min-width: 598px; width: 598px;">
+									<tr>
+										<td align="center" valign="top">
+											<!-- BEGIN FOOTER // -->
+											<table border="0" cellpadding="0" cellspacing="0" width="100%" style="background-color:#F4F4F4;">
+												<f:if condition="{settings.newsletter.showfooter}">
+													<tr>
+														<td colspan="3" valign="top" style="color:#808080; font-family: 'Gudea', Helvetica, sans-serif; font-size:10px; line-height:150%; padding-top:10px; padding-right:20px; padding-bottom:5px; padding-left:20px; text-align:left;">
+															<b>Wenn Sie diesen Newsletter nicht mehr empfangen möchten, können Sie diesen <a href="https://ueberland-tecklenburg.de/de/newsletter/anmeldung/" target="_blank" style="color:#009d3c; text-decoration:none;">hier</a> abbestellen.</b>
+														</td>
+													</tr>
+													<tr>
+														<td colspan="3" valign="top" style="color:#808080; font-family: 'Gudea', Helvetica, sans-serif; font-size:10px; line-height:150%; padding-top:5px; padding-right:20px; padding-bottom:5px; padding-left:20px; text-align:left; ">
+															<b>Haben Sie Fragen oder wünschen Sie ein individuelles Angebot?<br/>
+															Gerne beraten wir Sie persönlich! <a href="https://ueberland-tecklenburg.de/de/reiseanfrage/" target="_blank" style="color:#009d3c; text-decoration:none;">→ zum Kontakformular</a></b>
+														</td>
+													</tr>
+												</f:if>
+												<tr>
+													<td align="left" valign="top" style="color:#808080; font-family: 'Gudea', Helvetica, sans-serif; font-size:10px; line-height:150%; padding-top:5px; padding-right:10px; padding-bottom:5px; padding-left:20px; text-align:left; width: 31%">
+														<b>überland Tecklenburg GmbH</b><br/>
+														Steinbrinkheide 2<br/>
+														49479 Ibbenbüren
+													</td>
+													<td align="center" valign="top" style="color:#808080; font-family: 'Gudea', Helvetica, sans-serif; font-size:10px; line-height:150%; padding-top:5px; padding-right:10px; padding-bottom:5px; padding-left:10px; text-align:left; width: 31%">
+														<b>T</b> +49 5451 937 47-0<br/>
+														<b>F</b> +49 5451 937 47-10<br/>
+														<b>M</b> <a href="mailto: info@ueberland-tecklenburg.de" style="color:#009d3c; text-decoration:none;">info@ueberland-tecklenburg.de</a>
+													</td>
+													<td align="right" valign="top" style="color:#808080; font-family: 'Gudea', Helvetica, sans-serif; font-size:10px; line-height:150%; padding-top:5px; padding-right:20px; padding-bottom:5px; padding-left:10px; text-align:left; width: 38%">
+														<b>Handelsregister:</b> HRB 12068 Steinfurt<br/>
+														<b>USt-Idnr.:</b> DE319494080<br/>
+														<b>Geschäftsführer:</b> Christian Münch
+													</td>
+												</tr>
+												<tr>
+													<td colspan="3" valign="top" style="color:#808080; font-family: 'Gudea', Helvetica, sans-serif; font-size:10px; line-height:150%; padding-top:5px; padding-right:20px; padding-bottom:20px; padding-left:20px; text-align:left;">
+														<a href="https://www.ueberland-tecklenburg.de" target="_blank"style="color:#009d3c; text-decoration:none;">www.ueberland-tecklenburg.de</a>
+													</td>
+												</tr>
+											</table>
+											<!-- // END FOOTER -->
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+					<!-- // END TEMPLATE -->
+				</td>
+			</tr>
+		</table>
+	</center>
+</html>

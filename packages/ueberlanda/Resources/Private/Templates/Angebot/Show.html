@@ -1,0 +1,380 @@
+<html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true"
+	xmlns:balu="Balumedien\Ueberland\ViewHelpers">
+
+<f:layout name="Default" />
+
+<f:section name="content">
+
+	<div class="angebot-show">
+		<h1>{angebot.title}</h1>
+		<h4>{angebot.subtitle}</h4>
+
+		<div class="row">
+			<div class="angebot-header-container">
+				<div class="angebot-header">
+					<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+						<div class="angebot-image flexslider" id="angebot-image-slider">
+							<div class="flex-viewport" style="overflow: hidden; position: relative;">
+								<f:if condition="{angebot.categories}">
+									<f:for each="{angebot.categories}" as="category">
+										<f:if condition="{category.uid}==16">
+											<span class="genussreise-overlay">
+												<f:image
+													src="EXT:ueberland/Resources/Public/Icons/category-genussreisen.svg" />
+											</span>
+										</f:if>
+									</f:for>
+								</f:if>
+								<ul class="slides" style="width: 100%;">
+									<f:for each="{angebot.image}" as="image">
+										<li>
+											<f:image src="{image.uid}" alt="" treatIdAsReference="TRUE" />
+										</li>
+									</f:for>
+								</ul>
+							</div>
+							<f:if condition="{f:count(subject: angebot.image)} > 1">
+								<ul class="flex-direction-nav">
+									<li class="flex-nav-prev"><a class="flex-prev" href="#">Previous</a></li>
+									<li class="flex-nav-next"><a class="flex-next" href="#">Next</a></li>
+								</ul>
+							</f:if>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 angebot-meta">
+						<f:link.page addQueryString="true" section="angebotsanfrage"
+							class="btn btn-primary btn-angebotsanfrage">
+							<span class="button-info">
+								<f:translate key="angebot_anfrage" />
+							</span>
+							<div class="duration">
+								{angebot.durationInDays}
+								<f:translate key="angebot_days" />
+								<balu:food angebot="{angebot}" />
+							</div>
+							<div class="price">
+								<span>
+									<f:translate key="angebot_price_start" />
+								</span> € <strong>{angebot.price},-</strong>
+							</div>
+						</f:link.page>
+						<f:if condition="{angebot.extensionPrice}">
+							<h4>
+								<f:translate key="angebot_extension_price" />
+							</h4>
+							<div class="btn btn-secondary btn-extension-price">
+								<div class="price">
+									<span>
+										<f:translate key="angebot_price_start" />
+									</span> € <strong>{angebot.extensionPrice},-</strong>
+								</div>
+							</div>
+						</f:if>
+						<f:if condition="{angebot.availableFrom} || {angebot.availableTill}">
+							<h4>
+								<f:translate key="angebot_availability" />
+							</h4>
+							<div class="btn btn-secondary btn-availability">
+								<f:if
+									condition="{f:format.date(date: angebot.availableFrom, format: 'd.m.Y')} != {f:format.date(date: angebot.availableTill, format: 'd.m.Y')}">
+									<f:then>
+										<f:format.date format="d.m.Y">{angebot.availableFrom}</f:format.date>&ndash;
+										<f:format.date format="d.m.Y">{angebot.availableTill}</f:format.date>
+									</f:then>
+									<f:else>
+										<f:format.date format="d.m.Y">{angebot.availableFrom}</f:format.date>
+									</f:else>
+								</f:if>
+							</div>
+						</f:if>
+						<h4>
+							<f:translate key="angebot_id" />
+						</h4>
+						<div class="btn btn-secondary btn-id">
+							<f:if condition="{angebot.id}">
+								<f:then>{angebot.id}</f:then>
+								<f:else>
+									<f:translate key="angebot_id_not_available" />
+								</f:else>
+							</f:if>
+						</div>
+						<h4>
+							<f:translate key="angebot_season" />
+						</h4>
+						<div class="btn btn-secondary btn-id">
+							{angebot.season}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<div class="tab-v1 angebot-overview">
+					<ul class="nav nav-tabs">
+						<f:if condition="{angebot.benefits}">
+							<li id="tab-element-benefits" class="active">
+								<a href="#tab-benefits" role="tab" data-toggle="tab">
+									<f:translate key="angebot_leistungen" />
+								</a>
+							</li>
+						</f:if>
+						<f:if condition="{angebot.benefits}">
+							<f:then>
+								<li id="tab-element-dayprogram">
+							</f:then>
+							<f:else>
+								<li id="tab-element-dayprogram" class="active">
+							</f:else>
+						</f:if>
+						<a href="#tab-dayprogram" role="tab" data-toggle="tab">
+							<f:translate key="angebot_dayprogram" />
+						</a>
+						</li>
+						<f:if condition="{angebot.programmpunkt}">
+							<f:if condition="{angebot.dayProgram} || {angebot.dayProgram}">
+								<f:then>
+									<li id="tab-element-programmpunkte">
+								</f:then>
+								<f:else>
+									<li id="tab-element-programmpunkte" class="active">
+								</f:else>
+							</f:if>
+							<a href="#tab-programmpunkte" role="tab" data-toggle="tab">
+								<f:translate key="angebot_programmpunkt" />
+							</a>
+							</li>
+						</f:if>
+						<f:if condition="{events}">
+							<f:if condition="{angebot.benefits} || {angebot.dayProgram} || {angebot.programmpunkt}">
+								<f:then>
+									<li id="tab-element-events">
+								</f:then>
+								<f:else>
+									<li id="tab-element-events" class="active">
+								</f:else>
+							</f:if>
+							<a href="#tab-events" role="tab" data-toggle="tab">Events</a>
+							</li>
+						</f:if>
+						<f:if condition="{sights}">
+							<f:if condition="{angebot.benefits} || {angebot.dayProgram} || {events}">
+								<f:then>
+									<li id="tab-element-sights">
+								</f:then>
+								<f:else>
+									<li id="tab-element-sights" class="active">
+								</f:else>
+							</f:if>
+							<a href="#tab-sights" role="tab" data-toggle="tab">
+								<f:translate key="angebot_sights" />
+							</a>
+							</li>
+						</f:if>
+						<f:if condition="{angebote}">
+							<f:if condition="{angebot.benefits} || {angebot.dayProgram} || {events} || {sights}">
+								<f:then>
+									<li id="tab-element-angebote">
+								</f:then>
+								<f:else>
+									<li id="tab-element-angebote" class="active">
+								</f:else>
+							</f:if>
+							<a href="#tab-angebote" role="tab" data-toggle="tab">
+								<f:translate key="angebot_angebote" />
+							</a>
+							</li>
+						</f:if>
+						<f:if
+							condition="{angebot.benefits} || {angebot.dayProgram} || {events} || {sights} || {angebote}">
+							<f:then>
+								<li id="tab-element-map">
+							</f:then>
+							<f:else>
+								<li id="tab-element-map" class="active">
+							</f:else>
+						</f:if>
+						<a href="#tab-map" role="tab" data-toggle="tab">
+							<f:translate key="angebot_map" />
+						</a>
+						</li>
+					</ul>
+					<div class="tab-content">
+						<f:if condition="{angebot.benefits}">
+							<div id="tab-benefits" class="tab-pane fade active in">
+								<f:format.html>{angebot.benefits}</f:format.html>
+							</div>
+						</f:if>
+						<f:if condition="{angebot.benefits}">
+							<f:then>
+								<f:render partial="Tagesprogramm/Listing"
+									arguments="{dayprograms: angebot.dayProgram, intro: angebot.intro, active: 0}" />
+							</f:then>
+							<f:else>
+								<f:render partial="Tagesprogramm/Listing"
+									arguments="{dayprograms: angebot.dayProgram, intro: angebot.intro, active: 1}" />
+							</f:else>
+						</f:if>
+						<f:if condition="{angebot.programmpunkt}">
+							<f:if condition="{angebot.benefits} || {angebot.dayProgram}">
+								<f:then>
+									<f:render partial="Programmpunkt/Listing"
+										arguments="{programmpunkte: angebot.programmpunkt, active: 0}" />
+								</f:then>
+								<f:else>
+									<f:render partial="Programmpunkt/Listing"
+										arguments="{programmpunkte: angebot.programmpunkt, active: 1}" />
+								</f:else>
+							</f:if>
+						</f:if>
+						<f:if condition="{events}">
+							<f:if condition="{angebot.benefits} || {angebot.dayProgram} || {angebot.programmpunkt}">
+								<f:then>
+									<f:render partial="Event/Listing" arguments="{events: events, active: 0}" />
+								</f:then>
+								<f:else>
+									<f:render partial="Event/Listing" arguments="{events: events, active: 1}" />
+								</f:else>
+							</f:if>
+						</f:if>
+						<f:if condition="{sights}">
+							<div id="tab-sights" class="tab-pane fade">
+								<div class="listing sight-listing">
+									<f:for each="{angebot.city}" as="city">
+										<f:for each="{city.sights}" as="sight" iteration="iterator">
+											<f:if condition="{iterator.isFirst} && {city.bild} && {city.beschreibung}">
+												<div class="item">
+													<div class="row">
+														<div class="col-xs-12 col-sm-4 col-md-3">
+															<f:link.action action="list" arguments="{city : city}"
+																pageUid="18">
+																<f:image src="{city.bild.uid}" alt=""
+																	treatIdAsReference="TRUE" />
+															</f:link.action>
+														</div>
+														<div class="col-xs-12 col-sm-8 col-md-9">
+															<h3 style="margin-top: 15px; padding: 0;">
+																<f:link.action action="list" arguments="{city : city}"
+																	pageUid="18">{city.name}</f:link.action>
+															</h3>
+															<span style="font-size: 150%; font-style: italic;">
+																<f:format.html>{city.beschreibung}</f:format.html>
+															</span>
+														</div>
+													</div>
+												</div>
+											</f:if>
+											<f:render partial="Sight/ListingItem" arguments="{sight: sight}" />
+										</f:for>
+									</f:for>
+								</div>
+							</div>
+						</f:if>
+						<f:if condition="{angebote}">
+							<f:if condition="{angebot.benefits} || {angebot.dayProgram} || {events} || {sights}">
+								<f:then>
+									<f:render partial="Angebot/Listing" arguments="{angebote: angebote, active: 0}" />
+								</f:then>
+								<f:else>
+									<f:render partial="Angebot/Listing" arguments="{angebote: angebote, active: 1}" />
+								</f:else>
+							</f:if>
+						</f:if>
+						<div id="tab-map" class="tab-pane">
+							<div id="map"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<f:if
+			condition="{f:format.date(date: '+0 days', format: 'Y-m-d')} > {f:format.date(date: angebot.availableTill, format: 'Y-m-d')}">
+			<f:then>
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="angebotsanfrage">
+						<h2>
+							<f:translate key="angebot_inquiry_headline.1" /> {angebot.id}
+							<f:translate key="angebot_inquiry_headline.2" />
+						</h2>
+						<div class="alert alert-warning">
+							Der Buchungszeitraum für diese Codenummer ist leider bereits abgelaufen.
+							Wir erstellen Ihnen gerne ein aktualisiertes Angebot für dieses Reiseprogramm.
+							Kontaktieren Sie uns <f:link.page pageUid="16">hier</f:link.page> – wir beraten Sie gerne!
+							<f:if condition="{angebote}">
+								Lassen Sie sich auch von weiteren Reisevorschlägen für Alternativ-Angebote inspirieren.
+							</f:if>
+						</div>
+						<f:if condition="{angebote}">
+							<f:render partial="Angebot/Slider" arguments="{angebote: angebote}" />
+						</f:if>
+					</div>
+				</div>
+			</f:then>
+			<f:else>
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="angebotsanfrage">
+						<h2>
+							<f:translate key="angebot_inquiry_headline.1" /> {angebot.id}
+							<f:translate key="angebot_inquiry_headline.2" />
+						</h2>
+						<f:render partial="Angebot/Inquiry"
+							arguments="{angebot : angebot, angebotsanfrage : angebotsanfrage}" />
+					</div>
+				</div>
+			</f:else>
+		</f:if>
+
+	</div>
+
+	<script>
+		(function ($) {
+			$(document).ready(function () {
+				$('#angebot-image-slider').flexslider({
+					direction: "horizontal", slideshowSpeed: 8000,
+					animation: "slide", animationSpeed: 800, animationLoop: true, useCSS: false,
+					controlNav: false, directionNav: true, pausePlay: false, pauseOnHover: true,
+					initDelay: 0, randomize: false, reverse: false
+				});
+			});
+		})(jQuery);
+	</script>
+
+	<script>
+		var bounds = L.latLngBounds([
+			<f:for each="{angebot.city}" as="city" iteration="iterator">
+				<f:if condition="{iterator.isLast} && {city.latitude} && {city.longitude}">
+					<f:then>
+						<f:format.raw>[{city.latitude}, {city.longitude}]</f:format.raw>
+					</f:then>
+					<f:else>
+						<f:format.raw>[{city.latitude}, {city.longitude}],</f:format.raw>
+					</f:else>
+				</f:if>
+			</f:for>
+		]);
+		var center = bounds.getCenter();
+		var map = L.map('map').setView(center, 10);
+
+    	L.tileLayer('https://tile.openstreetmap.org/<f:format.raw>{</f:format.raw>z<f:format.raw>}</f:format.raw>/<f:format.raw>{</f:format.raw>x<f:format.raw>}</f:format.raw>/<f:format.raw>{</f:format.raw>y<f:format.raw>}</f:format.raw>.png', {
+			attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+		}).addTo(map);
+
+		// Loop through the cities and place a marker for each set of coordinates.
+		<f:for each="{angebot.city}" as="city">
+			L.marker([{city.latitude}, {city.longitude}]).addTo(map).bindPopup("<f:format.raw>{city.name}</f:format.raw>");
+		</f:for>
+		
+		var tab = document.getElementById('tab-map');
+		var observer = new MutationObserver(function(){
+			if(tab.style.display != 'none'){
+				map.invalidateSize();
+			}
+		});
+		observer.observe(tab, {attributes: true});  
+	</script>
+
+</f:section>
+
+</html>

@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-05-25T15:01:30Z" product-name="ueberland">
+		<header/>
+		<body>
+			<trans-unit id="tx_ueberland_general.label">
+				<source>Bezeichnung</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_general.slug">
+				<source>URL-Pfad</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_land">
+				<source>Land</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_land.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_land.bundesland">
+				<source>Bundesland</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_region">
+				<source>Region</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_region.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_bundesland">
+				<source>Bundesland</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_bundesland.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_bundesland.beschreibung">
+				<source>Beschreibung</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_bundesland.land">
+				<source>Land</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_programmkategorie">
+				<source>Programmkategorie</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_stadt">
+				<source>Stadt</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_stadt.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_stadt.beschreibung">
+				<source>Beschreibung</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_stadt.bild">
+				<source>Bild</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_stadt.historische_alstadt">
+				<source>Historische Alstadt</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_stadt.welthafen">
+				<source>Welthafen</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_stadt.kueste">
+				<source>Kueste</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_stadt.kunststadt">
+				<source>Kunststadt</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_stadt.latitude">
+				<source>Latitude</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_stadt.longitude">
+				<source>Longitude</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_stadt.bundesland">
+				<source>Bundesland</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_stadt.region">
+				<source>Region</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_stadt.land">
+				<source>Land</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_event">
+				<source>Event</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_event.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_event.startdatum">
+				<source>Startdatum</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_event.enddatum">
+				<source>Enddatum</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_event.stadt">
+				<source>Stadt</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_sight">
+				<source>Sight</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_sight.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_sight.subtitle">
+				<source>Subtitle</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_sight.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_sight.street">
+				<source>Street</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_sight.housenumber">
+				<source>Housenumber</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_sight.postalcode">
+				<source>Postalcode</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_sight.url">
+				<source>Url</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_sight.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_sight.city">
+				<source>City</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_angebot">
+				<source>Angebot</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_angebot.id">
+				<source>Id</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_angebot.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_angebot.subtitle">
+				<source>Subtitle</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_angebot.price">
+				<source>Price</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_angebot.extension_price">
+				<source>Extension Price</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_angebot.halfboard">
+				<source>Halfboard</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_angebot.duration_in_days">
+				<source>Duration In Days</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_angebot.benefits">
+				<source>Benefits</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_angebot.last_minute">
+				<source>Last Minute</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_angebot.last_minute_from">
+				<source>Last Minute From</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_angebot.last_minute_to">
+				<source>Last Minute To</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_angebot.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_angebot.highlight">
+				<source>Highlight</source>
+			</trans-unit>
+			<trans-unit id="tx_ueberland_domain_model_angebot.city">
+				<source>City</source>
+			</trans-unit>
+			
+			<trans-unit id="flexforms_tab.general">
+				<source>Grundeinstellungen</source>
+			</trans-unit>
+			<trans-unit id="flexforms_tab.list">
+				<source>Listenansicht</source>
+			</trans-unit>
+			<trans-unit id="flexforms_tab.show">
+				<source>Einzelansicht</source>
+			</trans-unit>
+			<trans-unit id="flexforms_tab.newsletter">
+				<source>Newsletter</source>
+			</trans-unit>
+			<trans-unit id="flexforms_tab.programmpunkt">
+				<source>Programmpunkte</source>
+			</trans-unit>
+			
+			<trans-unit id="flexforms_general.mode">
+				<source>Anzeigemodus</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.mode.angebot_list">
+				<source>Liste der Angebote</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.mode.angebot_show">
+				<source>Anzeige eines Angebots</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.mode.angebot_latest">
+				<source>Die letzten Angebote</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.mode.angebot_categories">
+				<source>Überblick der Angebotskategorien</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.mode.angebot_search">
+				<source>Suchformular</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.mode.angebot_highlight">
+				<source>Highlight-Slider</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.mode.angebot_inquiry">
+				<source>Reiseanfragenformular</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.mode.angebot_newsletter">
+				<source>Überland-Newsletter</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.mode.programmpunkt_list">
+				<source>Liste der Programmpunkte</source>
+			</trans-unit>
+			<trans-unit id="flexforms_general.mode.programmkategorie_list">
+				<source>Liste der Programmkategorien</source>
+			</trans-unit>
+			
+			<trans-unit id="flexforms_list.listPid">
+				<source>PageID für Listenansicht</source>
+			</trans-unit>
+			<trans-unit id="flexforms_list.showFilters">
+				<source>Filtermöglichkeiten anzeigen</source>
+			</trans-unit>
+			<trans-unit id="flexforms_list.showFilters.yes">
+				<source>Ja</source>
+			</trans-unit>
+			<trans-unit id="flexforms_list.showFilters.no">
+				<source>Nein</source>
+			</trans-unit>
+			<trans-unit id="flexforms_list.orderBy">
+				<source>Sortierung nach</source>
+			</trans-unit>
+			<trans-unit id="flexforms_list.orderBy.uid">
+				<source>UID</source>
+			</trans-unit>
+			<trans-unit id="flexforms_list.orderBy.tstamp">
+				<source>Letzte Aktualisierung</source>
+			</trans-unit>
+			<trans-unit id="flexforms_list.orderBy.title">
+				<source>Titel</source>
+			</trans-unit>
+			<trans-unit id="flexforms_list.orderDirection">
+				<source>Sortierreihenfolge</source>
+			</trans-unit>
+			<trans-unit id="flexforms_list.orderDirection.asc">
+				<source>Aufsteigend</source>
+			</trans-unit>
+			<trans-unit id="flexforms_list.orderDirection.desc">
+				<source>Absteigend</source>
+			</trans-unit>
+			<trans-unit id="flexforms_list.limit">
+				<source>Maximale Anzahl an Angeboten</source>
+			</trans-unit>
+			<trans-unit id="flexforms_list.offset">
+				<source>Start der Liste</source>
+			</trans-unit>
+			<trans-unit id="flexforms_list.itemsPerPage">
+				<source>Angebote pro Seite</source>
+			</trans-unit>
+			
+			<trans-unit id="flexforms_show.detailPid">
+				<source>Seite mit Einzelansicht</source>
+			</trans-unit>
+			<trans-unit id="flexforms_show.backPid">
+				<source>Seite für Zurück-Knopf</source>
+			</trans-unit>
+			<trans-unit id="flexforms_show.singleNews">
+				<source>Zeige einzelnes Angebot</source>
+			</trans-unit>
+			<trans-unit id="flexforms_show.inquiryMail">
+				<source>Mail für Angebotsanfragen</source>
+			</trans-unit>
+			
+			<trans-unit id="flexforms_newsletter.layout">
+				<source>Layout</source>
+			</trans-unit>
+			<trans-unit id="flexforms_newsletter.headline">
+				<source>Überschrift</source>
+			</trans-unit>
+			<trans-unit id="flexforms_newsletter.introduction">
+				<source>Alle Layouts - Einleitungstext</source>
+			</trans-unit>
+			<trans-unit id="flexforms_newsletter.startimage">
+				<source>Layout B1 bis C1 - Startbild</source>
+			</trans-unit>
+			<trans-unit id="flexforms_newsletter.arrangements">
+				<source>Layout A1 bis C1 - Angebote</source>
+			</trans-unit>
+			<trans-unit id="flexforms_newsletter.c2.headline">
+				<source>Layout C2 - Überschrift</source>
+			</trans-unit>
+			<trans-unit id="flexforms_newsletter.c2.subheadline">
+				<source>Layout C2 - Überschrift 2</source>
+			</trans-unit>
+			<trans-unit id="flexforms_newsletter.c2.text">
+				<source>Layout C2 - Text</source>
+			</trans-unit>
+			<trans-unit id="flexforms_newsletter.c2.images">
+				<source>Layout C2 - Bilder</source>
+			</trans-unit>
+			<trans-unit id="flexforms_newsletter.showfooter">
+				<source>Zeige Newsletter Footer</source>
+			</trans-unit>
+			
+		</body>
+	</file>
+</xliff>

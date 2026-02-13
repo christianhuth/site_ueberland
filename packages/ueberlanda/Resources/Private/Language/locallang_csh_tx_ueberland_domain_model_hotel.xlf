@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-05-08T00:33:00Z" product-name="ueberland">
+		<header/>
+		<body>
+			<trans-unit id="name.description">
+				<source>name</source>
+			</trans-unit>
+			<trans-unit id="strasse.description">
+				<source>strasse</source>
+			</trans-unit>
+			<trans-unit id="hausnummer.description">
+				<source>hausnummer</source>
+			</trans-unit>
+			<trans-unit id="plz.description">
+				<source>plz</source>
+			</trans-unit>
+			<trans-unit id="klassifizierung.description">
+				<source>klassifizierung</source>
+			</trans-unit>
+			<trans-unit id="sternebewertung.description">
+				<source>sternebewertung</source>
+			</trans-unit>
+			<trans-unit id="lage.description">
+				<source>lage</source>
+			</trans-unit>
+			<trans-unit id="anzahl_der_zimmer.description">
+				<source>anzahlDerZimmer</source>
+			</trans-unit>
+			<trans-unit id="stadt.description">
+				<source>stadt</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-06-03T04:27:54Z" product-name="ueberland">
+		<header/>
+		<body>
+			<trans-unit id="name.description">
+				<source>name</source>
+			</trans-unit>
+			<trans-unit id="beschreibung.description">
+				<source>beschreibung</source>
+			</trans-unit>
+			<trans-unit id="bild.description">
+				<source>bild</source>
+			</trans-unit>
+			<trans-unit id="historische_alstadt.description">
+				<source>historischeAlstadt</source>
+			</trans-unit>
+			<trans-unit id="welthafen.description">
+				<source>welthafen</source>
+			</trans-unit>
+			<trans-unit id="kueste.description">
+				<source>kueste</source>
+			</trans-unit>
+			<trans-unit id="kunststadt.description">
+				<source>kunststadt</source>
+			</trans-unit>
+			<trans-unit id="latitude.description">
+				<source>latitude</source>
+			</trans-unit>
+			<trans-unit id="longitude.description">
+				<source>longitude</source>
+			</trans-unit>
+			<trans-unit id="bundesland.description">
+				<source>bundesland</source>
+			</trans-unit>
+			<trans-unit id="region.description">
+				<source>region</source>
+			</trans-unit>
+			<trans-unit id="land.description">
+				<source>land</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

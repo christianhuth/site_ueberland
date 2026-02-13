@@ -1,0 +1,27 @@
+# Configuration/Yaml/FormEditorSetup.yaml
+
+TYPO3:
+  CMS:
+    Form:
+      prototypes:
+        standard:
+          formEditor:
+            dynamicRequireJsModules:
+              additionalViewModelModules:
+                - 'BaluMedien/Ueberland/Backend/FormEditor/YourCustomElementViewModel'
+
+            formEditorPartials:
+              FormElement-YourCustomElement: 'Stage/SimpleTemplate'
+
+          formElementsDefinition:
+            YourCustomElement:
+              formEditor:
+                label: 'formEditor.elements.YourCustomElement.label'
+                group: custom
+                groupSorting: 1000
+                iconIdentifier: 't3-form-icon-your-custom-element'
+      mixins:
+        formElementMixins:
+          YourCustomElementMixin:
+            __inheritances:
+              10: 'TYPO3.CMS.Form.mixins.formElementMixins.FormElementMixin'

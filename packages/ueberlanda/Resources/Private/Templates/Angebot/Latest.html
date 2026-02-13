@@ -1,0 +1,66 @@
+<html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	
+	<f:layout name="Default" />
+	
+	<f:section name="content">
+		
+		<div class="carousel slide" id="latestSlider">
+			<div class="carousel-inner">
+				<f:for each="{angebote}" as="angebot" iteration="iterator">
+					<f:render partial="Angebot/LatestItem" arguments="{angebot : angebot, iterator: iterator}" />
+				</f:for>
+			</div>
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<f:for each="{angebote}" as="angebot" iteration="iterator">
+					<f:if condition="{iterator.isFirst}">
+						<f:then>
+							<li data-target="#latestSlider" data-slide-to="{iterator.index}" class="active"></li>
+						</f:then>
+						<f:else>
+							<li data-target="#latestSlider" data-slide-to="{iterator.index}"></li>
+						</f:else>
+					</f:if>
+				</f:for>
+			</ol>
+		</div>
+		<script type="text/javascript">
+			$('#latestSlider').carousel({
+			  	interval: 4000,
+				loop: 1
+			})
+
+			$('#latestSlider .item').each(function(){
+			  var next = $(this).next();
+			  if (!next.length) {
+				next = $(this).siblings(':first');
+			  }
+			  next.children(':first-child').clone().appendTo($(this));
+
+			  if (next.next().length>0) {
+				next.next().children(':first-child').clone().appendTo($(this));
+			  } else {
+				$(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+			  }
+			});
+			
+			$("#latestSlider").on("touchstart", function(event){
+				var xClick = event.originalEvent.touches[0].pageX;
+				$(this).one("touchmove", function(event){
+					var xMove = event.originalEvent.touches[0].pageX;
+					if( Math.floor(xClick - xMove) > 5 ){
+						$(this).carousel('next');
+					}
+					else if( Math.floor(xClick - xMove) < -5 ){
+						$(this).carousel('prev');
+					}
+				});
+				$("#latestSlider").on("touchend", function(){
+						$(this).off("touchmove");
+				});
+			});
+			
+		</script>
+	</f:section>
+	
+</html>

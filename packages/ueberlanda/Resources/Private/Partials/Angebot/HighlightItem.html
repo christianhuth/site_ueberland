@@ -1,0 +1,27 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+<!--
+	=====================
+		Partials/Angebot/highlightItem.html
+-->
+	<f:if condition="{active}">
+		<f:then>
+			<div class="item active">
+		</f:then>
+		<f:else>
+			<div class="item">	
+		</f:else>
+	</f:if>
+		<f:link.action action="show" arguments="{angebot : angebot}" pageUid="61">
+			<div class="angebot-image">
+				<f:for each="{angebot.image}" as="image" iteration="iterator">
+					<f:if condition="{iterator.isFirst}"><f:image src="{image.uid}" alt="" treatIdAsReference="TRUE" /></f:if>
+				</f:for>
+			</div>
+			<div class="carousel-caption">
+				<h2>{angebot.title}</h2>
+				<p>{angebot.subtitle}</p>
+			</div>
+		</f:link.action>
+	</div> <!-- End Item -->
+	
+</html>

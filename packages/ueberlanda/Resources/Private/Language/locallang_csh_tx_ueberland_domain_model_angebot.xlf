@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2018-06-03T04:27:54Z" product-name="ueberland">
+		<header/>
+		<body>
+			<trans-unit id="id.description">
+				<source>id</source>
+			</trans-unit>
+			<trans-unit id="title.description">
+				<source>title</source>
+			</trans-unit>
+			<trans-unit id="subtitle.description">
+				<source>subtitle</source>
+			</trans-unit>
+			<trans-unit id="price.description">
+				<source>price</source>
+			</trans-unit>
+			<trans-unit id="price_type.description">
+				<source>priceType</source>
+			</trans-unit>
+			<trans-unit id="duration_in_days.description">
+				<source>durationInDays</source>
+			</trans-unit>
+			<trans-unit id="benefits.description">
+				<source>benefits</source>
+			</trans-unit>
+			<trans-unit id="last_minute.description">
+				<source>lastMinute</source>
+			</trans-unit>
+			<trans-unit id="last_minute_from.description">
+				<source>lastMinuteFrom</source>
+			</trans-unit>
+			<trans-unit id="last_minute_to.description">
+				<source>lastMinuteTo</source>
+			</trans-unit>
+			<trans-unit id="image.description">
+				<source>image</source>
+			</trans-unit>
+			<trans-unit id="highlight.description">
+				<source>highlight</source>
+			</trans-unit>
+			<trans-unit id="available_from.description">
+				<source>availableFrom</source>
+			</trans-unit>
+			<trans-unit id="available_till.description">
+				<source>availableTill</source>
+			</trans-unit>
+			<trans-unit id="city.description">
+				<source>city</source>
+			</trans-unit>
+			<trans-unit id="day_program.description">
+				<source>dayProgram</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

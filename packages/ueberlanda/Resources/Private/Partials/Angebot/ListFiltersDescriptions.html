@@ -1,0 +1,133 @@
+<html 	xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      		xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
+<!--
+	=====================
+		Partials/Angebot/listFiltersDescriptions.html
+-->
+	
+	<div class="angebote-filter-beschreibung">
+		<div class="tab-v1">
+			<ul class="nav nav-tabs">
+				<f:if condition="{selectedCountry} && {selectedCountry.beschreibung} && {selectedCountry.bild}">
+					<li id="tab-element-country" class="active">
+						<a href="#tab-country" role="tab" data-toggle="tab"><f:translate key="angebot_search_country"/></a>
+					</li>
+				</f:if>
+				<f:if condition="{selectedSection} && {selectedSection.beschreibung} && {selectedSection.bild}">
+					<f:if condition="{selectedCountry} && {selectedCountry.beschreibung} && {selectedCountry.bild}">
+						<f:then>
+							<li id="tab-element-section">
+						</f:then>
+						<f:else>
+							<li id="tab-element-section" class="active">
+						</f:else>
+					</f:if>
+						<a href="#tab-section" role="tab" data-toggle="tab"><f:translate key="angebot_search_region"/></a>
+					</li>
+				</f:if>
+				<f:if condition="{selectedCity} && {selectedCity.beschreibung} && {selectedCity.bild}">
+					<f:if condition="	({selectedCountry} && {selectedCountry.beschreibung} && {selectedCountry.bild}) || 
+										({selectedSection} && {selectedSection.beschreibung} && {selectedSection.bild})">
+						<f:then>
+							<li id="tab-element-city">
+						</f:then>
+						<f:else>
+							<li id="tab-element-city" class="active">
+						</f:else>
+					</f:if>
+						<a href="#tab-city" role="tab" data-toggle="tab"><f:translate key="angebot_search_city"/></a>
+					</li>
+				</f:if>
+				<f:if condition="{selectedCategory} && {selectedCategory.txUeberlandDescription} && {selectedCategory.txUeberlandImage}">
+					<f:if condition="	({selectedCountry} && {selectedCountry.beschreibung} && {selectedCountry.bild}) || 
+										({selectedSection} && {selectedSection.beschreibung} && {selectedSection.bild}) || 
+										({selectedCity} && {selectedCity.beschreibung} && {selectedCity.bild})">
+						<f:then>
+							<li id="tab-element-category">
+						</f:then>
+						<f:else>
+							<li id="tab-element-category" class="active">
+						</f:else>
+					</f:if>
+						<a href="#tab-category" role="tab" data-toggle="tab"><f:translate key="angebot_search_category"/></a>
+					</li>
+				</f:if>
+			</ul>
+			<div class="tab-content">
+				<f:if condition="{selectedCountry} && {selectedCountry.beschreibung} && {selectedCountry.bild}">
+					<div id="tab-country" class="tab-pane fade active in">
+						<div class="col-xs-12 col-sm-4 col-md-3">
+							<f:link.action action="list" arguments="{country : selectedCountry}" pageUid="18"><f:image src="{selectedCountry.bild.uid}" alt="" treatIdAsReference="TRUE" /></f:link.action>
+						</div>
+						<div class="col-xs-12 col-sm-8 col-md-9">
+							<h3 style="margin-top: 15px; padding: 0;"><f:link.action action="list" arguments="{country : selectedCountry}" pageUid="18">{selectedCountry.name}</f:link.action></h3>
+							<span style="font-size: 150%; font-style: italic;"><f:format.html>{selectedCountry.beschreibung}</f:format.html></span>
+						</div>
+					</div>
+				</f:if>
+				<f:if condition="{selectedSection} && {selectedSection.beschreibung} && {selectedSection.bild}">
+					<f:if condition="{selectedCountry} && {selectedCountry.beschreibung} && {selectedCountry.bild}">
+						<f:then>
+							<div id="tab-section" class="tab-pane fade in">
+						</f:then>
+						<f:else>
+							<div id="tab-section" class="tab-pane fade active in">
+						</f:else>
+					</f:if>
+								<div class="col-xs-12 col-sm-4 col-md-3">
+									<f:link.action action="list" arguments="{section : selectedSection}" pageUid="18"><f:image src="{selectedSection.bild.uid}" alt="" treatIdAsReference="TRUE" /></f:link.action>
+								</div>
+								<div class="col-xs-12 col-sm-8 col-md-9">
+									<h3 style="margin-top: 15px; padding: 0;"><f:link.action action="list" arguments="{section : selectedSection}" pageUid="18">{selectedSection.name}</f:link.action></h3>
+									<span style="font-size: 150%; font-style: italic;"><f:format.html>{selectedSection.beschreibung}</f:format.html></span>
+								</div>
+							</div>
+				</f:if>
+				<f:if condition="{selectedCity} && {selectedCity.beschreibung} && {selectedCity.bild}">
+					<f:if condition="	({selectedCountry} && {selectedCountry.beschreibung} && {selectedCountry.bild}) || 
+										({selectedSection} && {selectedSection.beschreibung} && {selectedSection.bild})">
+						<f:then>
+							<div id="tab-city" class="tab-pane fade in">
+						</f:then>
+						<f:else>
+							<div id="tab-city" class="tab-pane fade active in">
+						</f:else>
+					</f:if>		
+								<div class="col-xs-12 col-sm-4 col-md-3">
+									<f:link.action action="list" arguments="{city : selectedCity}" pageUid="18"><f:image src="{selectedCity.bild.uid}" alt="" treatIdAsReference="TRUE" /></f:link.action>
+								</div>
+								<div class="col-xs-12 col-sm-8 col-md-9">
+									<h3 style="margin-top: 15px; padding: 0;"><f:link.action action="list" arguments="{city : selectedCity}" pageUid="18">{selectedCity.name}</f:link.action></h3>
+									<span style="font-size: 150%; font-style: italic;"><f:format.html>{selectedCity.beschreibung}</f:format.html></span>
+								</div>
+							</div>
+				</f:if>
+				<f:if condition="{selectedCategory} && {selectedCategory.txUeberlandDescription} && {selectedCategory.txUeberlandImage}">
+					<f:if condition="	({selectedCountry} && {selectedCountry.beschreibung} && {selectedCountry.bild}) || 
+										({selectedSection} && {selectedSection.beschreibung} && {selectedSection.bild}) || 
+										({selectedCity} && {selectedCity.beschreibung} && {selectedCity.bild})">
+						<f:then>
+							<div id="tab-category" class="tab-pane fade in">
+						</f:then>
+						<f:else>
+							<div id="tab-category" class="tab-pane fade active in">
+						</f:else>
+					</f:if>
+								<div class="col-xs-12 col-sm-4 col-md-3">
+									<f:for each="{selectedCategory.txUeberlandImage}" as="image" iteration="iterator">
+										<f:if condition="{iterator.isFirst}">
+											<f:link.action action="list" arguments="{category : selectedCategory}" pageUid="18"><f:image src="{image.uid}" alt="" treatIdAsReference="TRUE" /></f:link.action>
+										</f:if>
+									</f:for> 
+									</div>
+								<div class="col-xs-12 col-sm-8 col-md-9">
+									<h3 style="margin-top: 15px; padding: 0;"><f:link.action action="list" arguments="{category : selectedCategory}" pageUid="18">{selectedCategory.title}</f:link.action></h3>
+									<span style="font-size: 150%; font-style: italic;"><f:format.html>{selectedCategory.txUeberlandDescription}</f:format.html></span>
+								</div>
+							</div>
+				</f:if>
+			</div>
+		</div>
+	</div>
+	
+</html>

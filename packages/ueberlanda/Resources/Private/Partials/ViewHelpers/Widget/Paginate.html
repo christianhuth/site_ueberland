@@ -1,0 +1,41 @@
+<f:if condition="{paginator.numberOfPages} > 1">
+	<nav aria-label="Page navigation" class="paginationContainer">
+		<div class="text-center">
+			<ul class="pagination pagination-lg">
+				<li class="previous{f:if(condition: paging.previousPageNumber, else: ' disabled')}">
+					<f:link.action addQueryStringMethod="{configuration.addQueryStringMethod}"
+						section="{configuration.section}" arguments="{currentPage: paging.previousPageNumber}"
+						additionalAttributes="{aria-label: '{f:translate(key: \"
+						widget.paginator.previous\")}'}">
+						<span aria-hidden="true">&laquo;</span>
+					</f:link.action>
+				</li>
+				<f:for each="{pages}" as="page">
+					<f:if condition="{page} == {paginator.currentPageNumber}">
+						<f:then>
+							<li class="active">
+								<span>{page} <span class="sr-only">(current)</span></span>
+							</li>
+						</f:then>
+						<f:else>
+							<li>
+								<f:link.action addQueryStringMethod="{configuration.addQueryStringMethod}"
+									section="{configuration.section}" arguments="{currentPage: page}">
+									{page}
+								</f:link.action>
+							</li>
+						</f:else>
+					</f:if>
+				</f:for>
+				<li class="next{f:if(condition: paging.nextPageNumber, else: ' disabled')}">
+					<f:link.action addQueryStringMethod="{configuration.addQueryStringMethod}"
+						section="{configuration.section}"
+						additionalAttributes="{aria-label: '{f:translate(key: \" widget.paginator.next\")}'}"
+						arguments="{currentPage: paging.nextPageNumber}">
+						<span aria-hidden="true">&raquo;</span>
+					</f:link.action>
+				</li>
+			</ul>
+		</div>
+	</nav>
+</f:if>

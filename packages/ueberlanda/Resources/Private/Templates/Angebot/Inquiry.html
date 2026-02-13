@@ -1,0 +1,301 @@
+<html xmlns:f="https://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:layout name="Default" />
+
+	<f:section name="content">
+		
+		<f:if condition="{reiseanfrage} && {reiseanfrage.status=TRUE}">
+			<div class="alert alert-success" role="alert">
+				<f:translate key="travel_inquiry_success"/>
+			</div>
+		</f:if>
+	
+		<f:form method="post" action="inquiry" id="reiseanfrage">
+			<h2><f:translate key="travel_inquiry_contact"/></h2>
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+					<div class="form-group">
+						<label class="control-label"><f:translate key="travel_inquiry_company_type"/><span class="required">*</span></label>
+						<div class="input">
+							<select class="form-control" required="required" name="tx_ueberland_ueberland[reiseanfrage][companyType]">
+								<option value="Busunternehmen"><f:translate key="travel_inquiry_company_type.1"/></option>
+								<option value="Reiseveranstalter"><f:translate key="travel_inquiry_company_type.2"/></option>
+								<option value="Reisebüro"><f:translate key="travel_inquiry_company_type.3"/></option>
+								<option value="Sonstiges"><f:translate key="travel_inquiry_company_type.4"/></option>
+							</select>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+					<div class="form-group">
+						<label class="control-label"><f:translate key="travel_inquiry_company"/><span class="required">*</span></label>
+						<div class="input">
+							<f:form.textfield required="TRUE" class="form-control" name="reiseanfrage[company]"/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+					<div class="form-group">
+						<label class="control-label"><f:translate key="travel_inquiry_firstname"/><span class="required">*</span></label>
+						<div class="input">
+							<f:form.textfield required="TRUE" class="form-control" name="reiseanfrage[firstname]"/>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+					<div class="form-group">
+						<label class="control-label"><f:translate key="travel_inquiry_lastname"/><span class="required">*</span></label>
+						<div class="input">
+							<f:form.textfield required="TRUE" class="form-control" name="reiseanfrage[lastname]"/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+					<div class="form-group">
+						<label class="control-label"><f:translate key="travel_inquiry_street"/><span class="required">*</span></label>
+						<div class="input">
+							<f:form.textfield placeholder="" required="TRUE" class="form-control" name="reiseanfrage[street]"/>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+					<div class="form-group">
+						<label class="control-label"><f:translate key="travel_inquiry_zipcode"/><span class="required">*</span></label>
+						<div class="input">
+							<f:form.textfield placeholder="" required="TRUE" class="form-control" name="reiseanfrage[zipcode]"/>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+					<div class="form-group">
+						<label class="control-label"><f:translate key="travel_inquiry_location"/><span class="required">*</span></label>
+						<div class="input">
+							<f:form.textfield placeholder="" required="TRUE" class="form-control" name="reiseanfrage[location]"/>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+					<div class="form-group">
+						<label class="control-label"><f:translate key="travel_inquiry_country"/><span class="required">*</span></label>
+						<div class="input">
+							<f:form.textfield placeholder="" required="TRUE" class="form-control" name="reiseanfrage[country]"/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+					<div class="form-group">
+						<label class="control-label"><f:translate key="travel_inquiry_phone"/><span class="required">*</span></label>
+						<div class="input">
+							<f:form.textfield placeholder="" required="TRUE" class="form-control" name="reiseanfrage[phone]"/>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+					<div class="form-group">
+						<label class="control-label"><f:translate key="travel_inquiry_fax"/></label>
+						<div class="input">
+							<f:form.textfield placeholder="" class="form-control" name="reiseanfrage[fax]"/>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+					<div class="form-group">
+						<label class="control-label"><f:translate key="travel_inquiry_mail"/><span class="required">*</span></label>
+						<div class="input">
+							<f:form.textfield placeholder="" type="mail" required="TRUE" class="form-control" name="reiseanfrage[mail]"/>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+					<div class="form-group">
+						<label class="control-label"><f:translate key="travel_inquiry_language"/><span class="required">*</span></label>
+						<div class="input">
+							<select class="form-control" required="required" name="tx_ueberland_ueberland[reiseanfrage][language]">
+								<option value="Deutsch"><f:translate key="travel_inquiry_language.german"/></option>
+								<option value="Englisch"><f:translate key="travel_inquiry_language.english"/></option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h2><f:translate key="travel_inquiry_travel_goal"/></h2>
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+					<div class="form-group">
+						<label class="control-label"><f:translate key="travel_inquiry_travel_goal.country"/></label>
+						<div class="input">
+							<f:form.select options="{countries}" optionValueField="name" optionLabelField="name" sortByOptionLabel="name" prependOptionLabel="<f:translate key='angebot_filter_countries'/>" class="form-control" name="reiseanfrage[goalCountry]"/>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+					<div class="form-group">
+						<label class="control-label"><f:translate key="travel_inquiry_travel_goal.city"/></label>
+						<div class="input">
+							<f:form.select options="{cities}" optionValueField="name" optionLabelField="name" sortByOptionLabel="name" prependOptionLabel="<f:translate key='angebot_filter_cities'/>" class="form-control" name="reiseanfrage[goalCity]"/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h2><f:translate key="travel_inquiry_travel_date"/></h2>
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+					<div class="form-group">
+						<label class="control-label"><f:translate key="travel_inquiry_travel_date.start"/><span class="required">*</span></label>
+						<div class="input">
+							<f:form.textfield type="date" required="TRUE" class="form-control" name="reiseanfrage[dateStart]"/>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+					<div class="form-group">
+						<label class="control-label"><f:translate key="travel_inquiry_travel_date.end"/><span class="required">*</span></label>
+						<div class="input">
+							<f:form.textfield type="date" required="TRUE" class="form-control" name="reiseanfrage[dateEnd]"/>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+					<div class="form-group">
+						<label class="control-label"><f:translate key="travel_inquiry_travel_date.number_of_nights"/><span class="required">*</span></label>
+						<div class="input">
+							<f:form.textfield required="TRUE" class="form-control" name="reiseanfrage[numberOfNights]"/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h2><f:translate key="travel_inquiry_travel_accomodation"/></h2>
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+					<div class="form-group">
+						<label class="control-label"><f:translate key="travel_inquiry_travel_accomodation.participants"/><span class="required">*</span></label>
+						<div class="input">
+							<f:form.textfield required="TRUE" class="form-control" name="reiseanfrage[participants]"/>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+					<div class="form-group">
+						<label class="control-label"><f:translate key="travel_inquiry_travel_accomodation.single_room_count"/></label>
+						<div class="input">
+							<f:form.textfield class="form-control" name="reiseanfrage[singleRoomCount]"/>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+					<div class="form-group">
+						<label class="control-label"><f:translate key="travel_inquiry_travel_accomodation.double_room_count"/></label>
+						<div class="input">
+							<f:form.textfield class="form-control" name="reiseanfrage[doubleRoomCount]"/>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
+					<div class="form-group">
+						<label class="control-label"><f:translate key="travel_inquiry_travel_accomodation.multi_room_count"/></label>
+						<div class="input">
+							<f:form.textfield class="form-control" name="reiseanfrage[multiRoomCount]"/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+					<div class="form-group">
+						<label class="control-label"><f:translate key="travel_inquiry_travel_accomodation.type"/></label>
+						<div class="input">
+							<f:form.checkbox name="reiseanfrage[accomodationType][]" value='<f:translate key="travel_inquiry_travel_accomodation.type.6"/>'/><span><f:translate key="travel_inquiry_travel_accomodation.type.6"/></span>
+						</div>
+						<div class="input">
+							<f:form.checkbox name="reiseanfrage[accomodationType][]" value='<f:translate key="travel_inquiry_travel_accomodation.type.5"/>'/><span><f:translate key="travel_inquiry_travel_accomodation.type.5"/></span>
+						</div>
+						<div class="input">
+							<f:form.checkbox name="reiseanfrage[accomodationType][]" value='<f:translate key="travel_inquiry_travel_accomodation.type.2"/>'/><span><f:translate key="travel_inquiry_travel_accomodation.type.2"/></span>
+						</div>
+						<div class="input">
+							<f:form.checkbox name="reiseanfrage[accomodationType][]" value='<f:translate key="travel_inquiry_travel_accomodation.type.3"/>'/><span><f:translate key="travel_inquiry_travel_accomodation.type.3"/></span>
+						</div>
+						<div class="input">
+							<f:form.checkbox name="reiseanfrage[accomodationType][]" value='<f:translate key="travel_inquiry_travel_accomodation.type.4"/>'/><span><f:translate key="travel_inquiry_travel_accomodation.type.4"/></span>
+						</div>
+						<div class="input">
+							<f:form.checkbox name="reiseanfrage[accomodationType][]" value='<f:translate key="travel_inquiry_travel_accomodation.type.1"/>'/><span><f:translate key="travel_inquiry_travel_accomodation.type.1"/></span>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+					<div class="form-group">
+						<label class="control-label"><f:translate key="travel_inquiry_travel_accomodation.provision"/></label>
+						<div class="input">
+							<f:form.radio name="reiseanfrage[accomodationProvision][]" value='<f:translate key="travel_inquiry_travel_accomodation.provision.1"/>'/><span><f:translate key="travel_inquiry_travel_accomodation.provision.1"/></span>
+						</div>
+						<div class="input">
+							<f:form.radio name="reiseanfrage[accomodationProvision][]" value='<f:translate key="travel_inquiry_travel_accomodation.provision.2"/>'/><span><f:translate key="travel_inquiry_travel_accomodation.provision.2"/></span>
+						</div>
+						<div class="input">
+							<f:form.radio name="reiseanfrage[accomodationProvision][]" value='<f:translate key="travel_inquiry_travel_accomodation.provision.3"/>'/><span><f:translate key="travel_inquiry_travel_accomodation.provision.3"/></span>
+						</div>
+						<div class="input">
+							<f:form.radio name="reiseanfrage[accomodationProvision][]" value='<f:translate key="travel_inquiry_travel_accomodation.provision.4"/>'/><span><f:translate key="travel_inquiry_travel_accomodation.provision.4"/></span>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+					<div class="form-group">
+						<label class="control-label"><f:translate key="travel_inquiry_travel_accomodation.programme"/></label>
+						<div class="input">
+							<f:form.checkbox name="reiseanfrage[accomodationProgramme][]" value='<f:translate key="travel_inquiry_travel_accomodation.programme.1"/>'/><span><f:translate key="travel_inquiry_travel_accomodation.programme.1"/></span>
+						</div>
+						<div class="input">
+							<f:form.checkbox name="reiseanfrage[accomodationProgramme][]" value='<f:translate key="travel_inquiry_travel_accomodation.programme.2"/>'/><span><f:translate key="travel_inquiry_travel_accomodation.programme.2"/></span>
+						</div>
+						<div class="input">
+							<f:form.checkbox name="reiseanfrage[accomodationProgramme][]" value='<f:translate key="travel_inquiry_travel_accomodation.programme.3"/>'/><span><f:translate key="travel_inquiry_travel_accomodation.programme.3"/></span>
+						</div>
+						<div class="input">
+							<f:form.checkbox name="reiseanfrage[accomodationProgramme][]" value='<f:translate key="travel_inquiry_travel_accomodation.programme.4"/>'/><span><f:translate key="travel_inquiry_travel_accomodation.programme.4"/></span>
+						</div>
+						<div class="input">
+							<f:form.checkbox name="reiseanfrage[accomodationProgramme][]" value='<f:translate key="travel_inquiry_travel_accomodation.programme.5"/>'/><span><f:translate key="travel_inquiry_travel_accomodation.programme.5"/></span>
+						</div>
+						<div class="input">
+							<f:form.checkbox name="reiseanfrage[accomodationProgramme][]" value='<f:translate key="travel_inquiry_travel_accomodation.programme.6"/>'/><span><f:translate key="travel_inquiry_travel_accomodation.programme.6"/></span>
+						</div>
+						<div class="input">
+							<f:form.checkbox name="reiseanfrage[accomodationProgramme][]" value='<f:translate key="travel_inquiry_travel_accomodation.programme.7"/>'/><span><f:translate key="travel_inquiry_travel_accomodation.programme.7"/></span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<h2><f:translate key="travel_inquiry_travel_submit"/></h2>
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<div class="form-group">
+						<div class="input">
+							<f:form.textarea class="form-control" name="reiseanfrage[additional]"/>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<div class="actions">
+						<nav class="form-navigation">
+							<div class="btn-toolbar" role="toolbar">
+								<div class="btn-group" role="group">
+									<span class="next submit">
+										<f:form.submit value='<f:translate key="travel_inquiry_travel_submit.submit"/>' name="reiseanfrage[submit]" class="btn btn-primary"/>
+									</span>
+								</div>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</f:form>
+		
+	</f:section>
+</html>
