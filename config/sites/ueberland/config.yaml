@@ -1,7 +1,7 @@
 base: 'https://ueberland-tecklenburg.de'
 baseVariants:
   -
-    base: 'https://sp-ueberland.ddev.site'
+    base: 'https://site-ueberland.ddev.site'
     condition: 'applicationContext == "Development"'
 languages:
   -
