@@ -3,6 +3,11 @@ baseVariants:
   -
     base: 'https://site-ueberland.ddev.site'
     condition: 'applicationContext == "Development"'
+errorHandling:
+  -
+    errorCode: 404
+    errorHandler: Page
+    errorContentSource: 't3://page?uid=1'
 languages:
   -
     title: Deutsch
@@ -43,7 +48,7 @@ routeEnhancers:
     limitToPages:
       - 109
     routes:
-      - 
+      -
         routePath: '/{localized_seite}/{page}'
         _controller: 'News::list'
         _arguments:
@@ -56,7 +61,7 @@ routeEnhancers:
         type: LocaleModifier
         default: seite
         localeMap:
-          - 
+          -
             locale: 'en_.*'
             value: page
       page:
@@ -265,35 +270,35 @@ routeEnhancers:
         type: LocaleModifier
         default: bundesland
         localeMap:
-          - 
+          -
             locale: 'en_.*'
             value: section
       localized_category:
         type: LocaleModifier
         default: kategorie
         localeMap:
-          - 
+          -
             locale: 'en_.*'
             value: category
       localized_land:
         type: LocaleModifier
         default: land
         localeMap:
-          - 
+          -
             locale: 'en_.*'
             value: country
       localized_stadt:
         type: LocaleModifier
         default: stadt
         localeMap:
-          - 
+          -
             locale: 'en_.*'
             value: city
       localized_seite:
         type: LocaleModifier
         default: seite
         localeMap:
-          - 
+          -
             locale: 'en_.*'
             value: page
 websiteTitle: ''

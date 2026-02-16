@@ -2,14 +2,13 @@
 defined('TYPO3') or die();
 
 call_user_func(
-    function()
-    {
+    function () {
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
             'Ueberland',
             'Ueberland',
             [
-                \Balumedien\Ueberland\Controller\AngebotController::class => 'list, newsletter',
+                \Balumedien\Ueberland\Controller\AngebotController::class => 'list, show, newsletter',
                 \Balumedien\Ueberland\Controller\ProgrammpunktController::class => 'list',
                 \Balumedien\Ueberland\Controller\ProgrammkategorieController::class => 'list'
             ],
@@ -19,9 +18,41 @@ call_user_func(
             ]
         );
 
-    // wizards
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-        'mod {
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'Ueberland',
+            'inquiry',
+            [
+                \Balumedien\Ueberland\Controller\AngebotController::class => 'inquiry',
+            ]
+        );
+
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'Ueberland',
+            'search',
+            [
+                \Balumedien\Ueberland\Controller\AngebotController::class => 'search',
+            ]
+        );
+
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'Ueberland',
+            'latest',
+            [
+                \Balumedien\Ueberland\Controller\AngebotController::class => 'latest',
+            ]
+        );
+
+        \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
+            'Ueberland',
+            'categories',
+            [
+                \Balumedien\Ueberland\Controller\AngebotController::class => 'categories',
+            ]
+        );
+
+        // wizards
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+            'mod {
             wizards.newContentElement.wizardItems.plugins {
                 elements {
                     ueberland {
@@ -37,14 +68,14 @@ call_user_func(
                 show = *
             }
        }'
-    );
-		$iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
-		
-		$iconRegistry->registerIcon(
-			'ueberland-plugin-ueberland',
-			\TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-			['source' => 'EXT:ueberland/Resources/Public/Icons/user_plugin_ueberland.svg']
-		);
-		
+        );
+        $iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Imaging\IconRegistry::class);
+
+        $iconRegistry->registerIcon(
+            'ueberland-plugin-ueberland',
+            \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+            ['source' => 'EXT:ueberland/Resources/Public/Icons/user_plugin_ueberland.svg']
+        );
+
     }
 );

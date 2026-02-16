@@ -27,7 +27,8 @@ return [
 								--div--;Programmpunkte, programmpunkt,
 								--div--;Newsletter, newsletter_image, newsletter_show_time_of_travel, --palette--;;newsletter_text, 
 								--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, hidden, starttime, endtime, slug,
-								--div--;Sprache, sys_language_uid, l10n_parent, l10n_diffsource'],
+								--div--;Sprache, sys_language_uid, l10n_parent, l10n_diffsource,
+                                --div--;Kategorien, categories'],
 	],
 	'palettes' => [
 		'prices' => ['showitem' => 'price, extension_price'],
@@ -566,6 +567,13 @@ return [
 				'eval' => 'uniqueInPid',
 			],
 		],
+        'categories' => [
+			'l10n_display' => 'defaultAsReadonly',
+            'config' => [
+                'type' => 'category',
+                'relationship' => 'manyToMany'
+            ]
+        ],
     
     ],
 ];
