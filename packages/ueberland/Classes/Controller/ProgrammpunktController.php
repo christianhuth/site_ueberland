@@ -1,6 +1,9 @@
 <?php
 	
 	namespace Balumedien\Ueberland\Controller;
+
+	use \Balumedien\Ueberland\Domain\Repository\LandRepository;
+	use \Balumedien\Ueberland\Domain\Repository\ProgrammpunktRepository;
 	
 	/***
 	 *
@@ -19,17 +22,20 @@
 	class ProgrammpunktController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 		
 		/**
-		 * @var \Balumedien\Ueberland\Domain\Repository\LandRepository
-		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 * @var LandRepository
 		 */
 		protected $landRepository;
 		
 		/**
-		 * @var \Balumedien\Ueberland\Domain\Repository\ProgrammpunktRepository
-		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 * @var ProgrammpunktRepository
 		 */
 		protected $programmpunktRepository = null;
 		
+		public function __construct(LandRepository $landRepository, ProgrammpunktRepository $programmpunktRepository) {
+			$this->landRepository = $landRepository;
+			$this->programmpunktRepository = $programmpunktRepository;
+		}
+
 		/**
 		 * action list
 		 *

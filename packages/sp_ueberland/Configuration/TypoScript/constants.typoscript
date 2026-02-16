@@ -4,7 +4,6 @@
 @import 'EXT:sp_ueberland/Configuration/TypoScript/Extensions/fluid_styled_content/constants.typoscript'
 @import 'EXT:sp_ueberland/Configuration/TypoScript/Extensions/gridelements/constants.typoscript'
 @import 'EXT:sp_ueberland/Configuration/TypoScript/Extensions/news/constants.typoscript'
-@import 'EXT:sp_ueberland/Configuration/TypoScript/Extensions/sr_language_menu/constants.typoscript'
 @import 'EXT:sp_ueberland/Configuration/TypoScript/Extensions/tgm_copyright/constants.typoscript'
 @import 'EXT:sp_ueberland/Configuration/TypoScript/Extensions/ueberland/constants.typoscript'
 @import 'EXT:sp_ueberland/Configuration/TypoScript/Extensions/ws_slider/constants.typoscript'

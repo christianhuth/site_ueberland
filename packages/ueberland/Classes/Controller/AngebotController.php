@@ -11,6 +11,7 @@ use Balumedien\Ueberland\Domain\Repository\StadtRepository;
 
 use TYPO3\CMS\Core\Pagination\SimplePagination;
 use TYPO3\CMS\Extbase\Pagination\QueryResultPaginator;
+use Psr\Http\Message\ResponseInterface;
 
 /***
  *
@@ -32,7 +33,6 @@ class AngebotController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
      * angebotRepository
      *
      * @var \Balumedien\Ueberland\Domain\Repository\AngebotRepository
-     * @TYPO3\CMS\Extbase\Annotation\Inject
      */
     protected $angebotRepository = null;
 
@@ -40,7 +40,6 @@ class AngebotController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
      * bundeslandRepository
      *
      * @var \Balumedien\Ueberland\Domain\Repository\BundeslandRepository
-     * @TYPO3\CMS\Extbase\Annotation\Inject
      */
     protected $bundeslandRepository = null;
 
@@ -48,7 +47,6 @@ class AngebotController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
      * categoryRepository
      *
      * @var \Balumedien\Ueberland\Domain\Repository\CategoryRepository
-     * @TYPO3\CMS\Extbase\Annotation\Inject
      */
     protected $categoryRepository = null;
 
@@ -56,7 +54,6 @@ class AngebotController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
      * eventRepository
      *
      * @var \Balumedien\Ueberland\Domain\Repository\EventRepository
-     * @TYPO3\CMS\Extbase\Annotation\Inject
      */
     protected $eventRepository = null;
 
@@ -64,7 +61,6 @@ class AngebotController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
      * landRepository
      *
      * @var \Balumedien\Ueberland\Domain\Repository\LandRepository
-     * @TYPO3\CMS\Extbase\Annotation\Inject
      */
     protected $landRepository = null;
 
@@ -72,7 +68,6 @@ class AngebotController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
      * sightRepository
      *
      * @var \Balumedien\Ueberland\Domain\Repository\SightRepository
-     * @TYPO3\CMS\Extbase\Annotation\Inject
      */
     protected $sightRepository = null;
 
@@ -80,7 +75,6 @@ class AngebotController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
      * stadtRepository
      *
      * @var \Balumedien\Ueberland\Domain\Repository\StadtRepository
-     * @TYPO3\CMS\Extbase\Annotation\Inject
      */
     protected $stadtRepository = null;
 
@@ -99,7 +93,7 @@ class AngebotController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
      * action list
      * @return void
      */
-    public function listAction()
+    public function listAction(): ResponseInterface
     {
         // Settings for ListView
         $showFilters = boolval($this->settings['showFilters']);
@@ -181,9 +175,10 @@ class AngebotController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
         $orderBy = $this->settings['orderBy'];
         $orderDirection = $this->settings['orderDirection'];
         $offset = $this->settings['offset'];
-        $itemsPerPage = $this->settings['list']['paginate']['itemsPerPage'];
+        $itemsPerPage = intval($this->settings['list']['paginate']['itemsPerPage']);
+        $itemsPerPage = ($itemsPerPage == 0) ? 10 : $itemsPerPage;
         $angebote = $this->angebotRepository->findAllAngebote($orderBy, $orderDirection, $limit, $offset, $categoryWithChildren, $country, $section, $city, $suchtext);
-        $queryResultPaginator = new QueryResultPaginator($angebote, $currentPage, $itemsPerPage);
+        $queryResultPaginator = new QueryResultPaginator($angebote, $currentPage, intval($itemsPerPage));
         $paging = new SimplePagination($queryResultPaginator);
         $this->view->assignMultiple(
             [
@@ -194,6 +189,9 @@ class AngebotController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
             ]
         );
         $this->view->assign('showFilters', $showFilters);
+        return $this->responseFactory->createResponse()
+            ->withAddedHeader('Content-Type', 'text/html; charset=utf-8')
+            ->withBody($this->streamFactory->createStream($this->view->render()));
     }
 
     /**
@@ -202,7 +200,7 @@ class AngebotController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
      * @TYPO3\CMS\Extbase\Annotation\IgnoreValidation $angebot
      * @return void
      */
-    public function showAction(\Balumedien\Ueberland\Domain\Model\Angebot $angebot = null)
+    public function showAction(\Balumedien\Ueberland\Domain\Model\Angebot $angebot = null): ResponseInterface
     {
         if ($this->request->hasArgument('angebotsanfrage')) {
             $arguments = $this->request->getArguments();
@@ -218,6 +216,9 @@ class AngebotController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
         $this->view->assign('angebote', $angeboteOfCity);
         $this->view->assign('events', $eventsOfCity);
         $this->view->assign('sights', $sightsOfCity);
+        return $this->responseFactory->createResponse()
+            ->withAddedHeader('Content-Type', 'text/html; charset=utf-8')
+            ->withBody($this->streamFactory->createStream($this->view->render()));
     }
 
     /**
@@ -344,10 +345,13 @@ class AngebotController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
      *
      * @return void
      */
-    public function latestAction()
+    public function latestAction(): ResponseInterface
     {
         $angebote = $this->angebotRepository->findCurrents();
         $this->view->assign('angebote', $angebote);
+        return $this->responseFactory->createResponse()
+            ->withAddedHeader('Content-Type', 'text/html; charset=utf-8')
+            ->withBody($this->streamFactory->createStream($this->view->render()));
     }
 
     /**
@@ -355,7 +359,7 @@ class AngebotController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
      *
      * @return void
      */
-    public function categoriesAction()
+    public function categoriesAction(): ResponseInterface
     {
         $defaultOrderings = [
             'parent' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
@@ -364,6 +368,9 @@ class AngebotController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
         $this->categoryRepository->setDefaultOrderings($defaultOrderings);
         $categories = $this->categoryRepository->findAll();
         $this->view->assign('categories', $categories);
+        return $this->responseFactory->createResponse()
+            ->withAddedHeader('Content-Type', 'text/html; charset=utf-8')
+            ->withBody($this->streamFactory->createStream($this->view->render()));
     }
 
     /**
@@ -371,7 +378,7 @@ class AngebotController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
      *
      * @return void
      */
-    public function searchAction()
+    public function searchAction(): ResponseInterface
     {
         $defaultOrderings = [
             'parent' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING,
@@ -391,6 +398,9 @@ class AngebotController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
         $this->stadtRepository->setDefaultOrderings($stadtOrderings);
         $cities = $this->stadtRepository->findAll();
         $this->view->assign('cities', $cities);
+        return $this->responseFactory->createResponse()
+            ->withAddedHeader('Content-Type', 'text/html; charset=utf-8')
+            ->withBody($this->streamFactory->createStream($this->view->render()));
     }
 
     /**
@@ -398,10 +408,13 @@ class AngebotController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
      *
      * @return void
      */
-    public function highlightAction()
+    public function highlightAction(): ResponseInterface
     {
         $angebote = $this->angebotRepository->findHighlights();
         $this->view->assign('angebote', $angebote);
+        return $this->responseFactory->createResponse()
+            ->withAddedHeader('Content-Type', 'text/html; charset=utf-8')
+            ->withBody($this->streamFactory->createStream($this->view->render()));
     }
 
     /**
@@ -409,7 +422,7 @@ class AngebotController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
      *
      * @return void
      */
-    public function inquiryAction()
+    public function inquiryAction(): ResponseInterface
     {
         if ($this->request->hasArgument('reiseanfrage')) {
             $arguments = $this->request->getArguments();
@@ -458,6 +471,9 @@ class AngebotController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
         $cities = $this->stadtRepository->findAll();
         $this->view->assign('countries', $countries);
         $this->view->assign('cities', $cities);
+        return $this->responseFactory->createResponse()
+            ->withAddedHeader('Content-Type', 'text/html; charset=utf-8')
+            ->withBody($this->streamFactory->createStream($this->view->render()));
     }
 
     /**

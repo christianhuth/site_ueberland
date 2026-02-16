@@ -1,4 +1,0 @@
-######################
-####  TYPOSCRIPT  ####
-######################
-@import 'EXT:sr_language_menu/Configuration/TypoScript/PluginSetup/constants.typoscript'

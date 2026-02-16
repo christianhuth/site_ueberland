@@ -1,6 +1,8 @@
 <?php
 	
 	namespace Balumedien\Ueberland\Controller;
+
+	use \Balumedien\Ueberland\Domain\Repository\ProgrammkategorieRepository;
 	
 	/***
 	 *
@@ -19,11 +21,14 @@
 	class ProgrammkategorieController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 		
 		/**
-		 * @var \Balumedien\Ueberland\Domain\Repository\ProgrammkategorieRepository
-		 * @TYPO3\CMS\Extbase\Annotation\Inject
+		 * @var ProgrammkategorieRepository
 		 */
 		protected $programmkategorieRepository = null;
 		
+		public function __construct(ProgrammkategorieRepository $programmkategorieRepository) {
+			$this->programmkategorieRepository = $programmkategorieRepository;
+		}
+
 		/**
 		 * action list
 		 *

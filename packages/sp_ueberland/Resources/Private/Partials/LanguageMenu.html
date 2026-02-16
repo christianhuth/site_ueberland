@@ -1,0 +1,16 @@
+<ul id="langmenu">
+    <div class="langmenu-wrapper">
+        <div class="NO SPC">
+            <f:for each="{languageNavigation}" as="language">
+                <f:if condition="{language.active}">
+                    <f:then></f:then>
+                    <f:else>
+                        <a class="flag" href="{language.link}">
+                            <f:image src="EXT:sp_ueberland/Resources/Public/Images/LanguageMenu/{language.twoLetterIsoCode}.svg" title="{language.title}" alt="{language.title}" class="flag-linked" />
+                        </a>
+                    </f:else>
+                </f:if>
+            </f:for>
+        </div>
+    </div>
+</ul>

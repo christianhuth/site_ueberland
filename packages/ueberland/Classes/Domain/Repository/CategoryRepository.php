@@ -15,7 +15,7 @@ namespace Balumedien\Ueberland\Domain\Repository;
 /**
  * The repository for Category
  */
-class CategoryRepository extends \TYPO3\CMS\Extbase\Domain\Repository\CategoryRepository {
+class CategoryRepository extends \TYPO3\CMS\Extbase\Persistence\Repository {
 	
 	public function findObjectAndChildrenByUid($uid) {
 		$query = $this->createQuery();

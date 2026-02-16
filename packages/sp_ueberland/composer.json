@@ -24,9 +24,6 @@
         "audit": {
             "block-insecure": false
         },
-        "platform": {
-            "php": "7.4.1"
-        },
         "sort-packages": true
     },
     "extra": {
