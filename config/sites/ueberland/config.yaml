@@ -1,11 +1,19 @@
-base: 'https://ueberland-tecklenburg.de'
+base: 'https://typo12.ueberland-tecklenburg.de'
 baseVariants:
   -
     base: 'https://site-ueberland.ddev.site'
     condition: 'applicationContext == "Development"'
 errorHandling:
   -
+    errorCode: 307
+    errorHandler: Page
+    errorContentSource: 't3://page?uid=1'
+  -
     errorCode: 404
+    errorHandler: Page
+    errorContentSource: 't3://page?uid=1'
+  -
+    errorCode: 503
     errorHandler: Page
     errorContentSource: 't3://page?uid=1'
 languages:
