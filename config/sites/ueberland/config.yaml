@@ -1,4 +1,4 @@
-base: 'https://typo12.ueberland-tecklenburg.de'
+base: 'https://ueberland-tecklenburg.de'
 baseVariants:
   -
     base: 'https://site-ueberland.ddev.site'
