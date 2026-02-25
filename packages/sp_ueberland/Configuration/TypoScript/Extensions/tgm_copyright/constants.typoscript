@@ -1,7 +1,7 @@
 ######################
 ####  TYPOSCRIPT  ####
 ######################
-@import 'EXT:ueberland/Configuration/TypoScript/constants.txt'
+@import 'EXT:tgm_copyright/Configuration/TypoScript/constants.txt'
 
 ######################
 ####  SITECONFIG  ####

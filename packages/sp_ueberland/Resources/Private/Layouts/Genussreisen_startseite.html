@@ -1,0 +1,42 @@
+<f:render partial="header" arguments="{_all}" />
+
+<main id="main">
+	<div class="container full-width-on-mobile">
+		<div class="row">
+			<div id="genussreisen-startseite" class="col-xs-12">
+				<div class="genussreisen-logo">
+					<f:image src="EXT:sp_ueberland/Resources/Public/Images/Genussreisen/logo.svg" />
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div id="genussreisen" class="full-width-on-mobile" style="margin-top: 0;">
+			<div class="row">
+				<div class="container">
+					<div class="row">
+						<div id="content" class="col-xs-12">
+							<f:render section="content_main" />
+						</div>
+					</div>
+				</div>
+				<div class="container full-width-on-mobile">
+					<div class="row">
+						<div id="slider" class="col-xs-12">
+							<f:render section="content_slider" />
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class="row">
+						<div id="content2" class="col-xs-12">
+							<f:render section="content_main2" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+
+<f:render partial="Footer/Footer" arguments="{_all}" />

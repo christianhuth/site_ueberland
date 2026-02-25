@@ -1,0 +1,17 @@
+<f:layout name="genussreisen_startseite" />
+
+<f:section name="content_main">
+	<f:for each="{content_main}" as="contentElement">
+		<f:cObject typoscriptObjectPath="tt_content.{contentElement.data.CType}" data="{contentElement.data}" table="tt_content" />
+	</f:for>
+</f:section>
+<f:section name="content_slider">
+	<f:for each="{content_slider}" as="contentElement">
+		<f:cObject typoscriptObjectPath="tt_content.{contentElement.data.CType}" data="{contentElement.data}" table="tt_content" />
+	</f:for>
+</f:section>
+<f:section name="content_main2">
+	<f:for each="{content_main2}" as="contentElement">
+		<f:cObject typoscriptObjectPath="tt_content.{contentElement.data.CType}" data="{contentElement.data}" table="tt_content" />
+	</f:for>
+</f:section>

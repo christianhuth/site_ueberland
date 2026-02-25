@@ -47,7 +47,7 @@ class AngebotRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 			$suchtext = '%' . $suchtext . '%';
 			$constraints[] = $query->LogicalOr($query->like('id', $suchtext), $query->like('title', $suchtext), $query->like('subtitle', $suchtext), $query->like('benefits', $suchtext));
 		}
-        $query->matching($query->LogicalAnd($query->LogicalAnd($constraints)));
+        $query->matching($query->LogicalAnd($query->LogicalAnd(...$constraints)));
         if ($orderBy != null) {
             $orderDirectionString = null;
             switch ($orderDirection) {
@@ -94,7 +94,7 @@ class AngebotRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
         $constraints = [];
         $constraints[] = $query->greaterThanOrEqual('available_till', $dateLimit);
         $constraints[] = $query->equals('city.uid', $cities);
-        $query->matching($query->LogicalAnd($constraints));
+        $query->matching($query->LogicalAnd(...$constraints));
         $query->setOrderings([
             'title' => \TYPO3\CMS\Extbase\Persistence\QueryInterface::ORDER_ASCENDING
         ]);
@@ -124,7 +124,7 @@ class AngebotRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
         $constraints = [];
 		$constraints[] = $query->equals('current', TRUE);
         $constraints[] = $query->greaterThanOrEqual('available_till', $dateLimit);
-        $query->matching($query->LogicalAnd($constraints));
+        $query->matching($query->LogicalAnd(...$constraints));
         $query->getQuerySettings()->setRespectSysLanguage(true);
     	$query->getQuerySettings()->setLanguageOverlayMode(false);
 		$query->setOrderings([
@@ -144,7 +144,7 @@ class AngebotRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
         foreach ($uidArray as $key => $value) {
             $constraints[] = $query->equals('uid', $value);
         }
-        $query->matching($query->logicalAnd($query->logicalOr($constraints), $query->equals('hidden', 0), $query->equals('deleted', 0)));
+        $query->matching($query->logicalAnd($query->logicalOr(...$constraints), $query->equals('hidden', 0), $query->equals('deleted', 0)));
         $query->getQuerySettings()->setRespectSysLanguage(false);
         return $query->execute();
     }

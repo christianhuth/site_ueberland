@@ -84,14 +84,3 @@ $fields = array(
 $GLOBALS['TCA']['sys_category']['palettes']['tx_ueberland'] = array(
   'showitem' => 'tx_ueberland_description, tx_ueberland_image'
 );
-
-
-/* Add Categories */
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::makeCategorizable(
-	'Balumedien.Ueberland',
-	'tx_ueberland_domain_model_angebot',
-	'categories',
-	array(
-		'l10n_display' => 'defaultAsReadonly',
-	)
-);
