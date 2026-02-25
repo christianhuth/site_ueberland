@@ -58,6 +58,11 @@
 								</span> € <strong>{angebot.price},-</strong>
 							</div>
 						</f:link.page>
+						<f:if condition="({angebot.halfBoard} == 0) && ({angebot.fullBoard} == 0)">
+							<div class="angebot-halfboard">
+								<p></p><f:translate key="angebot_bookable_as_halfboard" /></p>
+							</div>
+						</f:if>
 						<f:if condition="{angebot.extensionPrice}">
 							<h4>
 								<f:translate key="angebot_extension_price" />
