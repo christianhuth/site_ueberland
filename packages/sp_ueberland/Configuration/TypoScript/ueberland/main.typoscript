@@ -7,18 +7,50 @@ page.typeNum = 0
 
 page.10 = FLUIDTEMPLATE
 page.10 {
-    format = html
-    file = fileadmin/templates/layouts/main_layout.html
-    partialRootPath = EXT:sp_ueberland/Resources/Private/Partials/
-    layoutRootPath = fileadmin/templates/layouts/
-    variables {
-        content_main < styles.content.get
-        content_main.select.where = colPos = 0
-        content_slider < styles.content.get
-        content_slider.select.where = colPos = 1
-        content_main2 < styles.content.get
-        content_main2.select.where = colPos = 2
+  
+  layoutRootPaths {
+    0 = EXT:sp_ueberland/Resources/Private/Layouts
+    1 = {$page.fluidtemplate.layoutRootPath}
+  }
+  partialRootPaths {
+    0 = EXT:sp_ueberland/Resources/Private/Partials/
+    1 = {$page.fluidtemplate.partialRootPath}
+  }
+  templateRootPaths {
+    0 = EXT:sp_ueberland/Resources/Private/Templates
+    1 = {$page.fluidtemplate.templateRootPath}
+  }
+  
+  dataProcessing {
+    # Page Contents
+    10 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+    10 {
+        table = tt_content
+        orderBy = sorting
+        where = colPos = 0
+        as = content_main
     }
+    11 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+    11 {
+        table = tt_content
+        orderBy = sorting
+        where = colPos = 1
+        as = content_slider
+    }
+    12 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+    12 {
+        table = tt_content
+        orderBy = sorting
+        where = colPos = 2
+        as = content_main2
+    }
+    # Navigation
+    20 = language-menu
+    20 {
+        languages = auto
+        as = languageNavigation
+    }
+  }
 }
 
 ## Backend Layouts
@@ -29,16 +61,16 @@ page.10.file.stdWrap.cObject {
     key.override.field = backend_layout
     
     default = TEXT
-    default.value = fileadmin/templates/main_1_column_without_sidebar.html
+    default.value = EXT:sp_ueberland/Resources/Private/Templates/Page/Default.html
     
     6 = TEXT
-    6.value = fileadmin/templates/genussreisen-startseite.html
+    6.value = EXT:sp_ueberland/Resources/Private/Templates/genussreisen-startseite.html
     
     7 = TEXT
-    7.value = fileadmin/templates/genussreisen.html
+    7.value = EXT:sp_ueberland/Resources/Private/Templates/genussreisen.html
     
     8 = TEXT
-    8.value = fileadmin/templates/genussreisen-region.html
+    8.value = EXT:sp_ueberland/Resources/Private/Templates/genussreisen-region.html
 
 }
 
@@ -76,35 +108,35 @@ page {
 page {
   headerData {
     10 = TEXT
-    10.value = <link rel="apple-touch-icon" sizes="57x57" href="/fileadmin/templates/images/favicon/apple-icon-57x57.png">
+    10.value = <link rel="apple-touch-icon" sizes="57x57" href="/typo3conf/ext/sp_ueberland/Resources/Public/Images/Favicon/apple-icon-57x57.png">
     20 = TEXT
-    20.value = <link rel="apple-touch-icon" sizes="60x60" href="/fileadmin/templates/images/favicon/apple-icon-60x60.png">
+    20.value = <link rel="apple-touch-icon" sizes="60x60" href="/typo3conf/ext/sp_ueberland/Resources/Public/Images/Favicon/apple-icon-60x60.png">
     30 = TEXT
-    30.value = <link rel="apple-touch-icon" sizes="72x72" href="/fileadmin/templates/images/favicon/apple-icon-72x72.png">
+    30.value = <link rel="apple-touch-icon" sizes="72x72" href="/typo3conf/ext/sp_ueberland/Resources/Public/Images/Favicon/apple-icon-72x72.png">
     40 = TEXT
-    40.value = <link rel="apple-touch-icon" sizes="76x76" href="/fileadmin/templates/images/favicon/apple-icon-76x76.png">
+    40.value = <link rel="apple-touch-icon" sizes="76x76" href="/typo3conf/ext/sp_ueberland/Resources/Public/Images/Favicon/apple-icon-76x76.png">
     50 = TEXT
-    50.value = <link rel="apple-touch-icon" sizes="114x114" href="/fileadmin/templates/images/favicon/apple-icon-114x114.png">
+    50.value = <link rel="apple-touch-icon" sizes="114x114" href="/typo3conf/ext/sp_ueberland/Resources/Public/Images/Favicon/apple-icon-114x114.png">
     60 = TEXT
-    60.value = <link rel="apple-touch-icon" sizes="120x120" href="/fileadmin/templates/images/favicon/apple-icon-120x120.png">
+    60.value = <link rel="apple-touch-icon" sizes="120x120" href="/typo3conf/ext/sp_ueberland/Resources/Public/Images/Favicon/apple-icon-120x120.png">
     70 = TEXT
-    70.value = <link rel="apple-touch-icon" sizes="144x144" href="/fileadmin/templates/images/favicon/apple-icon-144x144.png">
+    70.value = <link rel="apple-touch-icon" sizes="144x144" href="/typo3conf/ext/sp_ueberland/Resources/Public/Images/Favicon/apple-icon-144x144.png">
     80 = TEXT
-    80.value = <link rel="apple-touch-icon" sizes="152x152" href="/fileadmin/templates/images/favicon/apple-icon-152x152.png">
+    80.value = <link rel="apple-touch-icon" sizes="152x152" href="/typo3conf/ext/sp_ueberland/Resources/Public/Images/Favicon/apple-icon-152x152.png">
     90 = TEXT
-    90.value = <link rel="apple-touch-icon" sizes="180x180" href="/fileadmin/templates/images/favicon/apple-icon-180x180.png">
+    90.value = <link rel="apple-touch-icon" sizes="180x180" href="/typo3conf/ext/sp_ueberland/Resources/Public/Images/Favicon/apple-icon-180x180.png">
     100 = TEXT
-    100.value = <link rel="icon" type="image/png" sizes="192x192" href="/fileadmin/templates/images/favicon/android-icon-192x192.png">
+    100.value = <link rel="icon" type="image/png" sizes="192x192" href="/typo3conf/ext/sp_ueberland/Resources/Public/Images/Favicon/android-icon-192x192.png">
     110 = TEXT
-    110.value = <link rel="icon" type="image/png" sizes="32x32" href="/fileadmin/templates/images/favicon/favicon-32x32.png">
+    110.value = <link rel="icon" type="image/png" sizes="32x32" href="/typo3conf/ext/sp_ueberland/Resources/Public/Images/Favicon/favicon-32x32.png">
     120 = TEXT
-    120.value = <link rel="icon" type="image/png" sizes="96x96" href="/fileadmin/templates/images/favicon/favicon-96x96.png">
+    120.value = <link rel="icon" type="image/png" sizes="96x96" href="/typo3conf/ext/sp_ueberland/Resources/Public/Images/Favicon/favicon-96x96.png">
     130 = TEXT
-    130.value = <link rel="icon" type="image/png" sizes="16x16" href="/fileadmin/templates/images/favicon/favicon-16x16.png">
+    130.value = <link rel="icon" type="image/png" sizes="16x16" href="/typo3conf/ext/sp_ueberland/Resources/Public/Images/Favicon/favicon-16x16.png">
     140 = TEXT
     140.value = <meta name="msapplication-TileColor" content="#ffffff">
     150 = TEXT
-    150.value = <meta name="msapplication-TileImage" content="/fileadmin/templates/images/favicon/ms-icon-144x144.png">
+    150.value = <meta name="msapplication-TileImage" content="/typo3conf/ext/sp_ueberland/Resources/Public/Images/Favicon/ms-icon-144x144.png">
     160 = TEXT
     160.value = <meta name="theme-color" content="#ffffff">
   }
@@ -116,7 +148,7 @@ page.headerData.1 = TEXT
 page.headerData.1.field = title
 page.headerData.1.htmlSpecialChars = 1
 page.headerData.1.noTrimWrap = |<title>überland Tecklenburg &#124; | </title>|
-[globalVar = GP:tx_ueberland_ueberland|angebot > 0]
+[request && traverse(request.getQueryParams(), 'tx_ueberland_ueberland/angebot') > 0]
 temp.angebotTitle = RECORDS
 temp.angebotTitle {
   source = {GP:tx_ueberland_ueberland|angebot}

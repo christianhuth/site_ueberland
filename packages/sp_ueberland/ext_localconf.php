@@ -39,6 +39,7 @@ $GLOBALS['TYPO3_CONF_VARS']['FE']['cacheHash']['excludedParameters'] = array_mer
         'tx_ueberland_ueberland[city]',
         'tx_ueberland_ueberland[country]',
         'tx_ueberland_ueberland[section]',
-        'tx_ueberland_ueberland[suchtext]'
+        'tx_ueberland_ueberland[suchtext]',
+        '_sc'
     ]
 );

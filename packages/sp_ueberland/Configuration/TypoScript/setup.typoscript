@@ -7,7 +7,6 @@
 @import 'EXT:sp_ueberland/Configuration/TypoScript/Extensions/gridelements/setup.typoscript'
 @import 'EXT:sp_ueberland/Configuration/TypoScript/Extensions/mask/setup.typoscript'
 @import 'EXT:sp_ueberland/Configuration/TypoScript/Extensions/news/setup.typoscript'
-@import 'EXT:sp_ueberland/Configuration/TypoScript/Extensions/sr_language_menu/setup.typoscript'
 @import 'EXT:sp_ueberland/Configuration/TypoScript/Extensions/tgm_copyright/setup.typoscript'
 @import 'EXT:sp_ueberland/Configuration/TypoScript/Extensions/ueberland/setup.typoscript'
 @import 'EXT:sp_ueberland/Configuration/TypoScript/Extensions/ws_slider/setup.typoscript'
