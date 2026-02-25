@@ -6,6 +6,9 @@
 			<trans-unit id="angebot_anfrage">
 				<target>Jetzt anfragen</target>
 			</trans-unit>
+			<trans-unit id="angebot_bookable_as_halfboard">
+				<target>Auch als HP buchbar - fragen Sie uns an!</target>
+			</trans-unit>
 			<trans-unit id="angebot_season">
 				<target>Saison</target>
 			</trans-unit>
