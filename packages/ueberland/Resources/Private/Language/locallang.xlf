@@ -6,6 +6,9 @@
 			<trans-unit id="angebot_anfrage">
 				<source>Enquire now</source>
 			</trans-unit>
+			<trans-unit id="angebot_bookable_as_halfboard">
+				<source>Also available as HB — just ask us!</source>
+			</trans-unit>
 			<trans-unit id="angebot_season">
 				<source>Season</source>
 			</trans-unit>
