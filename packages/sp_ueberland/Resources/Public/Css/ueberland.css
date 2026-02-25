@@ -1427,6 +1427,7 @@ form {
 	line-height: 1;
 	position: relative;
 	width: 100%;
+	font-weight: bold;
 }
 
 .btn-extension-price,
@@ -1458,11 +1459,11 @@ form {
 }
 
 .btn-angebotsanfrage .button-info {
-position: absolute;
-left: 20px;
-top: 20px;
-line-height: 1;
-font-size: 14px;
+	position: absolute;
+	left: 20px;
+	top: 20px;
+	line-height: 1;
+	font-size: 17px;
 }
 
 .angebote-search .btn.btn-primary {
@@ -1479,16 +1480,23 @@ font-size: 14px;
 
 .btn-angebotsanfrage .duration {
     float: left !important;
-	margin-top: 17px;
+	margin-top: 22px;
 }
 
 .btn-angebotsanfrage .price {
 	font-size: 35px;
 	float: right !important;
+	margin-top: 4px;
 }
 
 .btn-angebotsanfrage .price span {
-	font-size: 21px;
+	font-size: 17px;
+}
+
+.angebot-halfboard {
+	font-size: 12px;
+	font-style: italic;
+	text-align: center;
 }
 
 .angebot-overview {
