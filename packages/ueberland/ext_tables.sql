@@ -352,8 +352,6 @@ CREATE TABLE tx_ueberland_domain_model_angebot (
 	image int(11) unsigned NOT NULL default '0',
 	highlight smallint(5) unsigned DEFAULT '0' NOT NULL,
 	current smallint(5) unsigned DEFAULT '0' NOT NULL,
-	available_from date DEFAULT NULL,
-	available_till date DEFAULT NULL,
 	city int(11) unsigned DEFAULT '0' NOT NULL,
 	day_program int(11) unsigned DEFAULT '0' NOT NULL,
 	intro text,
