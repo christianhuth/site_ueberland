@@ -339,11 +339,11 @@ return [
             'l10n_display' => 'defaultAsReadonly',
             'config' => [
                 'dbType' => 'date',
-                'type' => 'input',
-                'renderType' => 'inputDateTime',
+                'type' => 'datetime',
+                'format' => 'date',
                 'size' => 7,
-                'eval' => 'date, required',
-                'default' => null,
+                'default' => 0,
+                'required' => true,
             ],
         ],
         'available_till' => [
@@ -352,11 +352,11 @@ return [
 	        'l10n_display' => 'defaultAsReadonly',
             'config' => [
                 'dbType' => 'date',
-                'type' => 'input',
-                'renderType' => 'inputDateTime',
+                'type' => 'datetime',
+                'format' => 'date',
                 'size' => 7,
-                'eval' => 'date, required',
-                'default' => null,
+                'default' => 0,
+                'required' => true,
             ],
         ],
         'city' => [
