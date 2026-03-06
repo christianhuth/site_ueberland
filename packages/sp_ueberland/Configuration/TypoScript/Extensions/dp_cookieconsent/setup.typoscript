@@ -1,0 +1,4 @@
+######################
+####  TYPOSCRIPT  ####
+######################
+@import 'EXT:dp_cookieconsent/Configuration/TypoScript/setup.typoscript'

@@ -2,6 +2,7 @@
 ####  EXTENSIONS  ####
 ######################
 @import 'EXT:sp_ueberland/Configuration/TypoScript/Extensions/bootstrap_grids/setup.typoscript'
+@import 'EXT:sp_ueberland/Configuration/TypoScript/Extensions/dp_cookieconsent/setup.typoscript'
 @import 'EXT:sp_ueberland/Configuration/TypoScript/Extensions/fluid_styled_content/setup.typoscript'
 @import 'EXT:sp_ueberland/Configuration/TypoScript/Extensions/form/setup.typoscript'
 @import 'EXT:sp_ueberland/Configuration/TypoScript/Extensions/gridelements/setup.typoscript'

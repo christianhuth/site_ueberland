@@ -1,6 +1,7 @@
 ######################
 ####  EXTENSIONS  ####
 ######################
+@import 'EXT:sp_ueberland/Configuration/TypoScript/Extensions/dp_cookieconsent/constants.typoscript'
 @import 'EXT:sp_ueberland/Configuration/TypoScript/Extensions/fluid_styled_content/constants.typoscript'
 @import 'EXT:sp_ueberland/Configuration/TypoScript/Extensions/gridelements/constants.typoscript'
 @import 'EXT:sp_ueberland/Configuration/TypoScript/Extensions/news/constants.typoscript'

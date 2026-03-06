@@ -28,9 +28,10 @@
         }
     ],
     "require": {
-	"balumedien/ueberland": "^1.0",
-	"christianknell/sp_ueberland": "^1.0",
+        "balumedien/ueberland": "^1.0",
+        "christianknell/sp_ueberland": "^1.0",
         "cobweb/flush_language_cache": "^4.0",
+        "dirkpersky/typo3-dp_cookieconsent": "^13.0",
         "georgringer/news": "^13.0",
         "gridelementsteam/gridelements": "^12.0",
         "helhum/typo3-console": "^8.3",
