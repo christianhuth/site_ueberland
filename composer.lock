@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2afbe3ee03e63067921f6a41e4aacba5",
+    "content-hash": "291c7ab05fa624c2bb00c5d949d51b37",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -358,6 +358,76 @@
                 "source": "https://github.com/DeepLcom/deepl-php/tree/v1.16.0"
             },
             "time": "2025-12-10T21:01:51+00:00"
+        },
+        {
+            "name": "dirkpersky/typo3-dp_cookieconsent",
+            "version": "13.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/DirkPersky/typo3-dp_cookieconsent.git",
+                "reference": "00e63d18df6423e605e67d26542f0a7e51df90be"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/DirkPersky/typo3-dp_cookieconsent/zipball/00e63d18df6423e605e67d26542f0a7e51df90be",
+                "reference": "00e63d18df6423e605e67d26542f0a7e51df90be",
+                "shasum": ""
+            },
+            "require": {
+                "typo3/cms-core": "^12.4.0||^13.4.0||dev-main"
+            },
+            "replace": {
+                "typo3-ter/dp_cookieconsent": "self.version"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "web-dir": ".Build/Web",
+                    "extension-key": "dp_cookieconsent",
+                    "cms-package-dir": "{$vendor-dir}/typo3/cms"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "DirkPersky\\DpCookieconsent\\": "Classes"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "AGPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Dirk Persky",
+                    "homepage": "http://dp-wired.de",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Enable a cookie consent box. Let you visitors control the usage of cookies and load script or content after a consent. (ePrivacy, TTDSG)",
+            "homepage": "https://github.com/DirkPersky/typo3-dp_cookieconsent",
+            "keywords": [
+                "consent",
+                "cookie",
+                "cookieconsent",
+                "dsgvo",
+                "ePrivacy",
+                "typo3"
+            ],
+            "support": {
+                "issues": "https://github.com/DirkPersky/typo3-dp_cookieconsent/issues",
+                "source": "https://github.com/DirkPersky/typo3-dp_cookieconsent/tree/13.0.2"
+            },
+            "funding": [
+                {
+                    "url": "https://www.paypal.com/paypalme/dirkpersky",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/DirkPersky",
+                    "type": "github"
+                }
+            ],
+            "time": "2025-02-16T10:32:39+00:00"
         },
         {
             "name": "doctrine/annotations",
