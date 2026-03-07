@@ -1,4 +1,7 @@
 User-agent: *
 Disallow: /typo3/
 
-Sitemap: https://ueberland-tecklenburg.de/sitemap.xml
+Sitemap: https://ueberland-tecklenburg.de/de/home/sitemap/pages/sitemap.xml
+Sitemap: https://ueberland-tecklenburg.de/de/home/sitemap/news/sitemap.xml
+Sitemap: https://ueberland-tecklenburg.de/en/home/sitemap/pages/sitemap.xml
+Sitemap: https://ueberland-tecklenburg.de/en/home/sitemap/news/sitemap.xml

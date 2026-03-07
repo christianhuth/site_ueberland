@@ -1,0 +1,8 @@
+######################
+####  TYPOSCRIPT  ####
+######################
+@import 'EXT:seo/Configuration/TypoScript/XmlSitemap/constants.typoscript'
+
+######################
+####  SITECONFIG  ####
+######################

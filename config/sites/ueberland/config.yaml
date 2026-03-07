@@ -49,12 +49,28 @@ languages:
     deeplTargetLanguage: EN-US
 rootPageId: 1
 routeEnhancers:
+  PageTypeSuffix:
+    type: PageType
+    map:
+      /: 0
+      sitemap.xml: 1533906435
+  Sitemap:
+    type: Simple
+    routePath: 'sitemap/{sitemap}'
+    aspects:
+      sitemap:
+        type: StaticValueMapper
+        map:
+          pages: pages
+          news: news
+          ueberland: ueberland
   NewsPlugin:
     type: Extbase
     extension: News
     plugin: Pi1
     limitToPages:
       - 109
+      - 373
     routes:
       -
         routePath: '/{localized_seite}/{page}'
