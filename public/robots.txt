@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /typo3/
+
+Sitemap: https://ueberland-tecklenburg.de/sitemap.xml
