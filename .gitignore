@@ -12,6 +12,7 @@
 /var/*
 /public/*
 !/public/.htaccess
+!/public/robots.txt
 /config/system/settings.php
 /.php-cs-fixer.cache
 /.env
