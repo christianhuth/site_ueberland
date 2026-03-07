@@ -22,7 +22,7 @@ plugin.tx_seo.config {
                     pid = 110
                     recursive = 2
                     url {
-                        pageId = 373
+                        pageId = 372
                         fieldToParameterMap {
                             uid = tx_news_pi1[news]
                         }

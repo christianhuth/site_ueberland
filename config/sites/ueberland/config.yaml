@@ -70,8 +70,14 @@ routeEnhancers:
     plugin: Pi1
     limitToPages:
       - 109
+      - 372
       - 373
     routes:
+      - 
+        routePath: '/{news-title}'
+        _controller: 'News::detail'
+        _arguments:
+          news-title: news
       -
         routePath: '/{localized_seite}/{page}'
         _controller: 'News::list'
@@ -88,6 +94,8 @@ routeEnhancers:
           -
             locale: 'en_.*'
             value: page
+      news-title:
+        type: NewsTitle
       page:
         type: StaticRangeMapper
         start: '1'
