@@ -15,7 +15,7 @@ return [
         'enablecolumns' => [
             'disabled' => 'hidden',
             'starttime' => 'starttime',
-            'endtime' => 'endtime',
+            'endtime' => 'available_till',
         ],
         'searchFields' => 'id,title,subtitle,duration_in_days,benefits,last_minute,last_minute_from,last_minute_to,image,highlight,current,available_from,available_till,city,day_program,slug',
         'iconfile' => 'EXT:ueberland/Resources/Public/Icons/tx_ueberland_domain_model_angebot.gif'
@@ -26,7 +26,7 @@ return [
 								--div--;Tagesprogramm, day_program, intro,
 								--div--;Programmpunkte, programmpunkt,
 								--div--;Newsletter, newsletter_image, newsletter_show_time_of_travel, --palette--;;newsletter_text, 
-								--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, hidden, starttime, endtime, slug,
+								--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, hidden, starttime, slug,
 								--div--;Sprache, sys_language_uid, l10n_parent, l10n_diffsource,
                                 --div--;Kategorien, categories'],
 	],
@@ -107,24 +107,6 @@ return [
                 'size' => 13,
                 'eval' => 'datetime',
                 'default' => 0,
-            ],
-        ],
-        'endtime' => [
-            'exclude' => true,
-            'behaviour' => [
-                'allowLanguageSynchronization' => true
-            ],
-            'label' => 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.endtime',
-			'l10n_display' => 'defaultAsReadonly',
-            'config' => [
-                'type' => 'input',
-                'renderType' => 'inputDateTime',
-                'size' => 13,
-                'eval' => 'datetime',
-                'default' => 0,
-                'range' => [
-                    'upper' => mktime(0, 0, 0, 1, 1, 2038)
-                ],
             ],
         ],
 
@@ -351,12 +333,15 @@ return [
             'label' => 'LLL:EXT:ueberland/Resources/Private/Language/locallang_db.xlf:tx_ueberland_domain_model_angebot.available_till',
 	        'l10n_display' => 'defaultAsReadonly',
             'config' => [
-                'dbType' => 'date',
+                'dbType' => 'timestamp',
                 'type' => 'datetime',
                 'format' => 'date',
-                'size' => 7,
+                'size' => 13,
                 'default' => 0,
                 'required' => true,
+                'range' => [
+                    'upper' => mktime(0, 0, 0, 1, 1, 2038)
+                ],
             ],
         ],
         'city' => [
