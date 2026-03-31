@@ -42,7 +42,7 @@ languages:
     hreflang: en-US
     direction: ltr
     fallbackType: strict
-    fallbacks: '0'
+    fallbacks: ''
     flag: gb
     languageId: 1
     websiteTitle: ''
@@ -73,7 +73,7 @@ routeEnhancers:
       - 372
       - 373
     routes:
-      - 
+      -
         routePath: '/{news-title}'
         _controller: 'News::detail'
         _arguments:
