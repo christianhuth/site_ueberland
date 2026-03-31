@@ -41,7 +41,7 @@ languages:
     navigationTitle: English
     hreflang: en-US
     direction: ltr
-    fallbackType: strict
+    fallbackType: free
     fallbacks: ''
     flag: gb
     languageId: 1
