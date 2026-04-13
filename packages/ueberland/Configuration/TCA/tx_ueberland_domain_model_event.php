@@ -20,7 +20,7 @@ return [
         'iconfile' => 'EXT:ueberland/Resources/Public/Icons/tx_ueberland_domain_model_event.gif'
     ],
     'types' => [
-        '1' => ['showitem' => '	 --div--; Allgemein, name, stadt, startdatum, enddatum, 
+        '1' => ['showitem' => '	 --div--; Allgemein, name, stadt, startdatum, enddatum,
 											--div--; Sprache, sys_language_uid, l10n_parent, l10n_diffsource,
 											--div--; LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, hidden, starttime, endtime'],
     ],
@@ -163,6 +163,6 @@ return [
                 'maxitems' => 1,
             ],
         ],
-    
+
     ],
 ];
