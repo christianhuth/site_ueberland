@@ -25,7 +25,6 @@ return [
 								--div--;Darstellung, --palette--;LLL:EXT:ueberland/Resources/Private/Language/locallang_db.xlf:tx_ueberland_domain_model_angebot.available;available, highlight, current,
 								--div--;Tagesprogramm, day_program, intro,
 								--div--;Programmpunkte, programmpunkt,
-								--div--;Newsletter, newsletter_image, newsletter_show_time_of_travel, --palette--;;newsletter_text, 
 								--div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, hidden, starttime, slug,
 								--div--;Sprache, sys_language_uid, l10n_parent, l10n_diffsource,
                                 --div--;Kategorien, categories'],
@@ -34,7 +33,6 @@ return [
 		'prices' => ['showitem' => 'price, extension_price'],
 		'available' => ['showitem' => 'available_from, available_till'],
 		'duration_and_food' => ['showitem' => 'duration_in_days, overnight_with_breakfast, half_board, full_board'],
-		'newsletter_text' => ['showitem' => 'newsletter_text_1, newsletter_text_2'],
 	],
     'columns' => [
         'sys_language_uid' => [
@@ -231,7 +229,7 @@ return [
                 ],
                 'default' => 0,
             ]
-            
+
         ],
         'last_minute_from' => [
             'exclude' => true,
@@ -458,81 +456,6 @@ return [
                 ],
             ],
         ],
-		'newsletter_image' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:ueberland/Resources/Private/Language/locallang_db.xlf:tx_ueberland_domain_model_angebot.image',
-			'l10n_mode' => 'exclude',
-            'config' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::getFileFieldTCAConfig(
-                'newsletter_image',
-                [
-                    'appearance' => [
-                        'createNewRelationLinkTitle' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:images.addFileReference'
-                    ],
-                    'foreign_types' => [
-                        '0' => [
-                            'showitem' => '
-                            --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
-                            --palette--;;filePalette'
-                        ],
-                        \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
-                            'showitem' => '
-                            --palette--;LLL:EXT:lang/locallang_tca.xlf:sys_file_reference.imageoverlayPalette;imageoverlayPalette,
-                            --palette--;;filePalette'
-                        ],
-                    ],
-					'minitems' => 0,
-                ],
-                $GLOBALS['TYPO3_CONF_VARS']['GFX']['imagefile_ext']
-            ),
-        ],
-        'newsletter_show_time_of_travel' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:ueberland/Resources/Private/Language/locallang_db.xlf:tx_ueberland_domain_model_angebot.newsletter_show_time_of_travel',
-			'l10n_display' => 'defaultAsReadonly',
-            'config' => [
-                'type' => 'check',
-                'items' => [
-                    '1' => [
-                        '0' => 'LLL:EXT:core/Resources/Private/Language/locallang_core.xlf:labels.enabled'
-                    ]
-                ],
-                'default' => 0,
-            ]
-        ],
-        'newsletter_text_1' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:ueberland/Resources/Private/Language/locallang_db.xlf:tx_ueberland_domain_model_angebot.newsletter_text_1',
-            'config' => [
-                'type' => 'text',
-                'enableRichtext' => true,
-                'richtextConfiguration' => 'default',
-                'fieldControl' => [
-                    'fullScreenRichtext' => [
-                        'disabled' => false,
-                    ],
-                ],
-                'cols' => 40,
-                'rows' => 15,
-                'eval' => 'trim',
-            ],
-        ],
-        'newsletter_text_2' => [
-            'exclude' => true,
-            'label' => 'LLL:EXT:ueberland/Resources/Private/Language/locallang_db.xlf:tx_ueberland_domain_model_angebot.newsletter_text_2',
-            'config' => [
-                'type' => 'text',
-                'enableRichtext' => true,
-                'richtextConfiguration' => 'default',
-                'fieldControl' => [
-                    'fullScreenRichtext' => [
-                        'disabled' => false,
-                    ],
-                ],
-                'cols' => 40,
-                'rows' => 15,
-                'eval' => 'trim',
-            ],
-        ],
 		'slug' => [
 			'label' => 'LLL:EXT:ueberland/Resources/Private/Language/locallang_be.xlf:tx_ueberland_general.slug',
 			'exclude' => 1,
@@ -559,7 +482,7 @@ return [
                 'relationship' => 'manyToMany'
             ]
         ],
-    
+
     ],
 ];
 
