@@ -521,10 +521,10 @@ class AngebotController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
         // Subject
         $message->setSubject($subject);
         // HTML
-        $message->setBody()->html($html, 'text/html', 'utf-8');
+        $message->html($html, 'utf-8');
         // Plain
         if ($plain) {
-            $message->setBody()->text($plain, 'text/plain', 'utf-8');
+            $message->text($plain, 'utf-8');
         }
         // Return Path
         if (trim($returnPath)) {
@@ -542,11 +542,7 @@ class AngebotController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
         if (count($attachements)) {
             foreach ($attachements as $file => $name) {
                 if (file_exists($file)) {
-                    if (trim($name)) {
-                        $message->attach(\Swift_Attachment::fromPath($file)->setFilename($name));
-                    } else {
-                        $message->attach(Swift_Attachment::fromPath($file));
-                    }
+                    $message->attachFromPath($file, trim($name) ?: null);
                 }
             }
         }
