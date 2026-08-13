@@ -2,13 +2,13 @@
 	<f:layout name="Default" />
 
 	<f:section name="content">
-		
-		<f:if condition="{reiseanfrage} && {reiseanfrage.status=TRUE}">
+
+		<f:if condition="{reiseanfrage} && {reiseanfrage.status}">
 			<div class="alert alert-success" role="alert">
 				<f:translate key="travel_inquiry_success"/>
 			</div>
 		</f:if>
-	
+
 		<f:form method="post" action="inquiry" id="reiseanfrage">
 			<h2><f:translate key="travel_inquiry_contact"/></h2>
 			<div class="row">
@@ -296,6 +296,6 @@
 				</div>
 			</div>
 		</f:form>
-		
+
 	</f:section>
 </html>

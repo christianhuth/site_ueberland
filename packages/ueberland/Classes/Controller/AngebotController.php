@@ -455,9 +455,9 @@ class AngebotController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
             $html_content .= '<b>Anzahl Einzelnimmer</b>: ' . $arguments['reiseanfrage']['singleRoomCount'] . '<br/>';
             $html_content .= '<b>Anzahl Doppelzimmer</b>: ' . $arguments['reiseanfrage']['doubleRoomCount'] . '<br/>';
             $html_content .= '<b>Anzahl Mehrbettzimmer</b>: ' . $arguments['reiseanfrage']['multiRoomCount'] . '<br/>';
-            $html_content .= '<b>Typ</b>: ' . implode(', ', $arguments['reiseanfrage']['accomodationType']) . '<br/>';
-            $html_content .= '<b>Verpflegung</b>: ' . implode(', ', $arguments['reiseanfrage']['accomodationProvision']) . '<br/>';
-            $html_content .= '<b>Programm</b>: ' . implode(', ', $arguments['reiseanfrage']['accomodationProgramme']);
+            $html_content .= '<b>Typ</b>: ' . implode(', ', (array)($arguments['reiseanfrage']['accomodationType'] ?? [])) . '<br/>';
+            $html_content .= '<b>Verpflegung</b>: ' . implode(', ', (array)($arguments['reiseanfrage']['accomodationProvision'] ?? [])) . '<br/>';
+            $html_content .= '<b>Programm</b>: ' . implode(', ', (array)($arguments['reiseanfrage']['accomodationProgramme'] ?? []));
             $html_content .= '</p>';
             $html_content .= '<p>';
             $html_content .= '<u><b>Abschluss</b></u><br/>';
