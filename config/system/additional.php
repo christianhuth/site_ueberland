@@ -37,6 +37,16 @@ if (getenv('IS_DDEV_PROJECT') == 'true') {
     );
 }
 
+// Same UTF-8 locale on every environment for correct handling of non-ASCII filenames (PathUtility,
+// CommandUtility); de_DE.UTF-8 exists in DDEV and at All-Inkl
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['systemLocale'] = 'de_DE.UTF-8';
+
+// Only answer for the live domain - TYPO3's default (the server's SERVER_NAME) depends on the
+// hoster's configuration. DDEV keeps its own catch-all pattern from above.
+if (getenv('IS_DDEV_PROJECT') != 'true') {
+    $GLOBALS['TYPO3_CONF_VARS']['SYS']['trustedHostsPattern'] = '(?:www\.)?ueberland-tecklenburg\.de';
+}
+
 // EXT:mask - everything lives in the sitepackage, so the configuration belongs into the repository
 // instead of only into the (unversioned) settings.php of each environment. Overrides the extension
 // configuration from settings.php, changes in the backend's Extension Configuration have no effect.

@@ -359,6 +359,23 @@ AddDefaultCharset utf-8
 	</If>
 </IfModule>
 
+# Block files with a PHP extension that isn't the last one (e.g. upload.php.txt): the hoster's web
+# server hands every file with ".php" anywhere in its name to PHP, so such files would be executed
+# Apache < 2.3
+<IfModule !mod_authz_core.c>
+	<FilesMatch "(?i:\.(?:php[0-9]?|phtml|phar|pht)\.)">
+		Order allow,deny
+		Deny from all
+		Satisfy All
+	</FilesMatch>
+</IfModule>
+# Apache ≥ 2.3
+<IfModule mod_authz_core.c>
+	<FilesMatch "(?i:\.(?:php[0-9]?|phtml|phar|pht)\.)">
+		Require all denied
+	</FilesMatch>
+</IfModule>
+
 # Block access to vcs directories
 <IfModule mod_alias.c>
 	RedirectMatch 404 /\.(?:git|svn|hg)/
