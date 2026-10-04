@@ -8,13 +8,7 @@ hosts:
   production:
     hostname: w017ad89.kasserver.com
     remote_user: ssh-w017ad89
-    deploy_path: /www/htdocs/w017ad89/typo13.ueberland-tecklenburg.de
+    # Document root (KAS): {{deploy_path}}/current/public
+    deploy_path: /www/htdocs/w017ad89/ueberland-tecklenburg.de
     # All-Inkl offers several PHP versions side by side, the plain "php" is just the CLI default
     bin/php: /usr/bin/php82
-    # Until the domain's document root is switched over to {{deploy_path}}/current/public, the live
-    # site is still the plain git checkout in legacy_root - so that's where "ddev sync" reads from
-    legacy_root: /www/htdocs/w017ad89/ueberland-tecklenburg.de
-    sync_typo3_root: '{{legacy_root}}'
-    sync_fileadmin_path: '{{legacy_root}}/public/fileadmin'
-    # Weekly backups of the old checkout, used by "ddev sync --use-existing-db-dump"
-    sync_existing_db_dumps: '{{legacy_root}}/backups/*/*.sql.gz'

@@ -1,10 +1,8 @@
 name: deploy
 
 on:
-  # Manual only until the live domain is switched over to the Deployer structure - re-enable the push
-  # trigger afterwards:
-  # push:
-  #   branches: [main]
+  push:
+    branches: [main]
   workflow_dispatch:
 
 concurrency: production_environment
