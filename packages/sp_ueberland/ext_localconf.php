@@ -12,21 +12,6 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['backend'] = [
         'loginLogoAlt' => ''
 ];
 
-$GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['mask'] = [
-        'backend' => 'EXT:sp_ueberland/Resources/Private/Extensions/mask/Backend/Templates',
-        'backend_layouts_folder' => '',
-        'backendlayout_pids' => '0,1',
-        'content' => 'EXT:sp_ueberland/Resources/Private/Extensions/mask/Frontend/Templates',
-        'content_elements_folder' => '',
-        'json' => 'EXT:sp_ueberland/Configuration/Mask/mask.json',
-        'layouts' => 'EXT:sp_ueberland/Resources/Private/Extensions/mask/Frontend/Layouts',
-        'layouts_backend' => 'EXT:sp_ueberland/Resources/Private/Extensions/mask/Backend/Layouts',
-        'loader_identifier' => 'json',
-        'partials' => 'EXT:sp_ueberland/Resources/Private/Extensions/mask/Frontend/Partials',
-        'partials_backend' => 'EXT:sp_ueberland/Resources/Private/Extensions/mask/Backend/Partials',
-        'preview' => 'EXT:sp_ueberland/Resources/Public/Mask/',
-];
-
 $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['wv_deepltranslate'] = [
         'apiKey' => '1eb28236-42b6-da73-2538-2e738e3f9f98:fx'
 ];

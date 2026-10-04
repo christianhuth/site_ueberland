@@ -1,11 +1,5 @@
 <?php
 
-/**
- * #ddev-generated: Automatically generated TYPO3 additional.php file.
- * ddev manages this file and may delete or overwrite the file unless this comment is removed.
- * It is recommended that you leave this file alone.
- */
-
 if (getenv('IS_DDEV_PROJECT') == 'true') {
     $GLOBALS['TYPO3_CONF_VARS'] = array_replace_recursive(
         $GLOBALS['TYPO3_CONF_VARS'],
@@ -42,3 +36,22 @@ if (getenv('IS_DDEV_PROJECT') == 'true') {
         ]
     );
 }
+
+// EXT:mask - everything lives in the sitepackage, so the configuration belongs into the repository
+// instead of only into the (unversioned) settings.php of each environment. Overrides the extension
+// configuration from settings.php, changes in the backend's Extension Configuration have no effect.
+$GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['mask'] = [
+    'backend' => 'EXT:sp_ueberland/Resources/Private/Extensions/mask/Backend/Templates',
+    'backend_layouts_folder' => '',
+    'backendlayout_pids' => '0,1',
+    'content' => 'EXT:sp_ueberland/Resources/Private/Extensions/mask/Frontend/Templates',
+    'content_elements_folder' => '',
+    'json' => 'EXT:sp_ueberland/Configuration/Mask/mask.json',
+    'layouts' => 'EXT:sp_ueberland/Resources/Private/Extensions/mask/Frontend/Layouts',
+    'layouts_backend' => 'EXT:sp_ueberland/Resources/Private/Extensions/mask/Backend/Layouts',
+    'loader_identifier' => 'json',
+    'override_shared_fields' => '0',
+    'partials' => 'EXT:sp_ueberland/Resources/Private/Extensions/mask/Frontend/Partials',
+    'partials_backend' => 'EXT:sp_ueberland/Resources/Private/Extensions/mask/Backend/Partials',
+    'preview' => 'EXT:sp_ueberland/Resources/Public/Mask/',
+];
