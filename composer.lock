@@ -160,12 +160,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/christianhuth/typo3-deployer.git",
-                "reference": "e6ef0472fce9fd23e836549d09aa4a5b057f332e"
+                "reference": "8ddadcbf6430f77eb652e949bb97a072fa05f87f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/christianhuth/typo3-deployer/zipball/e6ef0472fce9fd23e836549d09aa4a5b057f332e",
-                "reference": "e6ef0472fce9fd23e836549d09aa4a5b057f332e",
+                "url": "https://api.github.com/repos/christianhuth/typo3-deployer/zipball/8ddadcbf6430f77eb652e949bb97a072fa05f87f",
+                "reference": "8ddadcbf6430f77eb652e949bb97a072fa05f87f",
                 "shasum": ""
             },
             "require": {
@@ -189,7 +189,7 @@
                 "source": "https://github.com/christianhuth/typo3-deployer/tree/main",
                 "issues": "https://github.com/christianhuth/typo3-deployer/issues"
             },
-            "time": "2026-10-04T19:53:37+00:00"
+            "time": "2026-10-04T20:13:15+00:00"
         },
         {
             "name": "christianknell/sp_ueberland",
