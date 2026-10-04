@@ -2,3 +2,11 @@
 ####  TYPOSCRIPT  ####
 ######################
 @import 'EXT:dp_cookieconsent/Configuration/TypoScript/constants.typoscript'
+
+# Google Tag Manager with Consent Mode v2 (built into dp_cookieconsent): GTM loads right away with all
+# consent signals "denied", accepting statistics/marketing in the banner sends a consent update plus the
+# dataLayer events dp-cookie-statistics-accept / dp-cookie-marketing-accept. Production only, so local
+# DDEV visits don't end up in the statistics.
+[applicationContext == "Production"]
+    plugin.tx_cookieconsent.settings.tracking.googleTagManager.id = GTM-TFW82TRG
+[END]
