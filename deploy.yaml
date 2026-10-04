@@ -1,17 +1,20 @@
-import: 
-  - recipe/typo3.php
-
-config:
-  repository: 'git@github.com:christianhuth/site_ueberland.git'
+# rsync-based deployment from CI, see vendor/christianhuth/typo3-deployer/README.md. Also provides the
+# dep sync:* tasks used by "ddev sync" (.ddev/commands/host/sync).
+import:
+  - vendor/christianhuth/typo3-deployer/recipe/deploy.php
 
 hosts:
-  v2202110159088166570.ultrasrv.de:
-    remote_user: knellcn
-    deploy_path: '~/sp_ueberland'
-
-tasks:
-  build:
-    - run: uptime  
-
-after:
-  deploy:failed: deploy:unlock
+  # Live site at All-Inkl
+  production:
+    hostname: w017ad89.kasserver.com
+    remote_user: ssh-w017ad89
+    deploy_path: /www/htdocs/w017ad89/typo13.ueberland-tecklenburg.de
+    # All-Inkl offers several PHP versions side by side, the plain "php" is just the CLI default
+    bin/php: /usr/bin/php82
+    # Until the domain's document root is switched over to {{deploy_path}}/current/public, the live
+    # site is still the plain git checkout in legacy_root - so that's where "ddev sync" reads from
+    legacy_root: /www/htdocs/w017ad89/ueberland-tecklenburg.de
+    sync_typo3_root: '{{legacy_root}}'
+    sync_fileadmin_path: '{{legacy_root}}/public/fileadmin'
+    # Weekly backups of the old checkout, used by "ddev sync --use-existing-db-dump"
+    sync_existing_db_dumps: '{{legacy_root}}/backups/*/*.sql.gz'

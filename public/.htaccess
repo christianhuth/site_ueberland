@@ -286,6 +286,10 @@ AddDefaultCharset utf-8
 	# Enable URL rewriting
 	RewriteEngine On
 
+	# Redirect www to non-www
+	RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+	RewriteRule ^ %{REQUEST_SCHEME}://%1%{REQUEST_URI} [R=301,L]
+
 	# Store the current location in an environment variable CWD to use
 	# mod_rewrite in .htaccess files without knowing the RewriteBase
 	RewriteCond $0#%{REQUEST_URI} ([^#]*)#(.*)\1$
@@ -395,4 +399,3 @@ FileETag None
 
 
 # Add your own rules here.
-

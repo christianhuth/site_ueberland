@@ -1,8 +1,12 @@
 base: 'https://ueberland-tecklenburg.de'
 baseVariants:
   -
-    base: 'https://site-ueberland.ddev.site'
+    base: 'https://site-ueberland.ddev.site:8443'
     condition: 'applicationContext == "Development"'
+  # Test domain for the Deployer setup - remove once ueberland-tecklenburg.de points to it
+  -
+    base: 'https://typo13.ueberland-tecklenburg.de'
+    condition: 'getenv("HTTP_HOST") == "typo13.ueberland-tecklenburg.de"'
 errorHandling:
   -
     errorCode: 307

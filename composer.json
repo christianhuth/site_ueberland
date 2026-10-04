@@ -25,10 +25,15 @@
             "options": {
                 "symlink": true
             }
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/christianhuth/typo3-deployer"
         }
     ],
     "require": {
         "balumedien/ueberland": "^1.0",
+        "christianhuth/typo3-deployer": "dev-main",
         "christianknell/sp_ueberland": "^1.0",
         "cobweb/flush_language_cache": "^4.0",
         "dirkpersky/typo3-dp_cookieconsent": "^13.0",
@@ -76,6 +81,9 @@
         "typo3/cms-viewpage": "^12.4",
         "wapplersystems/ws-slider": "^12.1",
         "web-vision/wv_deepltranslate": "^4.5"
+    },
+    "require-dev": {
+        "deployer/deployer": "^7.5"
     },
     "scripts": {
         "typo3-cms-scripts": [

@@ -1,8 +1,10 @@
 name: deploy
 
 on:
-  push:
-    branches: [main]
+  # Manual only until the live domain is switched over to the Deployer structure - re-enable the push
+  # trigger afterwards:
+  # push:
+  #   branches: [main]
   workflow_dispatch:
 
 concurrency: production_environment
@@ -12,20 +14,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout Code
+        uses: actions/checkout@v4
 
       - name: Setup PHP
         uses: shivammathur/setup-php@v2
         with:
           php-version: "8.2"
+          extensions: mbstring, intl
 
+      # The build happens here, the deploy rsyncs the result (including vendor/) to the host
       - name: Install dependencies
-        run: composer install
+        run: composer install --no-dev --no-ansi --no-interaction --no-scripts --prefer-dist --optimize-autoloader
 
       - name: Deploy
         uses: deployphp/action@v1
         with:
-          dep: deploy
+          dep: deploy production
           private-key: ${{ secrets.PRIVATE_KEY }}
           deployer-version: "7.5.12"
           verbosity: -vvv
