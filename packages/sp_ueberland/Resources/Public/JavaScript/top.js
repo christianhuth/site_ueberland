@@ -1,6 +1,10 @@
+// Resolved relative to this script, which TYPO3 publishes to /_assets/<hash>/JavaScript/ - only
+// available while the script is being executed, not inside the ready handler
+var topBtnImage = new URL('../Images/topBtn.png', document.currentScript.src).href;
+
 $(function () {
 
-    $('body').append('<button id="topBtn"><img src="/typo3conf/ext/sp_ueberland/Resources/Public/Images/topBtn.png"/></button>');
+    $('body').append('<button id="topBtn"><img src="' + topBtnImage + '"/></button>');
 
     $(window ).scroll(function(){
         topScrollFunction();

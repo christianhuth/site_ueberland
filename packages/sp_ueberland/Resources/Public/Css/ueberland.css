@@ -1742,14 +1742,6 @@ a.accordion-toggle,
 	background-size: contain;
 }
 
-.search-phone:before {
-	background-image: url("/typo3conf/ext/ueberland/Resources/Public/Icons/search-phone.svg");
-}
-
-.search-mail:before {
-	background-image: url("/typo3conf/ext/ueberland/Resources/Public/Icons/search-mail.svg");
-}
-
 #highlightSlider,
 #highlightSlider .nav {
     #background: #eee;

@@ -1,0 +1,9 @@
+/* Kept in EXT:ueberland next to its icons: extensions are published to separate /_assets/<hash>/
+   folders in Composer mode, so only paths relative to this extension work */
+.search-phone:before {
+	background-image: url("../Icons/search-phone.svg");
+}
+
+.search-mail:before {
+	background-image: url("../Icons/search-mail.svg");
+}
