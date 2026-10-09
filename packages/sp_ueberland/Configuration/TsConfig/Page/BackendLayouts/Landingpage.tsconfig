@@ -1,0 +1,31 @@
+# Same columns as "1 Spalte ohne Seitenleiste mit Slider" (DB record uid 1),
+# frontend renders the yellow navigation bar without menu and language menu
+mod.web_layout.BackendLayouts {
+    landingpage {
+        title = Landingpage
+        config {
+            backend_layout {
+                colCount = 1
+                rowCount = 2
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Slider
+                                colPos = 1
+                            }
+                        }
+                    }
+                    2 {
+                        columns {
+                            1 {
+                                name = Hauptbereich
+                                colPos = 0
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

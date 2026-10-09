@@ -992,6 +992,12 @@ div#navbar {
 	padding: 0;
 }
 
+/* Landingpage: empty yellow bar with the height of the regular menu, also on mobile */
+div#navbar.navbar-empty {
+	display: block !important;
+	min-height: 50px;
+}
+
 footer #partners {
 	background-color: #F4F4F4;
 	padding: 20px 0;

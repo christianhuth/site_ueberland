@@ -74,6 +74,12 @@ page.10.file.stdWrap.cObject {
 
 }
 
+## Landingpage: uses the default template, but without navigation and language menu
+[tree.pagelayout == "pagets__landingpage"]
+page.10.variables.hideNavigation = TEXT
+page.10.variables.hideNavigation.value = 1
+[global]
+
 ## CSS
 page.includeCSS {
     file10 = EXT:sp_ueberland/Resources/Public/Css/ueberland.css
